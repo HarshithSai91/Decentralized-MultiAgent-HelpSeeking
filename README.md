@@ -35,35 +35,58 @@ Full numbers: `results/MULTIAGENT_RESULTS_SUMMARY.md` (E5–E8), `results/RESULT
 
 ## Repository Layout
 
-```
-backend/src/help_seeking/       Decentralized MAS simulation package
-  autonomous_agent.py          AutonomousAgent: dual-role agent with internal state & activities
-  task_lifecycle.py            TemporalTask: deadline countdown, solo progression, completion tracking
-  requester_timing.py          RequesterTimingPolicy: 27-state Q-learning policy & baseline timing policies
-  temporal_environment.py     TemporalMultiAgentEnvironment: multi-step task lifecycle & interaction
-  temporal_simulation.py      compute_temporal_metrics: completion, deadline failure, ask rate, welfare
-  helper_qlearning.py          HelperQLearning: 9-state decision-epoch Q-learning with ε-greedy decay
-  acceptance.py                AcceptanceState: discounted Beta-Bernoulli tracking of peer acceptance
-  multiagent_policies.py       MA-Greedy, MA-D-UCB, MA-D-TS requester policies
-  multiagent_environment.py    MultiAgentEnvironment: sequential interaction protocol & oracle
-  multiagent_simulation.py     MultiAgentSimulationRun: multi-agent runner, metrics, logging
-  reliability.py               True θ_k(t) profiles (Stationary, Abrupt, Drift, MultiShift)
-  environment.py               Single-agent benchmark environment (E1–E4 backward compatibility)
-  algorithms.py                Single-agent bandit algorithms
-  baselines.py                 Heuristic baselines (Never-Ask, Always-Ask, etc.)
-  api.py                       FastAPI backend with both single-agent and multi-agent endpoints
-backend/tests/                 Test suite (198 tests)
-configs/                       JSON experiment configs (E1–E8, S1–S5)
-scripts/
-  run_all_experiments.py       Automated runner for full protocol (E1–E8, S1–S5)
-  generate_multiagent_figures_and_tables.py  E5–E8 tables, figures, key numbers and paired tests
-  analyze_results.py           Summary metrics & tables generator
-  generate_figures.py          Figures generator for E1–E4, S1–S5
-docs/                          Design specifications, decisions, and mathematical model
-results/                       Raw per-seed results, processed summaries, manifests, key numbers
-figures/                       Canonical vector PDF and PNG figures
-report/                        LaTeX report (arXiv style: main.tex, arxiv.sty), tables/, compiled main.pdf
-frontend/                      React + Vite + Tailwind + Lucide + Recharts dashboard
+```text
+.
+├── .gitignore
+├── PROGRESS.md
+├── README.md
+├── pytest.ini
+├── requirements.txt
+├── backend/                           # Multi-agent simulation package, algorithms & API
+│   ├── src/
+│   │   └── help_seeking/             # Core multi-agent learning modules
+│   │       ├── acceptance.py
+│   │       ├── algorithms.py
+│   │       ├── api.py
+│   │       ├── autonomous_agent.py
+│   │       ├── baselines.py
+│   │       ├── environment.py
+│   │       ├── helper_qlearning.py
+│   │       ├── multiagent_environment.py
+│   │       ├── multiagent_policies.py
+│   │       ├── multiagent_simulation.py
+│   │       ├── reliability.py
+│   │       ├── requester_timing.py
+│   │       ├── task_lifecycle.py
+│   │       ├── temporal_environment.py
+│   │       ├── temporal_simulation.py
+│   │       └── trust.py
+│   └── tests/                         # 198-test verification suite
+├── configs/                           # Experiment JSON configurations (E1–E8, S1–S5)
+├── docs/                              # Design specifications and mathematical model
+├── figures/                           # Publication vector PDFs and dashboard PNGs
+├── frontend/                          # Interactive React + TypeScript dashboard
+│   ├── dist/                          # Pre-built production bundle served by FastAPI
+│   └── src/                           # Live telemetry and simulation components
+├── report/                            # Publication manuscript (arXiv format) & PDF
+│   ├── tables/                        # Automated LaTeX result tables
+│   ├── arxiv.sty
+│   ├── main.bbl
+│   ├── main.pdf
+│   ├── main.tex
+│   └── references.bib
+├── results/                           # Experimental data and processed metrics
+│   ├── manifests/                     # Experiment run manifests
+│   ├── processed/                     # Summaries, key numbers, and diagnostics
+│   └── raw/                           # Raw per-seed runs.csv and curves.npz
+└── scripts/                           # Experiment execution and analysis pipelines
+    ├── analyze_results.py
+    ├── diagnose_e5_helpers.py
+    ├── diagnose_e8_timing.py
+    ├── generate_figures.py
+    ├── generate_multiagent_figures_and_tables.py
+    ├── run_all_experiments.py
+    └── run_experiment.py
 ```
 
 ---
