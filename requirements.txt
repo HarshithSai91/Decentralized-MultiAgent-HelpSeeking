@@ -1,0 +1,12 @@
+# core simulation + experiments
+numpy>=1.24
+# analysis and figures
+pandas>=1.5
+matplotlib>=3.7
+scipy>=1.10        # optional: exact t-quantiles (a built-in table is used otherwise)
+# tests
+pytest>=7.0
+# dashboard backend
+fastapi>=0.110
+uvicorn>=0.27
+httpx>=0.27        # used by FastAPI's TestClient in the API tests

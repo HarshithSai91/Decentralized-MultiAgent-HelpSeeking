@@ -1,0 +1,230 @@
+{
+  "experiment": "S4_when_to_ask_gamma_U080",
+  "title": "S4: Ask-decision accuracy vs discounting (E2 environment)",
+  "config": {
+    "name": "S4_when_to_ask_gamma_U080",
+    "title": "S4: Ask-decision accuracy vs discounting (E2 environment)",
+    "T": 2000,
+    "R": 1.0,
+    "n_seeds": 30,
+    "base": {
+      "theta": [
+        0.75,
+        0.65,
+        0.5
+      ],
+      "c": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "U_self": 0.8,
+      "lambda": 1.0,
+      "gamma": 0.98,
+      "alpha_ucb": 1.0
+    },
+    "reliability": {
+      "type": "stationary"
+    },
+    "sweep": {
+      "name": "gamma",
+      "symbol": "\u03b3",
+      "points": [
+        {
+          "value": 1.0,
+          "set": {
+            "gamma": 1.0
+          }
+        },
+        {
+          "value": 0.995,
+          "set": {
+            "gamma": 0.995
+          }
+        },
+        {
+          "value": 0.98,
+          "set": {
+            "gamma": 0.98
+          }
+        },
+        {
+          "value": 0.95,
+          "set": {
+            "gamma": 0.95
+          }
+        }
+      ]
+    },
+    "algorithms": [
+      "Dynamic Oracle",
+      "D-TS",
+      "D-UCB",
+      {
+        "name": "D-UCB",
+        "label": "D-UCB [alpha=0.1]",
+        "overrides": {
+          "alpha_ucb": 0.1
+        }
+      }
+    ],
+    "notes": "Supplementary: is the ask-accuracy shortfall in E2 caused by discounting? E2 environment with U_self in {0.50, 0.80}, sweeping gamma.",
+    "scenario": "U080"
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "points": [
+    {
+      "index": 0,
+      "label": "\u03b3=1.0",
+      "value": 1.0,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 1.0,
+        "alpha_ucb": 1.0
+      }
+    },
+    {
+      "index": 1,
+      "label": "\u03b3=0.995",
+      "value": 0.995,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.995,
+        "alpha_ucb": 1.0
+      }
+    },
+    {
+      "index": 2,
+      "label": "\u03b3=0.98",
+      "value": 0.98,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 1.0
+      }
+    },
+    {
+      "index": 3,
+      "label": "\u03b3=0.95",
+      "value": 0.95,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.95,
+        "alpha_ucb": 1.0
+      }
+    }
+  ],
+  "algorithms": [
+    {
+      "label": "Dynamic Oracle",
+      "canonical": "Dynamic Oracle",
+      "overrides": {},
+      "slug": "Dynamic_Oracle"
+    },
+    {
+      "label": "D-TS",
+      "canonical": "D-TS",
+      "overrides": {},
+      "slug": "D_TS"
+    },
+    {
+      "label": "D-UCB",
+      "canonical": "D-UCB",
+      "overrides": {},
+      "slug": "D_UCB"
+    },
+    {
+      "label": "D-UCB [alpha=0.1]",
+      "canonical": "D-UCB",
+      "overrides": {
+        "alpha_ucb": 0.1
+      },
+      "slug": "D_UCB__alpha_0_1"
+    }
+  ],
+  "n_runs": 480,
+  "runtime_seconds": 43.43,
+  "completed_at": "2026-10-20 18:14:46",
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "files": {
+    "runs": "raw/S4_when_to_ask_gamma_U080/runs.csv",
+    "curves": "raw/S4_when_to_ask_gamma_U080/curves.npz",
+    "summary": "processed/S4_when_to_ask_gamma_U080_summary.csv"
+  }
+}

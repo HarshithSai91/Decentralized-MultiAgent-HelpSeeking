@@ -1,0 +1,139 @@
+{
+  "name": "S5_multishift",
+  "title": "S5: generalised multi-shift reliabilities (random change points)",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "base": {
+    "theta": [
+      0.7,
+      0.6,
+      0.5
+    ],
+    "c": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "U_self": 0.35,
+    "lambda": 1.0,
+    "gamma": 1.0,
+    "alpha_ucb": 1.0
+  },
+  "reliability": {
+    "type": "multishift",
+    "p_c": 0.0025,
+    "low": 0.2,
+    "high": 0.95
+  },
+  "sweep": {
+    "name": "p_c x gamma",
+    "symbol": "p_c",
+    "points": [
+      {
+        "value": 0.001,
+        "label": "p_c=0.001, \u03b3=1.0",
+        "set": {
+          "gamma": 1.0,
+          "p_c": 0.001
+        }
+      },
+      {
+        "value": 0.001,
+        "label": "p_c=0.001, \u03b3=0.99",
+        "set": {
+          "gamma": 0.99,
+          "p_c": 0.001
+        }
+      },
+      {
+        "value": 0.001,
+        "label": "p_c=0.001, \u03b3=0.98",
+        "set": {
+          "gamma": 0.98,
+          "p_c": 0.001
+        }
+      },
+      {
+        "value": 0.001,
+        "label": "p_c=0.001, \u03b3=0.95",
+        "set": {
+          "gamma": 0.95,
+          "p_c": 0.001
+        }
+      },
+      {
+        "value": 0.0025,
+        "label": "p_c=0.0025, \u03b3=1.0",
+        "set": {
+          "gamma": 1.0,
+          "p_c": 0.0025
+        }
+      },
+      {
+        "value": 0.0025,
+        "label": "p_c=0.0025, \u03b3=0.99",
+        "set": {
+          "gamma": 0.99,
+          "p_c": 0.0025
+        }
+      },
+      {
+        "value": 0.0025,
+        "label": "p_c=0.0025, \u03b3=0.98",
+        "set": {
+          "gamma": 0.98,
+          "p_c": 0.0025
+        }
+      },
+      {
+        "value": 0.0025,
+        "label": "p_c=0.0025, \u03b3=0.95",
+        "set": {
+          "gamma": 0.95,
+          "p_c": 0.0025
+        }
+      },
+      {
+        "value": 0.005,
+        "label": "p_c=0.005, \u03b3=1.0",
+        "set": {
+          "gamma": 1.0,
+          "p_c": 0.005
+        }
+      },
+      {
+        "value": 0.005,
+        "label": "p_c=0.005, \u03b3=0.99",
+        "set": {
+          "gamma": 0.99,
+          "p_c": 0.005
+        }
+      },
+      {
+        "value": 0.005,
+        "label": "p_c=0.005, \u03b3=0.98",
+        "set": {
+          "gamma": 0.98,
+          "p_c": 0.005
+        }
+      },
+      {
+        "value": 0.005,
+        "label": "p_c=0.005, \u03b3=0.95",
+        "set": {
+          "gamma": 0.95,
+          "p_c": 0.005
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "Dynamic Oracle",
+    "Never-Ask",
+    "Greedy",
+    "D-UCB",
+    "D-TS"
+  ],
+  "notes": "Proposal Sec. 2.3 'generalized multi-shift setting': before each round a change occurs with probability p_c; on a change every theta_k is redrawn from U[0.2, 0.95]. Expected changes in T = 2000: 2, 5, 10. Start from the E1 reliabilities; U_self = 0.35 as in E1/S3."
+}

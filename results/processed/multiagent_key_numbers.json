@@ -1,0 +1,1298 @@
+{
+ "E5": {
+  "Always Accept": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    },
+    "ask_rate": {
+     "mean": 0.9770500000000001,
+     "ci95_half_width": 0.002097657243633644
+    },
+    "requester_utility": {
+     "mean": 0.6032775,
+     "ci95_half_width": 0.00539541032659141
+    },
+    "helper_utility": {
+     "mean": 0.12333749999999985,
+     "ci95_half_width": 0.0023179365428334375
+    },
+    "social_welfare": {
+     "mean": 0.726615,
+     "ci95_half_width": 0.0067617833792105175
+    },
+    "cumulative_regret": {
+     "mean": 147.99833333333336,
+     "ci95_half_width": 5.087693717243752
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    },
+    "ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    },
+    "requester_utility": {
+     "mean": 0.5594833333333343,
+     "ci95_half_width": 0.015731611477974194
+    },
+    "helper_utility": {
+     "mean": 0.1361991666666658,
+     "ci95_half_width": 0.020943561160957608
+    },
+    "social_welfare": {
+     "mean": 0.6956825000000002,
+     "ci95_half_width": 0.032397238902002634
+    },
+    "cumulative_regret": {
+     "mean": 237.33000000000004,
+     "ci95_half_width": 31.012130856320027
+    }
+   }
+  },
+  "Always Reject": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.0,
+     "ci95_half_width": 0.0
+    },
+    "ask_rate": {
+     "mean": 0.4962,
+     "ci95_half_width": 0.002482034793621468
+    },
+    "requester_utility": {
+     "mean": 0.30037999999999854,
+     "ci95_half_width": 0.00024820347936216347
+    },
+    "helper_utility": {
+     "mean": 0.0,
+     "ci95_half_width": 0.0
+    },
+    "social_welfare": {
+     "mean": 0.30037999999999854,
+     "ci95_half_width": 0.00024820347936216347
+    },
+    "cumulative_regret": {
+     "mean": 99.24,
+     "ci95_half_width": 0.4964069587242932
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.0,
+     "ci95_half_width": 0.0
+    },
+    "ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    },
+    "requester_utility": {
+     "mean": 0.24999999999999992,
+     "ci95_half_width": 0.0
+    },
+    "helper_utility": {
+     "mean": 0.0,
+     "ci95_half_width": 0.0
+    },
+    "social_welfare": {
+     "mean": 0.24999999999999992,
+     "ci95_half_width": 0.0
+    },
+    "cumulative_regret": {
+     "mean": 200.00000000000003,
+     "ci95_half_width": 0.0
+    }
+   }
+  },
+  "Informed Threshold": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.8688590916713187,
+     "ci95_half_width": 0.005102104779882377
+    },
+    "ask_rate": {
+     "mean": 0.9617333333333331,
+     "ci95_half_width": 0.0023245551131221287
+    },
+    "requester_utility": {
+     "mean": 0.5486658333333349,
+     "ci95_half_width": 0.004229977633671611
+    },
+    "helper_utility": {
+     "mean": 0.13636083333333315,
+     "ci95_half_width": 0.0024393657368797783
+    },
+    "social_welfare": {
+     "mean": 0.685026666666668,
+     "ci95_half_width": 0.006577386050598544
+    },
+    "cumulative_regret": {
+     "mean": 222.27166666666668,
+     "ci95_half_width": 4.286243584444293
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.9884166666666666,
+     "ci95_half_width": 0.0043799703199961515
+    },
+    "ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    },
+    "requester_utility": {
+     "mean": 0.5650875000000007,
+     "ci95_half_width": 0.015353154649956346
+    },
+    "helper_utility": {
+     "mean": 0.16888499999999876,
+     "ci95_half_width": 0.008006675852613193
+    },
+    "social_welfare": {
+     "mean": 0.7339724999999996,
+     "ci95_half_width": 0.021961105875755393
+    },
+    "cumulative_regret": {
+     "mean": 214.08833333333342,
+     "ci95_half_width": 33.66182235835265
+    }
+   }
+  },
+  "Q-Learning": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.6899806277346843,
+     "ci95_half_width": 0.021078647439241815
+    },
+    "ask_rate": {
+     "mean": 0.9145000000000001,
+     "ci95_half_width": 0.008530342936386548
+    },
+    "requester_utility": {
+     "mean": 0.4792283333333353,
+     "ci95_half_width": 0.00889357566837734
+    },
+    "helper_utility": {
+     "mean": 0.10461916666666662,
+     "ci95_half_width": 0.004180607689989693
+    },
+    "social_welfare": {
+     "mean": 0.583847500000002,
+     "ci95_half_width": 0.011444600433586194
+    },
+    "cumulative_regret": {
+     "mean": 255.62088809826656,
+     "ci95_half_width": 8.409859366446085
+    },
+    "helper_policy_stability": {
+     "mean": 0.9913194444444444,
+     "ci95_half_width": 0.006050296272765654
+    },
+    "helper_states_evaluated": {
+     "mean": 4.358333333333333,
+     "ci95_half_width": 0.12195188019380687
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.8211499999999998,
+     "ci95_half_width": 0.02119791719364794
+    },
+    "ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    },
+    "requester_utility": {
+     "mean": 0.5265641666666687,
+     "ci95_half_width": 0.010337668860276983
+    },
+    "helper_utility": {
+     "mean": 0.13711666666666636,
+     "ci95_half_width": 0.004064399012358139
+    },
+    "social_welfare": {
+     "mean": 0.6636808333333352,
+     "ci95_half_width": 0.0120195715751924
+    },
+    "cumulative_regret": {
+     "mean": 195.1845543819854,
+     "ci95_half_width": 12.069422645941728
+    },
+    "helper_policy_stability": {
+     "mean": 0.994375,
+     "ci95_half_width": 0.006047076255893957
+    },
+    "helper_states_evaluated": {
+     "mean": 3.9166666666666665,
+     "ci95_half_width": 0.14662296162912147
+    }
+   }
+  },
+  "state_acceptance": {
+   "Q-Learning": {
+    "MultiAgent-D-TS": {
+     "low_w_high_r": {
+      "mean": 88.51136343006192,
+      "ci95_half_width": 2.0052347008629283
+     },
+     "med_w_med_r": {
+      "mean": 32.73208091265375,
+      "ci95_half_width": 9.640832091874877
+     },
+     "high_w_low_r": {
+      "mean": 25.665843148633254,
+      "ci95_half_width": 9.22007787810995
+     }
+    },
+    "MultiAgent-D-UCB": {
+     "low_w_high_r": {
+      "mean": 91.79376939198931,
+      "ci95_half_width": 1.3024574851072117
+     },
+     "med_w_med_r": {
+      "mean": 48.302376524127006,
+      "ci95_half_width": 10.138398072110128
+     },
+     "high_w_low_r": {
+      "mean": 27.63866144147136,
+      "ci95_half_width": 9.705029391965386
+     }
+    }
+   },
+   "Informed Threshold": {
+    "MultiAgent-D-TS": {
+     "low_w_high_r": {
+      "mean": 100.0,
+      "ci95_half_width": 0.0
+     },
+     "med_w_med_r": {
+      "mean": 79.30916436340024,
+      "ci95_half_width": 0.8121189212407813
+     },
+     "high_w_low_r": {
+      "mean": 0.0,
+      "ci95_half_width": 0.0
+     }
+    }
+   }
+  },
+  "tests": {
+   "MA-D-TS Q-learning vs informed helper_utility": {
+    "mean_a": 0.10461916666666662,
+    "mean_b": 0.13636083333333315,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS Q-learning vs always-accept helper_utility": {
+    "mean_a": 0.10461916666666662,
+    "mean_b": 0.12333749999999985,
+    "wilcoxon_p": 5.587935447692871e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS Q-learning vs informed requester_utility": {
+    "mean_a": 0.4792283333333353,
+    "mean_b": 0.5486658333333349,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS Q-learning vs always-accept requester_utility": {
+    "mean_a": 0.4792283333333353,
+    "mean_b": 0.6032775,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS Q-learning vs informed social_welfare": {
+    "mean_a": 0.583847500000002,
+    "mean_b": 0.685026666666668,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS Q-learning vs always-accept social_welfare": {
+    "mean_a": 0.583847500000002,
+    "mean_b": 0.726615,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-UCB Q-learning vs informed helper_utility": {
+    "mean_a": 0.13711666666666636,
+    "mean_b": 0.16888499999999876,
+    "wilcoxon_p": 4.7124922275543213e-07,
+    "n_pairs": 30
+   },
+   "MA-D-UCB Q-learning vs always-accept helper_utility": {
+    "mean_a": 0.13711666666666636,
+    "mean_b": 0.1361991666666658,
+    "wilcoxon_p": 0.4399667661637068,
+    "n_pairs": 30
+   },
+   "MA-D-UCB Q-learning vs informed requester_utility": {
+    "mean_a": 0.5265641666666687,
+    "mean_b": 0.5650875000000007,
+    "wilcoxon_p": 4.4075772166252136e-05,
+    "n_pairs": 30
+   },
+   "MA-D-UCB Q-learning vs always-accept requester_utility": {
+    "mean_a": 0.5265641666666687,
+    "mean_b": 0.5594833333333343,
+    "wilcoxon_p": 0.0009517744183540344,
+    "n_pairs": 30
+   },
+   "MA-D-UCB Q-learning vs informed social_welfare": {
+    "mean_a": 0.6636808333333352,
+    "mean_b": 0.7339724999999996,
+    "wilcoxon_p": 1.4193356037139893e-06,
+    "n_pairs": 30
+   },
+   "MA-D-UCB Q-learning vs always-accept social_welfare": {
+    "mean_a": 0.6636808333333352,
+    "mean_b": 0.6956825000000002,
+    "wilcoxon_p": 0.011303061619400978,
+    "n_pairs": 30
+   }
+  }
+ },
+ "E6": {
+  "$B=0.2$": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.09490456151139946,
+     "ci95_half_width": 0.00815721967529999
+    },
+    "requester_utility": {
+     "mean": 0.31254166666666544,
+     "ci95_half_width": 0.002005078935015836
+    },
+    "helper_utility": {
+     "mean": -0.0031766666666666636,
+     "ci95_half_width": 0.00021202463401212178
+    },
+    "social_welfare": {
+     "mean": 0.3093649999999987,
+     "ci95_half_width": 0.0021016940155861863
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.08028333333333333,
+     "ci95_half_width": 0.0056548456673603115
+    },
+    "requester_utility": {
+     "mean": 0.2775841666666667,
+     "ci95_half_width": 0.002851046144744518
+    },
+    "helper_utility": {
+     "mean": -0.0056375,
+     "ci95_half_width": 0.00037252590486483265
+    },
+    "social_welfare": {
+     "mean": 0.2719466666666668,
+     "ci95_half_width": 0.003019680429627969
+    }
+   }
+  },
+  "$B=0.5$": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.6899806277346843,
+     "ci95_half_width": 0.021078647439241815
+    },
+    "requester_utility": {
+     "mean": 0.4792283333333353,
+     "ci95_half_width": 0.00889357566837734
+    },
+    "helper_utility": {
+     "mean": 0.10461916666666662,
+     "ci95_half_width": 0.004180607689989693
+    },
+    "social_welfare": {
+     "mean": 0.583847500000002,
+     "ci95_half_width": 0.011444600433586194
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.8211499999999998,
+     "ci95_half_width": 0.02119791719364794
+    },
+    "requester_utility": {
+     "mean": 0.5265641666666687,
+     "ci95_half_width": 0.010337668860276983
+    },
+    "helper_utility": {
+     "mean": 0.13711666666666636,
+     "ci95_half_width": 0.004064399012358139
+    },
+    "social_welfare": {
+     "mean": 0.6636808333333352,
+     "ci95_half_width": 0.0120195715751924
+    }
+   }
+  },
+  "$B=0.8$": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.8207392209709765,
+     "ci95_half_width": 0.02790273572014479
+    },
+    "requester_utility": {
+     "mean": 0.5269250000000016,
+     "ci95_half_width": 0.01305726377486427
+    },
+    "helper_utility": {
+     "mean": 0.2728916666666672,
+     "ci95_half_width": 0.008938181697120018
+    },
+    "social_welfare": {
+     "mean": 0.7998166666666691,
+     "ci95_half_width": 0.020550873764238142
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.8877166666666666,
+     "ci95_half_width": 0.010321929275955322
+    },
+    "requester_utility": {
+     "mean": 0.5385158333333352,
+     "ci95_half_width": 0.010790497637405028
+    },
+    "helper_utility": {
+     "mean": 0.3023041666666671,
+     "ci95_half_width": 0.007337797973490323
+    },
+    "social_welfare": {
+     "mean": 0.8408200000000022,
+     "ci95_half_width": 0.014899403715474269
+    }
+   }
+  },
+  "Heterogeneous": {
+   "MA-D-TS": {
+    "acceptance_rate": {
+     "mean": 0.6437395137092609,
+     "ci95_half_width": 0.05049997542401563
+    },
+    "requester_utility": {
+     "mean": 0.4716491666666675,
+     "ci95_half_width": 0.022467120724717626
+    },
+    "helper_utility": {
+     "mean": 0.13504083333333344,
+     "ci95_half_width": 0.010254404889347812
+    },
+    "social_welfare": {
+     "mean": 0.606690000000001,
+     "ci95_half_width": 0.03206886656450725
+    }
+   },
+   "MA-D-UCB": {
+    "acceptance_rate": {
+     "mean": 0.7456833333333334,
+     "ci95_half_width": 0.04314025157805512
+    },
+    "requester_utility": {
+     "mean": 0.4985941666666684,
+     "ci95_half_width": 0.020478955876009175
+    },
+    "helper_utility": {
+     "mean": 0.17599916666666715,
+     "ci95_half_width": 0.008765373091050355
+    },
+    "social_welfare": {
+     "mean": 0.6745933333333354,
+     "ci95_half_width": 0.02636388608973872
+    }
+   }
+  },
+  "heterogeneous": {
+   "MA-D-TS": {
+    "agent_1": {
+     "acceptance_rate": {
+      "mean": 13.560809265788793,
+      "ci95_half_width": 2.0766768182482256
+     },
+     "help_frequency": {
+      "mean": 0.01305,
+      "ci95_half_width": 0.002532255116482888
+     },
+     "incoming_request_frequency": {
+      "mean": 0.09261666666666665,
+      "ci95_half_width": 0.006748916463881691
+     }
+    },
+    "agent_2": {
+     "acceptance_rate": {
+      "mean": 57.930639787378794,
+      "ci95_half_width": 7.301354912407646
+     },
+     "help_frequency": {
+      "mean": 0.11025000000000001,
+      "ci95_half_width": 0.016999615857913236
+     },
+     "incoming_request_frequency": {
+      "mean": 0.18078333333333332,
+      "ci95_half_width": 0.017868262537415802
+     }
+    },
+    "agent_3": {
+     "acceptance_rate": {
+      "mean": 56.223681587227944,
+      "ci95_half_width": 8.75379262885562
+     },
+     "help_frequency": {
+      "mean": 0.08394999999999998,
+      "ci95_half_width": 0.01596617859052235
+     },
+     "incoming_request_frequency": {
+      "mean": 0.14025,
+      "ci95_half_width": 0.014481704528092026
+     }
+    },
+    "agent_4": {
+     "acceptance_rate": {
+      "mean": 75.48795089545783,
+      "ci95_half_width": 5.814993805025523
+     },
+     "help_frequency": {
+      "mean": 0.3575666666666667,
+      "ci95_half_width": 0.05599973294973937
+     },
+     "incoming_request_frequency": {
+      "mean": 0.454,
+      "ci95_half_width": 0.03880293303161997
+     }
+    }
+   },
+   "MA-D-UCB": {
+    "agent_1": {
+     "acceptance_rate": {
+      "mean": 17.67384916739999,
+      "ci95_half_width": 3.262031965132394
+     },
+     "help_frequency": {
+      "mean": 0.010816666666666669,
+      "ci95_half_width": 0.0026296526431823196
+     },
+     "incoming_request_frequency": {
+      "mean": 0.060016666666666656,
+      "ci95_half_width": 0.008718423703407426
+     }
+    },
+    "agent_2": {
+     "acceptance_rate": {
+      "mean": 66.20117378165735,
+      "ci95_half_width": 9.247989065978558
+     },
+     "help_frequency": {
+      "mean": 0.16804999999999998,
+      "ci95_half_width": 0.03047537907401493
+     },
+     "incoming_request_frequency": {
+      "mean": 0.23256666666666667,
+      "ci95_half_width": 0.03327726927493843
+     }
+    },
+    "agent_3": {
+     "acceptance_rate": {
+      "mean": 63.635709159897644,
+      "ci95_half_width": 9.92882144734756
+     },
+     "help_frequency": {
+      "mean": 0.1846833333333334,
+      "ci95_half_width": 0.03810324897715264
+     },
+     "incoming_request_frequency": {
+      "mean": 0.25398333333333334,
+      "ci95_half_width": 0.042903886133591584
+     }
+    },
+    "agent_4": {
+     "acceptance_rate": {
+      "mean": 82.74409287679906,
+      "ci95_half_width": 4.122539172172182
+     },
+     "help_frequency": {
+      "mean": 0.38213333333333327,
+      "ci95_half_width": 0.05141856535007133
+     },
+     "incoming_request_frequency": {
+      "mean": 0.45343333333333347,
+      "ci95_half_width": 0.04329256546702581
+     }
+    }
+   }
+  }
+ },
+ "E7": {
+  "MA-D-TS": {
+   "gamma=1.00": {
+    "pre_change_regret": {
+     "mean": 66.71769078966753,
+     "ci95_half_width": 8.16128198236234
+    },
+    "post_change_regret": {
+     "mean": 102.90494076760987,
+     "ci95_half_width": 10.286097086046524
+    },
+    "cumulative_regret": {
+     "mean": 169.62263155727743,
+     "ci95_half_width": 13.424477163661265
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.3929,
+     "ci95_half_width": 0.0380057077643543
+    },
+    "post_change_ask_rate": {
+     "mean": 0.9389333333333332,
+     "ci95_half_width": 0.04889894431055297
+    }
+   },
+   "gamma=0.995": {
+    "pre_change_regret": {
+     "mean": 85.07742469155542,
+     "ci95_half_width": 6.667073652960795
+    },
+    "post_change_regret": {
+     "mean": 93.85872584181877,
+     "ci95_half_width": 5.650637493322705
+    },
+    "cumulative_regret": {
+     "mean": 178.9361505333742,
+     "ci95_half_width": 8.724419156670479
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.4251666666666667,
+     "ci95_half_width": 0.02651085336206066
+    },
+    "post_change_ask_rate": {
+     "mean": 0.8846,
+     "ci95_half_width": 0.029863733927001146
+    }
+   },
+   "gamma=0.98": {
+    "pre_change_regret": {
+     "mean": 117.043244672328,
+     "ci95_half_width": 7.985205270731825
+    },
+    "post_change_regret": {
+     "mean": 114.518260189074,
+     "ci95_half_width": 5.052020391238386
+    },
+    "cumulative_regret": {
+     "mean": 231.56150486140203,
+     "ci95_half_width": 9.604244789536295
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.38436666666666663,
+     "ci95_half_width": 0.018597151888378183
+    },
+    "post_change_ask_rate": {
+     "mean": 0.8122666666666666,
+     "ci95_half_width": 0.022599435626177944
+    }
+   },
+   "gamma=0.95": {
+    "pre_change_regret": {
+     "mean": 154.2730714403214,
+     "ci95_half_width": 6.3722786721838816
+    },
+    "post_change_regret": {
+     "mean": 137.9702070681889,
+     "ci95_half_width": 3.039174382739901
+    },
+    "cumulative_regret": {
+     "mean": 292.24327850851023,
+     "ci95_half_width": 7.268039273643069
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.31193333333333334,
+     "ci95_half_width": 0.008166173357889883
+    },
+    "post_change_ask_rate": {
+     "mean": 0.7460666666666665,
+     "ci95_half_width": 0.011894524454615474
+    }
+   }
+  },
+  "MA-D-UCB": {
+   "gamma=1.00": {
+    "pre_change_regret": {
+     "mean": 75.97245103561768,
+     "ci95_half_width": 15.781859501820122
+    },
+    "post_change_regret": {
+     "mean": 98.55356888911346,
+     "ci95_half_width": 12.433982223797813
+    },
+    "cumulative_regret": {
+     "mean": 174.52601992473112,
+     "ci95_half_width": 17.588253172293435
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.43130000000000007,
+     "ci95_half_width": 0.06469941272210539
+    },
+    "post_change_ask_rate": {
+     "mean": 0.9833333333333333,
+     "ci95_half_width": 0.03408716070221163
+    }
+   },
+   "gamma=0.995": {
+    "pre_change_regret": {
+     "mean": 82.90152952118963,
+     "ci95_half_width": 11.232190214890196
+    },
+    "post_change_regret": {
+     "mean": 83.27399033524672,
+     "ci95_half_width": 10.021655555477608
+    },
+    "cumulative_regret": {
+     "mean": 166.17551985643635,
+     "ci95_half_width": 14.701172579275521
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.4962666666666668,
+     "ci95_half_width": 0.059726383790176196
+    },
+    "post_change_ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    }
+   },
+   "gamma=0.98": {
+    "pre_change_regret": {
+     "mean": 109.98774896674837,
+     "ci95_half_width": 10.661160200967743
+    },
+    "post_change_regret": {
+     "mean": 110.31853427795436,
+     "ci95_half_width": 6.54443668716597
+    },
+    "cumulative_regret": {
+     "mean": 220.30628324470277,
+     "ci95_half_width": 10.441711487905337
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.4558666666666666,
+     "ci95_half_width": 0.03827715739230103
+    },
+    "post_change_ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    }
+   },
+   "gamma=0.95": {
+    "pre_change_regret": {
+     "mean": 135.67559757570447,
+     "ci95_half_width": 7.957396566983306
+    },
+    "post_change_regret": {
+     "mean": 137.93007592837185,
+     "ci95_half_width": 5.756775982442889
+    },
+    "cumulative_regret": {
+     "mean": 273.6056735040763,
+     "ci95_half_width": 8.442183534770606
+    },
+    "post_change_optimal_action_rate": {
+     "mean": 0.33640000000000003,
+     "ci95_half_width": 0.02287594864004322
+    },
+    "post_change_ask_rate": {
+     "mean": 1.0,
+     "ci95_half_width": 0.0
+    }
+   }
+  },
+  "MA-Greedy": {
+   "ask_rate": {
+    "mean": 0.0,
+    "ci95_half_width": 0.0
+   }
+  },
+  "tests": {
+   "MA-D-TS gamma=0.995 vs gamma=1.00 post_change_regret": {
+    "mean_a": 93.85872584181877,
+    "mean_b": 102.90494076760987,
+    "wilcoxon_p": 0.09194962680339813,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.995 vs gamma=1.00 pre_change_regret": {
+    "mean_a": 85.07742469155542,
+    "mean_b": 66.71769078966753,
+    "wilcoxon_p": 0.001340603455901146,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.995 vs gamma=1.00 cumulative_regret": {
+    "mean_a": 178.9361505333742,
+    "mean_b": 169.62263155727743,
+    "wilcoxon_p": 0.17059839516878128,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.98 vs gamma=1.00 post_change_regret": {
+    "mean_a": 114.518260189074,
+    "mean_b": 102.90494076760987,
+    "wilcoxon_p": 0.03098480962216854,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.98 vs gamma=1.00 pre_change_regret": {
+    "mean_a": 117.043244672328,
+    "mean_b": 66.71769078966753,
+    "wilcoxon_p": 9.313225746154785e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.98 vs gamma=1.00 cumulative_regret": {
+    "mean_a": 231.56150486140203,
+    "mean_b": 169.62263155727743,
+    "wilcoxon_p": 9.313225746154785e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.95 vs gamma=1.00 post_change_regret": {
+    "mean_a": 137.9702070681889,
+    "mean_b": 102.90494076760987,
+    "wilcoxon_p": 6.146728992462158e-08,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.95 vs gamma=1.00 pre_change_regret": {
+    "mean_a": 154.2730714403214,
+    "mean_b": 66.71769078966753,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-TS gamma=0.95 vs gamma=1.00 cumulative_regret": {
+    "mean_a": 292.24327850851023,
+    "mean_b": 169.62263155727743,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.995 vs gamma=1.00 post_change_regret": {
+    "mean_a": 83.27399033524672,
+    "mean_b": 98.55356888911346,
+    "wilcoxon_p": 0.029325857758522034,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.995 vs gamma=1.00 pre_change_regret": {
+    "mean_a": 82.90152952118963,
+    "mean_b": 75.97245103561768,
+    "wilcoxon_p": 0.21293285302817822,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.995 vs gamma=1.00 cumulative_regret": {
+    "mean_a": 166.17551985643635,
+    "mean_b": 174.52601992473112,
+    "wilcoxon_p": 0.4399667661637068,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.98 vs gamma=1.00 post_change_regret": {
+    "mean_a": 110.31853427795436,
+    "mean_b": 98.55356888911346,
+    "wilcoxon_p": 0.10943205840885639,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.98 vs gamma=1.00 pre_change_regret": {
+    "mean_a": 109.98774896674837,
+    "mean_b": 75.97245103561768,
+    "wilcoxon_p": 0.00031275488436222076,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.98 vs gamma=1.00 cumulative_regret": {
+    "mean_a": 220.30628324470277,
+    "mean_b": 174.52601992473112,
+    "wilcoxon_p": 4.4075772166252136e-05,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.95 vs gamma=1.00 post_change_regret": {
+    "mean_a": 137.93007592837185,
+    "mean_b": 98.55356888911346,
+    "wilcoxon_p": 7.994472980499268e-06,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.95 vs gamma=1.00 pre_change_regret": {
+    "mean_a": 135.67559757570447,
+    "mean_b": 75.97245103561768,
+    "wilcoxon_p": 8.009374141693115e-08,
+    "n_pairs": 30
+   },
+   "MA-D-UCB gamma=0.95 vs gamma=1.00 cumulative_regret": {
+    "mean_a": 273.6056735040763,
+    "mean_b": 174.52601992473112,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   }
+  }
+ },
+ "E8": {
+  "Learned Timing": {
+   "task_completion_rate": {
+    "mean": 0.5511666666666666,
+    "ci95_half_width": 0.02183891165713492
+   },
+   "ask_rate": {
+    "mean": 0.6225833333333332,
+    "ci95_half_width": 0.045115160814686917
+   },
+   "acceptance_rate": {
+    "mean": 0.7542104622586624,
+    "ci95_half_width": 0.05049335096900476
+   },
+   "avg_solo_attempts": {
+    "mean": 3.63425,
+    "ci95_half_width": 0.1703721103287421
+   },
+   "avg_time_to_request": {
+    "mean": 2.82836175679416,
+    "ci95_half_width": 0.17554852762437667
+   },
+   "avg_requester_reward": {
+    "mean": 0.199355,
+    "ci95_half_width": 0.03144721970197273
+   },
+   "avg_helper_reward": {
+    "mean": 0.07981249999999998,
+    "ci95_half_width": 0.01115788699053899
+   },
+   "social_welfare": {
+    "mean": 0.2791675,
+    "ci95_half_width": 0.04131080895031097
+   },
+   "timing_policy_stability": {
+    "mean": 0.9342113095238094,
+    "ci95_half_width": 0.00883023245700465
+   },
+   "timing_states_evaluated": {
+    "mean": 5.422916666666667,
+    "ci95_half_width": 0.16142028040404455
+   }
+  },
+  "Planned Timing": {
+   "task_completion_rate": {
+    "mean": 0.6054999999999999,
+    "ci95_half_width": 0.018396942328323118
+   },
+   "ask_rate": {
+    "mean": 0.4379166666666667,
+    "ci95_half_width": 0.013030260259388526
+   },
+   "acceptance_rate": {
+    "mean": 0.7670226736690184,
+    "ci95_half_width": 0.055624973547359735
+   },
+   "avg_solo_attempts": {
+    "mean": 4.388416666666667,
+    "ci95_half_width": 0.02929911651474182
+   },
+   "avg_time_to_request": {
+    "mean": 4.269797809459427,
+    "ci95_half_width": 0.027582129261154442
+   },
+   "avg_requester_reward": {
+    "mean": 0.28793166666666664,
+    "ci95_half_width": 0.0273685132532423
+   },
+   "avg_helper_reward": {
+    "mean": 0.06133749999999994,
+    "ci95_half_width": 0.005912336330065722
+   },
+   "social_welfare": {
+    "mean": 0.3492691666666667,
+    "ci95_half_width": 0.032579372446432886
+   }
+  },
+  "Immediate Evaluation": {
+   "task_completion_rate": {
+    "mean": 0.48716666666666664,
+    "ci95_half_width": 0.024372381549870648
+   },
+   "ask_rate": {
+    "mean": 0.9532500000000003,
+    "ci95_half_width": 0.006369973045917354
+   },
+   "acceptance_rate": {
+    "mean": 0.6949296087919952,
+    "ci95_half_width": 0.03631603498426961
+   },
+   "avg_solo_attempts": {
+    "mean": 2.4474166666666664,
+    "ci95_half_width": 0.12285070786699137
+   },
+   "avg_time_to_request": {
+    "mean": 1.4182084010855973,
+    "ci95_half_width": 0.04025625733360405
+   },
+   "avg_requester_reward": {
+    "mean": 0.08741166666666669,
+    "ci95_half_width": 0.038420020057309434
+   },
+   "avg_helper_reward": {
+    "mean": 0.09808749999999995,
+    "ci95_half_width": 0.007357077462343334
+   },
+   "social_welfare": {
+    "mean": 0.18549916666666666,
+    "ci95_half_width": 0.044208289356263475
+   }
+  },
+  "Fixed Delay (k=2)": {
+   "task_completion_rate": {
+    "mean": 0.6136666666666667,
+    "ci95_half_width": 0.022402669214677706
+   },
+   "ask_rate": {
+    "mean": 0.7895833333333333,
+    "ci95_half_width": 0.011083750912878831
+   },
+   "acceptance_rate": {
+    "mean": 0.8137519686502785,
+    "ci95_half_width": 0.04429534421313419
+   },
+   "avg_solo_attempts": {
+    "mean": 3.456833333333334,
+    "ci95_half_width": 0.0581064312733659
+   },
+   "avg_time_to_request": {
+    "mean": 3.296841273439971,
+    "ci95_half_width": 0.018183114032984893
+   },
+   "avg_requester_reward": {
+    "mean": 0.2766133333333333,
+    "ci95_half_width": 0.03403557998506068
+   },
+   "avg_helper_reward": {
+    "mean": 0.12140416666666667,
+    "ci95_half_width": 0.008104718688722451
+   },
+   "social_welfare": {
+    "mean": 0.3980175000000001,
+    "ci95_half_width": 0.04152945046157969
+   }
+  },
+  "Urgency-Based": {
+   "task_completion_rate": {
+    "mean": 0.6259166666666667,
+    "ci95_half_width": 0.02256405704618325
+   },
+   "ask_rate": {
+    "mean": 0.6779166666666666,
+    "ci95_half_width": 0.00998854897545054
+   },
+   "acceptance_rate": {
+    "mean": 0.8050251553959368,
+    "ci95_half_width": 0.046073209792919845
+   },
+   "avg_solo_attempts": {
+    "mean": 4.016666666666667,
+    "ci95_half_width": 0.027784983802753516
+   },
+   "avg_time_to_request": {
+    "mean": 4.1687476860121,
+    "ci95_half_width": 0.008569639812319174
+   },
+   "avg_requester_reward": {
+    "mean": 0.29719166666666663,
+    "ci95_half_width": 0.0339125653425813
+   },
+   "avg_helper_reward": {
+    "mean": 0.10042083333333332,
+    "ci95_half_width": 0.007241676870229641
+   },
+   "social_welfare": {
+    "mean": 0.39761250000000004,
+    "ci95_half_width": 0.04053939798040296
+   }
+  },
+  "Never Ask": {
+   "task_completion_rate": {
+    "mean": 0.4026666666666668,
+    "ci95_half_width": 0.00808237343327739
+   },
+   "ask_rate": {
+    "mean": 0.0,
+    "ci95_half_width": 0.0
+   },
+   "avg_solo_attempts": {
+    "mean": 4.997083333333334,
+    "ci95_half_width": 0.0007388564766506178
+   },
+   "avg_requester_reward": {
+    "mean": 0.02405833333333334,
+    "ci95_half_width": 0.012120420867029642
+   },
+   "avg_helper_reward": {
+    "mean": 0.0,
+    "ci95_half_width": 0.0
+   },
+   "social_welfare": {
+    "mean": 0.02405833333333334,
+    "ci95_half_width": 0.012120420867029642
+   }
+  },
+  "tests": {
+   "Learned vs Immediate Evaluation task_completion_rate": {
+    "mean_a": 0.5511666666666666,
+    "mean_b": 0.48716666666666664,
+    "wilcoxon_p": 0.0001602712351000754,
+    "n_pairs": 30
+   },
+   "Learned vs Immediate Evaluation avg_requester_reward": {
+    "mean_a": 0.199355,
+    "mean_b": 0.08741166666666669,
+    "wilcoxon_p": 4.421919584274292e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Immediate Evaluation ask_rate": {
+    "mean_a": 0.6225833333333332,
+    "mean_b": 0.9532500000000003,
+    "wilcoxon_p": 1.7289484360195754e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Fixed Delay (k=2) task_completion_rate": {
+    "mean_a": 0.5511666666666666,
+    "mean_b": 0.6136666666666667,
+    "wilcoxon_p": 2.8751270990020176e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Fixed Delay (k=2) avg_requester_reward": {
+    "mean_a": 0.199355,
+    "mean_b": 0.2766133333333333,
+    "wilcoxon_p": 9.310594407693577e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Fixed Delay (k=2) ask_rate": {
+    "mean_a": 0.6225833333333332,
+    "mean_b": 0.7895833333333333,
+    "wilcoxon_p": 1.919722783767457e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Urgency-Based task_completion_rate": {
+    "mean_a": 0.5511666666666666,
+    "mean_b": 0.6259166666666667,
+    "wilcoxon_p": 6.324866133059633e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Urgency-Based avg_requester_reward": {
+    "mean_a": 0.199355,
+    "mean_b": 0.29719166666666663,
+    "wilcoxon_p": 3.1478703022003174e-07,
+    "n_pairs": 30
+   },
+   "Learned vs Urgency-Based ask_rate": {
+    "mean_a": 0.6225833333333332,
+    "mean_b": 0.6779166666666666,
+    "wilcoxon_p": 0.014372081989444965,
+    "n_pairs": 30
+   },
+   "Learned vs Never Ask task_completion_rate": {
+    "mean_a": 0.5511666666666666,
+    "mean_b": 0.4026666666666668,
+    "wilcoxon_p": 1.917328010935302e-06,
+    "n_pairs": 30
+   },
+   "Learned vs Never Ask avg_requester_reward": {
+    "mean_a": 0.199355,
+    "mean_b": 0.02405833333333334,
+    "wilcoxon_p": 1.30385160446167e-08,
+    "n_pairs": 30
+   },
+   "Learned vs Never Ask ask_rate": {
+    "mean_a": 0.6225833333333332,
+    "mean_b": 0.0,
+    "wilcoxon_p": 1.7278603148724103e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Learned Timing task_completion_rate": {
+    "mean_a": 0.6054999999999999,
+    "mean_b": 0.5511666666666666,
+    "wilcoxon_p": 4.323368308771295e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Learned Timing avg_requester_reward": {
+    "mean_a": 0.28793166666666664,
+    "mean_b": 0.199355,
+    "wilcoxon_p": 1.862645149230957e-08,
+    "n_pairs": 30
+   },
+   "Planned vs Learned Timing ask_rate": {
+    "mean_a": 0.4379166666666667,
+    "mean_b": 0.6225833333333332,
+    "wilcoxon_p": 2.350534129999123e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Immediate Evaluation task_completion_rate": {
+    "mean_a": 0.6054999999999999,
+    "mean_b": 0.48716666666666664,
+    "wilcoxon_p": 1.7235135468062213e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Immediate Evaluation avg_requester_reward": {
+    "mean_a": 0.28793166666666664,
+    "mean_b": 0.08741166666666669,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "Planned vs Immediate Evaluation ask_rate": {
+    "mean_a": 0.4379166666666667,
+    "mean_b": 0.9532500000000003,
+    "wilcoxon_p": 1.7300371292901245e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Fixed Delay (k=2) task_completion_rate": {
+    "mean_a": 0.6054999999999999,
+    "mean_b": 0.6136666666666667,
+    "wilcoxon_p": 0.16176347734796992,
+    "n_pairs": 30
+   },
+   "Planned vs Fixed Delay (k=2) avg_requester_reward": {
+    "mean_a": 0.28793166666666664,
+    "mean_b": 0.2766133333333333,
+    "wilcoxon_p": 0.18396909348666668,
+    "n_pairs": 30
+   },
+   "Planned vs Fixed Delay (k=2) ask_rate": {
+    "mean_a": 0.4379166666666667,
+    "mean_b": 0.7895833333333333,
+    "wilcoxon_p": 1.7289484360195754e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Urgency-Based task_completion_rate": {
+    "mean_a": 0.6054999999999999,
+    "mean_b": 0.6259166666666667,
+    "wilcoxon_p": 0.002457092647544345,
+    "n_pairs": 30
+   },
+   "Planned vs Urgency-Based avg_requester_reward": {
+    "mean_a": 0.28793166666666664,
+    "mean_b": 0.29719166666666663,
+    "wilcoxon_p": 0.28008678182959557,
+    "n_pairs": 30
+   },
+   "Planned vs Urgency-Based ask_rate": {
+    "mean_a": 0.4379166666666667,
+    "mean_b": 0.6779166666666666,
+    "wilcoxon_p": 1.7256857880058036e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Never Ask task_completion_rate": {
+    "mean_a": 0.6054999999999999,
+    "mean_b": 0.4026666666666668,
+    "wilcoxon_p": 1.7278603148724103e-06,
+    "n_pairs": 30
+   },
+   "Planned vs Never Ask avg_requester_reward": {
+    "mean_a": 0.28793166666666664,
+    "mean_b": 0.02405833333333334,
+    "wilcoxon_p": 1.862645149230957e-09,
+    "n_pairs": 30
+   },
+   "Planned vs Never Ask ask_rate": {
+    "mean_a": 0.4379166666666667,
+    "mean_b": 0.0,
+    "wilcoxon_p": 1.7289484360195754e-06,
+    "n_pairs": 30
+   }
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "E6_multiagent_cooperation",
+  "title": "E6: Multi-Agent Cooperation under Reward Variation",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "n_agents": 4,
+  "base": {
+    "theta": [0.7, 0.6, 0.5, 0.8],
+    "c": [[0, 0.1, 0.1, 0.1], [0.1, 0, 0.1, 0.1], [0.1, 0.1, 0, 0.1], [0.1, 0.1, 0.1, 0]],
+    "U_self": 0.35,
+    "lambda": 1.0,
+    "gamma": 0.98,
+    "helper_rewards": {
+      "B_i": 0.5,
+      "resource_cost": 0.1,
+      "opportunity_cost": 0.05
+    }
+  },
+  "reliability": {"type": "stationary"},
+  "sweep": {
+    "name": "cooperation_reward",
+    "symbol": "B",
+    "points": [
+      {"value": 0.2, "label": "B = 0.20 (Low)", "set": {"helper_rewards": {"B_i": 0.2, "resource_cost": 0.1, "opportunity_cost": 0.05}}},
+      {"value": 0.5, "label": "B = 0.50 (Med)", "set": {"helper_rewards": {"B_i": 0.5, "resource_cost": 0.1, "opportunity_cost": 0.05}}},
+      {"value": 0.8, "label": "B = 0.80 (High)", "set": {"helper_rewards": {"B_i": 0.8, "resource_cost": 0.1, "opportunity_cost": 0.05}}},
+      {"value": -1.0, "label": "Heterogeneous (0.2-0.8)", "set": {"helper_rewards": [
+        {"B_i": 0.2, "resource_cost": 0.1, "opportunity_cost": 0.05},
+        {"B_i": 0.4, "resource_cost": 0.1, "opportunity_cost": 0.05},
+        {"B_i": 0.6, "resource_cost": 0.1, "opportunity_cost": 0.05},
+        {"B_i": 0.8, "resource_cost": 0.1, "opportunity_cost": 0.05}
+      ]}}
+    ]
+  },
+  "algorithms": [
+    "MultiAgent-D-TS",
+    "MultiAgent-D-UCB",
+    "MultiAgent-Greedy"
+  ]
+}

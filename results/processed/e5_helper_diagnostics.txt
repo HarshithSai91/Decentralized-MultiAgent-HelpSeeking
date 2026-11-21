@@ -1,0 +1,12 @@
+E5 helper diagnostics (MA-D-TS requesters, 30 seeds): utilities per round
+
+T = 2000 rounds
+  Q-learning, alpha = 0.1 (default)  accept 0.690  helper util 0.105  requester util 0.479  welfare 0.584
+  Q-learning, alpha = 1/n(s,a)       accept 0.772  helper util 0.112  requester util 0.509  welfare 0.620
+  Informed threshold                 accept 0.869  helper util 0.136  requester util 0.549  welfare 0.685
+
+T = 8000 rounds
+  Q-learning, alpha = 0.1 (default)  accept 0.706  helper util 0.112  requester util 0.483  welfare 0.595
+  Q-learning, alpha = 1/n(s,a)       accept 0.797  helper util 0.120  requester util 0.515  welfare 0.635
+  Informed threshold                 accept 0.871  helper util 0.136  requester util 0.547  welfare 0.683
+

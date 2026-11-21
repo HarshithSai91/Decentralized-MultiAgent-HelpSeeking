@@ -1,0 +1,232 @@
+{
+  "experiment": "E8_temporal_help_seeking",
+  "title": "E8: Temporal Help-Seeking Under Task Deadlines",
+  "config": {
+    "name": "E8_temporal_help_seeking",
+    "title": "E8: Temporal Help-Seeking Under Task Deadlines",
+    "temporal": true,
+    "T": 400,
+    "n_seeds": 30,
+    "n_agents": 4,
+    "default_deadline": 5,
+    "solo_capability": 0.6,
+    "step_cost": 0.02,
+    "c_fail": 0.5,
+    "R": 1.0,
+    "base": {
+      "theta": [
+        0.9,
+        0.7,
+        0.6,
+        0.5
+      ],
+      "c": [
+        [
+          0.0,
+          0.1,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.0,
+          0.1,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.0,
+          0.1
+        ],
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.0
+        ]
+      ],
+      "U_self": 0.35,
+      "lambda": 1.0,
+      "gamma": 0.98,
+      "requester_policy": "MultiAgent-D-TS",
+      "helper_rewards": {
+        "B_i": 0.5,
+        "resource_cost": 0.1,
+        "opportunity_cost": 0.05
+      }
+    },
+    "reliability": {
+      "type": "abrupt",
+      "theta_after": [
+        0.4,
+        0.8,
+        0.6,
+        0.5
+      ],
+      "tau": 200
+    },
+    "algorithms": [
+      {
+        "name": "Learned Timing",
+        "timing_policy": "learned"
+      },
+      {
+        "name": "Planned Timing",
+        "timing_policy": "planned"
+      },
+      {
+        "name": "Immediate Evaluation",
+        "timing_policy": "immediate"
+      },
+      {
+        "name": "Fixed Delay (k=2)",
+        "timing_policy": "fixed_delay",
+        "timing_params": {
+          "delay": 2
+        }
+      },
+      {
+        "name": "Urgency-Based",
+        "timing_policy": "urgency",
+        "timing_params": {
+          "urgency_threshold": 2
+        }
+      },
+      {
+        "name": "Never Ask",
+        "timing_policy": "never"
+      }
+    ]
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "points": [
+    {
+      "index": 0,
+      "label": "base",
+      "value": null,
+      "params": {
+        "theta": [
+          0.9,
+          0.7,
+          0.6,
+          0.5
+        ],
+        "c": [
+          [
+            0.0,
+            0.1,
+            0.1,
+            0.1
+          ],
+          [
+            0.1,
+            0.0,
+            0.1,
+            0.1
+          ],
+          [
+            0.1,
+            0.1,
+            0.0,
+            0.1
+          ],
+          [
+            0.1,
+            0.1,
+            0.1,
+            0.0
+          ]
+        ],
+        "U_self": 0.35,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "requester_policy": "MultiAgent-D-TS",
+        "helper_rewards": {
+          "B_i": 0.5,
+          "resource_cost": 0.1,
+          "opportunity_cost": 0.05
+        }
+      }
+    }
+  ],
+  "algorithms": [
+    {
+      "label": "Learned Timing",
+      "canonical": "Learned Timing",
+      "overrides": {},
+      "slug": "Learned_Timing"
+    },
+    {
+      "label": "Planned Timing",
+      "canonical": "Planned Timing",
+      "overrides": {},
+      "slug": "Planned_Timing"
+    },
+    {
+      "label": "Immediate Evaluation",
+      "canonical": "Immediate Evaluation",
+      "overrides": {},
+      "slug": "Immediate_Evaluation"
+    },
+    {
+      "label": "Fixed Delay (k=2)",
+      "canonical": "Fixed Delay (k=2)",
+      "overrides": {},
+      "slug": "Fixed_Delay__k_2"
+    },
+    {
+      "label": "Urgency-Based",
+      "canonical": "Urgency-Based",
+      "overrides": {},
+      "slug": "Urgency_Based"
+    },
+    {
+      "label": "Never Ask",
+      "canonical": "Never Ask",
+      "overrides": {},
+      "slug": "Never_Ask"
+    }
+  ],
+  "n_runs": 180,
+  "runtime_seconds": 41.61,
+  "completed_at": "2026-11-21 17:24:24",
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "files": {
+    "runs": "raw/E8_temporal_help_seeking/runs.csv",
+    "curves": "raw/E8_temporal_help_seeking/curves.npz",
+    "summary": "processed/E8_temporal_help_seeking_summary.csv"
+  }
+}

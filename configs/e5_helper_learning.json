@@ -1,0 +1,92 @@
+{
+  "name": "E5_helper_learning",
+  "title": "E5: Autonomous Helper Learning",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "n_agents": 4,
+  "base": {
+    "theta": [
+      0.7,
+      0.6,
+      0.5,
+      0.8
+    ],
+    "c": [
+      [
+        0,
+        0.1,
+        0.1,
+        0.1
+      ],
+      [
+        0.1,
+        0,
+        0.1,
+        0.1
+      ],
+      [
+        0.1,
+        0.1,
+        0,
+        0.1
+      ],
+      [
+        0.1,
+        0.1,
+        0.1,
+        0
+      ]
+    ],
+    "U_self": 0.35,
+    "lambda": 1.0,
+    "gamma": 0.98,
+    "helper_rewards": {
+      "B_i": 0.5,
+      "resource_cost": 0.1,
+      "opportunity_cost": 0.05
+    }
+  },
+  "reliability": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "name": "helper_policy",
+    "symbol": "π",
+    "points": [
+      {
+        "value": "always_accept",
+        "label": "Always Accept",
+        "set": {
+          "helper_policy": "always_accept"
+        }
+      },
+      {
+        "value": "always_reject",
+        "label": "Always Reject",
+        "set": {
+          "helper_policy": "always_reject"
+        }
+      },
+      {
+        "value": "informed_threshold",
+        "label": "Informed Threshold",
+        "set": {
+          "helper_policy": "informed_threshold"
+        }
+      },
+      {
+        "value": "q_learning",
+        "label": "Q-Learning",
+        "set": {
+          "helper_policy": "q_learning"
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "MultiAgent-D-TS",
+    "MultiAgent-D-UCB",
+    "MultiAgent-Greedy"
+  ]
+}

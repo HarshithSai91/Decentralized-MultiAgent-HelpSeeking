@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Timing policy & Completion\,\% & Ask\,\% & Solo attempts & Requester reward & Welfare \\
+\midrule
+Learned timing (Q-learning) & 55.1{\scriptsize$\pm$2.2} & 62.3{\scriptsize$\pm$4.5} & 3.63{\scriptsize$\pm$0.17} & 0.199{\scriptsize$\pm$0.031} & 0.279{\scriptsize$\pm$0.041} \\
+Planned timing (model-based) & 60.5{\scriptsize$\pm$1.8} & 43.8{\scriptsize$\pm$1.3} & 4.39{\scriptsize$\pm$0.03} & 0.288{\scriptsize$\pm$0.027} & 0.349{\scriptsize$\pm$0.033} \\
+Immediate evaluation & 48.7{\scriptsize$\pm$2.4} & 95.3{\scriptsize$\pm$0.6} & 2.45{\scriptsize$\pm$0.12} & 0.087{\scriptsize$\pm$0.038} & 0.185{\scriptsize$\pm$0.044} \\
+Fixed delay ($k=2$) & 61.4{\scriptsize$\pm$2.2} & 79.0{\scriptsize$\pm$1.1} & 3.46{\scriptsize$\pm$0.06} & 0.277{\scriptsize$\pm$0.034} & 0.398{\scriptsize$\pm$0.042} \\
+Urgency ($\tau_{\mathrm{rem}}\le 2$) & 62.6{\scriptsize$\pm$2.3} & 67.8{\scriptsize$\pm$1.0} & 4.02{\scriptsize$\pm$0.03} & 0.297{\scriptsize$\pm$0.034} & 0.398{\scriptsize$\pm$0.041} \\
+Never ask & 40.3{\scriptsize$\pm$0.8} & 0.0 & 5.00{\scriptsize$\pm$0.00} & 0.024{\scriptsize$\pm$0.012} & 0.024{\scriptsize$\pm$0.012} \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrrr}
+\toprule
+Helper policy & Requester & Accept\,\% & Ask\,\% & Requester util. & Helper util. & Welfare \\
+\midrule
+Always accept & MA-D-TS & 100.0 & 97.7{\scriptsize$\pm$0.2} & 0.603{\scriptsize$\pm$0.005} & 0.123{\scriptsize$\pm$0.002} & 0.727{\scriptsize$\pm$0.007} \\
+ & MA-D-UCB & 100.0 & 100.0 & 0.559{\scriptsize$\pm$0.016} & 0.136{\scriptsize$\pm$0.021} & 0.696{\scriptsize$\pm$0.032} \\
+\midrule
+Always reject & MA-D-TS & 0.0 & 49.6{\scriptsize$\pm$0.2} & 0.300{\scriptsize$\pm$0.000} & 0.000 & 0.300{\scriptsize$\pm$0.000} \\
+ & MA-D-UCB & 0.0 & 100.0 & 0.250 & 0.000 & 0.250 \\
+\midrule
+Informed threshold$^{\dagger}$ & MA-D-TS & 86.9{\scriptsize$\pm$0.5} & 96.2{\scriptsize$\pm$0.2} & 0.549{\scriptsize$\pm$0.004} & 0.136{\scriptsize$\pm$0.002} & 0.685{\scriptsize$\pm$0.007} \\
+ & MA-D-UCB & 98.8{\scriptsize$\pm$0.4} & 100.0 & 0.565{\scriptsize$\pm$0.015} & 0.169{\scriptsize$\pm$0.008} & 0.734{\scriptsize$\pm$0.022} \\
+\midrule
+Q-learning (ours) & MA-D-TS & 69.0{\scriptsize$\pm$2.1} & 91.5{\scriptsize$\pm$0.9} & 0.479{\scriptsize$\pm$0.009} & 0.105{\scriptsize$\pm$0.004} & 0.584{\scriptsize$\pm$0.011} \\
+ & MA-D-UCB & 82.1{\scriptsize$\pm$2.1} & 100.0 & 0.527{\scriptsize$\pm$0.010} & 0.137{\scriptsize$\pm$0.004} & 0.664{\scriptsize$\pm$0.012} \\
+\bottomrule
+\end{tabular}

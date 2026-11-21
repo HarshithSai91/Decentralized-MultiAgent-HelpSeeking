@@ -1,0 +1,33 @@
+\begin{tabular}{llrrrrr}
+\toprule
+$U^{\mathrm{self}}$ & Method & Ask rate (\%) & Acc$_{\mathrm{ask}}$ (\%) & Avg.\ utility & Comm.\ cost & Regret \\
+\midrule
+\multirow{6}{*}{0.30} & Oracle & 100.0 & 100.0 & 0.650{\scriptsize$\pm$0.004} & 200.0 & 0.0 \\
+ & Always-Ask + Greedy ($\gamma{=}1$) & 100.0 & 100.0 & 0.583{\scriptsize$\pm$0.033} & 200.0 & 133.8{\scriptsize$\pm$64.4} \\
+ & Never-Ask & 0.0 & 0.0 & 0.300 & 0.0 & 700.0 \\
+ & D-UCB & 100.0 & 100.0 & 0.556{\scriptsize$\pm$0.004} & 200.0 & 182.6{\scriptsize$\pm$1.7} \\
+ & D-TS & 100.0 & 100.0 & 0.600{\scriptsize$\pm$0.004} & 200.0 & 99.7{\scriptsize$\pm$4.3} \\
+ & D-Greedy$^\dagger$ & 99.9{\scriptsize$\pm$0.1} & 99.9{\scriptsize$\pm$0.1} & 0.622{\scriptsize$\pm$0.017} & 199.8{\scriptsize$\pm$0.3} & 56.5{\scriptsize$\pm$33.3} \\
+\midrule
+\multirow{6}{*}{0.50} & Oracle & 100.0 & 100.0 & 0.650{\scriptsize$\pm$0.004} & 200.0 & 0.0 \\
+ & Always-Ask + Greedy ($\gamma{=}1$) & 100.0 & 100.0 & 0.583{\scriptsize$\pm$0.033} & 200.0 & 133.8{\scriptsize$\pm$64.4} \\
+ & Never-Ask & 0.0 & 0.0 & 0.500 & 0.0 & 300.0 \\
+ & D-UCB & 100.0 & 100.0 & 0.556{\scriptsize$\pm$0.004} & 200.0 & 182.6{\scriptsize$\pm$1.7} \\
+ & D-TS & 97.0{\scriptsize$\pm$0.3} & 97.0{\scriptsize$\pm$0.3} & 0.595{\scriptsize$\pm$0.004} & 194.1{\scriptsize$\pm$0.7} & 108.5{\scriptsize$\pm$4.1} \\
+ & D-Greedy$^\dagger$ & 0.0 & 0.0 & 0.500 & 0.0 & 300.0 \\
+\midrule
+\multirow{6}{*}{0.65} & Oracle & 0.0 & 100.0 & 0.650 & 0.0 & 0.0 \\
+ & Always-Ask + Greedy ($\gamma{=}1$) & 100.0 & 100.0 & 0.583{\scriptsize$\pm$0.033} & 200.0 & 133.8{\scriptsize$\pm$64.4} \\
+ & Never-Ask & 0.0 & 100.0 & 0.650 & 0.0 & 0.0 \\
+ & D-UCB & 100.0 & 100.0 & 0.556{\scriptsize$\pm$0.004} & 200.0 & 182.6{\scriptsize$\pm$1.7} \\
+ & D-TS & 58.9{\scriptsize$\pm$1.7} & 100.0 & 0.614{\scriptsize$\pm$0.003} & 117.9{\scriptsize$\pm$3.4} & 74.7{\scriptsize$\pm$2.8} \\
+ & D-Greedy$^\dagger$ & 0.0 & 100.0 & 0.650 & 0.0 & 0.0 \\
+\midrule
+\multirow{6}{*}{0.80} & Oracle & 0.0 & 100.0 & 0.800 & 0.0 & 0.0 \\
+ & Always-Ask + Greedy ($\gamma{=}1$) & 100.0 & 0.0 & 0.583{\scriptsize$\pm$0.033} & 200.0 & 433.8{\scriptsize$\pm$64.4} \\
+ & Never-Ask & 0.0 & 100.0 & 0.800 & 0.0 & 0.0 \\
+ & D-UCB & 100.0 & 0.0 & 0.556{\scriptsize$\pm$0.004} & 200.0 & 482.6{\scriptsize$\pm$1.7} \\
+ & D-TS & 18.9{\scriptsize$\pm$0.7} & 81.1{\scriptsize$\pm$0.7} & 0.757{\scriptsize$\pm$0.001} & 37.8{\scriptsize$\pm$1.3} & 87.8{\scriptsize$\pm$2.7} \\
+ & D-Greedy$^\dagger$ & 0.0 & 100.0 & 0.800 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,565 @@
+experiment,point,point_label,point_value,algorithm,metric,n,mean,std,se,ci_low,ci_high
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,cumulative_regret,30,147.99833333333336,13.625094010009963,2.487590445803659,142.9106396160896,153.08602705057712
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,ask_rate,30,0.9770500000000001,0.005617629270492115,0.0010256340903832739,0.9749523427563664,0.9791476572436337
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,optimal_action_rate,30,0.5694333333333332,0.04236250239534254,0.0077342993847652475,0.5536149149704827,0.5852517516961838
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,rejection_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,success_rate,30,0.7091793042428715,0.013818183219021488,0.0025228435509324727,0.704019509830041,0.7143390986557019
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,task_completion_rate,30,0.7158999999999999,0.012563219442428789,0.0022937195611685743,0.7112088167627583,0.7205911832372415
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_workload,30,0.41233333333333333,0.00903586802247245,0.0016497162475159193,0.40895928476280585,0.4157073819038608
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_resources,30,1.5876666666666668,0.009035868022472453,0.00164971624751592,1.5842926180961392,1.5910407152371944
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,total_communication_cost,30,195.41000000000167,1.123525854098436,0.20512681807665717,194.99046855127494,195.8295314487284
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_requester_reward,30,301.63875,7.224587112351966,1.3190231100320937,298.9410448367043,304.33645516329574
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_helper_reward,30,61.66874999999994,3.103774034028601,0.5666690172787573,60.509781728583214,62.827718271416664
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_cooperation_frequency,30,0.24426250000000002,0.0014044073176230287,0.00025640852259581847,0.2437380856890916,0.24478691431090843
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,avg_acceptance_rate_per_agent,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,requester_net_utility,30,0.6032775,0.014449174224703933,0.002638046220064188,0.5978820896734086,0.6086729103265914
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,requester_utility,30,0.6032775,0.014449174224703933,0.002638046220064188,0.5978820896734086,0.6086729103265914
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,helper_utility,30,0.12333749999999988,0.0062075480680572025,0.0011333380345575146,0.12101956345716643,0.12565543654283332
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,social_welfare,30,0.726615,0.018108388463875094,0.0033061242805769043,0.7198532166207895,0.7333767833792105
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,low_w_high_r_visits,30,1191.5666666666666,52.20957986696558,9.53212153700154,1172.0712891467795,1211.0620441865537
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,low_w_high_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,low_w_high_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,med_w_med_r_visits,30,504.0,20.89712073881026,3.8152748051851337,496.1968868755533,511.8031131244467
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,med_w_med_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,med_w_med_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,high_w_low_r_visits,30,258.53333333333336,41.737879374887314,7.620259345351801,242.9481530394811,274.1185136271856
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,high_w_low_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,high_w_low_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_0_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_1_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_2_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_3_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_0_help_frequency,30,0.252,0.037859085367023676,0.006912091687344206,0.23786318519190458,0.2661368148080954
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_1_help_frequency,30,0.15728333333333336,0.0236864151860896,0.0043245279679514,0.14843868054504725,0.16612798612161947
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_2_help_frequency,30,0.11436666666666667,0.016134100390238645,0.00294567024292887,0.10834209456988031,0.12039123876345303
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_3_help_frequency,30,0.4534000000000001,0.037907873806792745,0.006920999197013207,0.439244967289092,0.46755503271090815
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_0_incoming_request_frequency,30,0.252,0.037859085367023676,0.006912091687344206,0.23786318519190458,0.2661368148080954
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_1_incoming_request_frequency,30,0.15728333333333336,0.0236864151860896,0.0043245279679514,0.14843868054504725,0.16612798612161947
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_2_incoming_request_frequency,30,0.11436666666666667,0.016134100390238645,0.00294567024292887,0.10834209456988031,0.12039123876345303
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_3_incoming_request_frequency,30,0.4534000000000001,0.037907873806792745,0.006920999197013207,0.439244967289092,0.46755503271090815
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_0_helper_reward,30,76.22333333333339,11.105953151454159,2.0276603545490106,72.07630227203245,80.37036439463432
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_1_helper_reward,30,38.613333333333536,9.34797537855993,1.7066989939467228,35.122741960715636,42.103924705951435
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_2_helper_reward,30,19.34500000000001,5.446358321439914,0.9943644363028711,17.3112963797908,21.37870362020922
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-TS,agent_3_helper_reward,30,112.49333333333281,7.38572403628981,1.348442552728011,109.7354586537804,115.25120801288523
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,cumulative_regret,30,237.33000000000004,83.05201174669051,15.163153426615475,206.31786914368,268.34213085632007
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,ask_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,optimal_action_rate,30,0.36851666666666666,0.18996916643340386,0.03468346589534284,0.29758101412561283,0.4394523192077205
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,rejection_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,success_rate,30,0.6594833333333334,0.04213002928809915,0.007691855796481739,0.6437517218553587,0.6752149448113082
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,task_completion_rate,30,0.6594833333333334,0.04213002928809915,0.007691855796481739,0.6437517218553587,0.6752149448113082
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_workload,30,0.35780416666666665,0.08835819710118165,0.01613192589760159,0.32481067363620364,0.39079765969712965
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_resources,30,1.642195833333333,0.08835819710118165,0.01613192589760159,1.6092023403028701,1.675189326363796
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,total_communication_cost,30,200.00000000000176,0.0,0.0,200.00000000000176,200.00000000000176
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_requester_reward,30,279.74166666666713,21.0650146440489,3.8459278982407468,271.87586092768004,287.6074724056542
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_helper_reward,30,68.09958333333289,28.0439434429077,5.120100141693213,57.62780275285408,78.5713639138117
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_cooperation_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,avg_acceptance_rate_per_agent,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,requester_net_utility,30,0.5594833333333343,0.04213002928809781,0.0076918557964814945,0.5437517218553601,0.5752149448113085
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,requester_utility,30,0.5594833333333343,0.04213002928809781,0.0076918557964814945,0.5437517218553601,0.5752149448113085
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,helper_utility,30,0.1361991666666658,0.05608788688581541,0.010240200283386429,0.11525560550570815,0.15714272782762342
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,social_welfare,30,0.6956825000000002,0.08676139921875542,0.01584039182427448,0.6632852610979976,0.7280797389020028
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,low_w_high_r_visits,30,1518.8666666666666,432.8283671414096,79.0232867371593,1357.2458982130763,1680.4874351202568
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,low_w_high_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,low_w_high_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,med_w_med_r_visits,30,381.7,306.4228709839867,55.944906191141584,267.27981953154386,496.1201804684561
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,med_w_med_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,med_w_med_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,high_w_low_r_visits,30,99.43333333333334,250.65083329182258,45.762371817132696,5.838773998635347,193.0278926680313
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,high_w_low_r_accept_rate,19,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,high_w_low_r_reject_rate,19,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_0_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_1_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_2_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_3_acceptance_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_0_help_frequency,30,0.23593333333333336,0.17464089921367482,0.03188491998743864,0.17072134983799436,0.30114531682867235
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_1_help_frequency,30,0.2359333333333333,0.19141648639646436,0.03494770915924143,0.16445724263622016,0.30740942403044647
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_2_help_frequency,30,0.24295,0.14108962363176014,0.025759323164342995,0.19026626870301014,0.2956337312969899
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_3_help_frequency,30,0.28518333333333334,0.1759718082502154,0.032127909621205555,0.2194743802362833,0.3508922864303834
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_0_incoming_request_frequency,30,0.23593333333333336,0.17464089921367482,0.03188491998743864,0.17072134983799436,0.30114531682867235
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_1_incoming_request_frequency,30,0.2359333333333333,0.19141648639646436,0.03494770915924143,0.16445724263622016,0.30740942403044647
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_2_incoming_request_frequency,30,0.24295,0.14108962363176014,0.025759323164342995,0.19026626870301014,0.2956337312969899
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_3_incoming_request_frequency,30,0.28518333333333334,0.1759718082502154,0.032127909621205555,0.2194743802362833,0.3508922864303834
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_0_helper_reward,30,78.56833333333276,57.42682823014551,10.484656409208391,57.12480325764313,100.0118634090224
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_1_helper_reward,30,46.72833333333316,52.823049898455096,9.644125328534944,27.0038823389707,66.45278432769562
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_2_helper_reward,30,31.783333333333562,45.020700858017875,8.219617804876192,14.972327351799034,48.594339314868094
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-D-UCB,agent_3_helper_reward,30,115.31833333333212,68.07962817898144,12.429582686730829,89.89698238309079,140.73968428357347
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,cumulative_regret,30,650.0,0.0,0.0,650.0,650.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,ask_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,optimal_action_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,rejection_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,success_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,task_completion_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_workload,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_resources,30,1.75,0.0,0.0,1.75,1.75
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,total_communication_cost,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_requester_reward,30,174.99999999999832,5.78151716258171e-14,1.0555557888497552e-14,174.9999999999983,174.99999999999835
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_cooperation_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,avg_acceptance_rate_per_agent,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,requester_net_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,requester_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,helper_utility,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,social_welfare,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,low_w_high_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,low_w_high_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,low_w_high_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,med_w_med_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,med_w_med_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,med_w_med_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,high_w_low_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,high_w_low_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,high_w_low_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_0_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_1_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_2_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_3_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_0_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_1_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_2_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_3_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_0_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_1_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_2_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_3_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_0_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_1_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_2_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,0,Always Accept,always_accept,MultiAgent-Greedy,agent_3_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,cumulative_regret,30,99.24,1.3294022509487413,0.2427145336142564,98.7435930412757,99.73640695872429
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,ask_rate,30,0.4962,0.006647011254743719,0.0012135726680712843,0.4937179652063785,0.49868203479362144
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,optimal_action_rate,30,0.5037999999999999,0.006647011254743722,0.001213572668071285,0.5013179652063785,0.5062820347936213
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,rejection_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,success_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,task_completion_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_workload,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_resources,30,1.6987583333333331,0.0029291072940795314,0.0005347793794400925,1.697664586694501,1.6998520799721653
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,total_communication_cost,30,99.24000000000031,1.329402250948762,0.24271453361426018,98.74359304127601,99.7364069587246
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_requester_reward,30,150.1899999999993,0.3323505627371735,0.06067863340356194,150.06589826031822,150.31410173968035
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_cooperation_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,avg_acceptance_rate_per_agent,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,requester_net_utility,30,0.3003799999999986,0.000664701125474351,0.00012135726680712462,0.30013179652063643,0.30062820347936076
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,requester_utility,30,0.3003799999999986,0.000664701125474351,0.00012135726680712462,0.30013179652063643,0.30062820347936076
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,helper_utility,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,social_welfare,30,0.3003799999999986,0.000664701125474351,0.00012135726680712462,0.30013179652063643,0.30062820347936076
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,low_w_high_r_visits,30,601.9666666666667,16.12127173329854,2.9433280613326724,595.9468848691081,607.9864484642253
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,low_w_high_r_accept_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,low_w_high_r_reject_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,med_w_med_r_visits,30,327.1333333333333,11.066361995529151,2.0204320314897335,323.00108585261614,331.2655808140505
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,med_w_med_r_accept_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,med_w_med_r_reject_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,high_w_low_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,high_w_low_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,high_w_low_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_0_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_1_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_2_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_3_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_0_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_1_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_2_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_3_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_0_incoming_request_frequency,30,0.12393333333333331,0.004782751576621787,0.0008732069751530502,0.12214742454403325,0.12571924212263336
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_1_incoming_request_frequency,30,0.12408333333333334,0.0033323992944230565,0.0006084100880566025,0.12283899498666741,0.12532767167999928
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_2_incoming_request_frequency,30,0.12486666666666664,0.003791854548837581,0.0006922947570589726,0.12345076490843657,0.1262825684248967
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_3_incoming_request_frequency,30,0.12331666666666667,0.005071018624010119,0.0009258370966330502,0.12142311719284668,0.12521021614048666
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_0_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_1_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_2_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-TS,agent_3_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,cumulative_regret,30,200.00000000000003,0.0,0.0,200.00000000000003,200.00000000000003
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,ask_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,optimal_action_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,rejection_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,success_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,task_completion_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_workload,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_resources,30,1.6119708333333331,0.0565977439096376,0.010333287014403048,1.590836888430811,1.6331047782358552
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,total_communication_cost,30,200.00000000000176,0.0,0.0,200.00000000000176,200.00000000000176
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_requester_reward,30,124.99999999999999,0.0,0.0,124.99999999999999,124.99999999999999
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_cooperation_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,avg_acceptance_rate_per_agent,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,requester_net_utility,30,0.24999999999999997,0.0,0.0,0.24999999999999997,0.24999999999999997
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,requester_utility,30,0.24999999999999997,0.0,0.0,0.24999999999999997,0.24999999999999997
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,helper_utility,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,social_welfare,30,0.24999999999999997,0.0,0.0,0.24999999999999997,0.24999999999999997
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,low_w_high_r_visits,30,1050.9,239.9017543165075,43.79986747473784,961.3192127191822,1140.480787280818
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,low_w_high_r_accept_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,low_w_high_r_reject_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,med_w_med_r_visits,30,666.2333333333333,1.072648457158112,0.19583791875287057,665.8327998168464,666.6338668498203
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,med_w_med_r_accept_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,med_w_med_r_reject_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,high_w_low_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,high_w_low_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,high_w_low_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_0_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_1_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_2_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_3_acceptance_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_0_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_1_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_2_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_3_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_0_incoming_request_frequency,30,0.25003333333333333,0.0004138409933973341,7.555668243468879e-05,0.2498788025667567,0.25018786409990995
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_1_incoming_request_frequency,30,0.25003333333333333,0.00045359356965986845,8.281447668066695e-05,0.2498639587108283,0.2502027079558383
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_2_incoming_request_frequency,30,0.25001666666666666,0.0003343375677296862,6.104140922232015e-05,0.2498918229671276,0.2501415103662057
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_3_incoming_request_frequency,30,0.24991666666666668,0.00041695392396839725,7.61250231992617e-05,0.2497609735127115,0.25007235982062187
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_0_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_1_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_2_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-D-UCB,agent_3_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,cumulative_regret,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,ask_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,optimal_action_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,rejection_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,success_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,task_completion_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_workload,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_resources,30,1.75,0.0,0.0,1.75,1.75
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,total_communication_cost,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_requester_reward,30,174.99999999999832,5.78151716258171e-14,1.0555557888497552e-14,174.9999999999983,174.99999999999835
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_cooperation_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,avg_acceptance_rate_per_agent,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,requester_net_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,requester_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,helper_utility,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,social_welfare,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,low_w_high_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,low_w_high_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,low_w_high_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,med_w_med_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,med_w_med_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,med_w_med_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,high_w_low_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,high_w_low_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,high_w_low_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_0_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_1_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_2_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_3_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_0_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_1_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_2_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_3_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_0_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_1_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_2_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_3_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_0_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_1_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_2_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,1,Always Reject,always_reject,MultiAgent-Greedy,agent_3_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,cumulative_regret,30,222.27166666666668,11.47877113551835,2.0957272944541967,217.98542308222238,226.55791025111097
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,ask_rate,30,0.9617333333333331,0.00622527292482071,0.001136574135850155,0.959408778220211,0.9640578884464552
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,optimal_action_rate,30,0.4935333333333334,0.018848275020923472,0.0034412084663403143,0.48649527177321616,0.5005713948934506
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,acceptance_rate,30,0.8688590916713187,0.013663687544555905,0.002494636628951881,0.8637569868914363,0.8739611964512011
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,rejection_rate,30,0.13114090832868144,0.013663687544555903,0.0024946366289518808,0.12603880354879907,0.13624301310856382
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,success_rate,30,0.702792928072544,0.011189826772993627,0.0020429735127146164,0.698614578086248,0.70697127805884
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,task_completion_rate,30,0.7516666666666667,0.009920662287865903,0.001811256840151655,0.747962230487673,0.7553711028456604
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_workload,30,0.34314583333333337,0.008433185891560148,0.0015396820481472695,0.339996829969003,0.34629483669766375
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_resources,30,1.5742208333333332,0.011249074834244687,0.002053790679259834,1.5700203597573752,1.5784213069092912
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,total_communication_cost,30,192.3466666666683,1.2450545849641648,0.22731482717003515,191.8817556440439,192.81157768929273
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_requester_reward,30,274.3329166666674,5.664044075970706,1.0341082357042202,272.2179278498316,276.44790548350323
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_helper_reward,30,68.18041666666657,3.266370711068496,0.5963549732088015,66.96073379822668,69.40009953510646
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_cooperation_frequency,30,0.20891249999999997,0.004105052343317844,0.0007494765893915417,0.20737964826329186,0.2104453517367081
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,avg_acceptance_rate_per_agent,30,0.8598138197212521,0.016083020801599634,0.002936344428620313,0.8538083210563266,0.8658193183861776
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,requester_net_utility,30,0.5486658333333349,0.011328088151941411,0.00206821647140844,0.5444358556996632,0.5528958109670065
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,requester_utility,30,0.5486658333333349,0.011328088151941411,0.00206821647140844,0.5444358556996632,0.5528958109670065
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,helper_utility,30,0.13636083333333318,0.006532741422136994,0.0011927099464176033,0.1339214675964534,0.13880019907021296
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,social_welfare,30,0.685026666666668,0.017614563348377684,0.0032159645621700626,0.6784492806160695,0.6916040527172665
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,low_w_high_r_visits,30,1212.7,47.96201801857167,8.756626390746979,1194.790688140563,1230.6093118594372
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,low_w_high_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,low_w_high_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,med_w_med_r_visits,30,421.93333333333334,38.45995080719623,7.021794205880132,407.5721516825116,436.29451498415506
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,med_w_med_r_accept_rate,30,0.7930916436340023,0.021748944146755857,0.003970795770366044,0.7849704544215945,0.8012128328464101
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,med_w_med_r_reject_rate,30,0.20690835636599764,0.02174894414675586,0.0039707957703660444,0.19878716715358985,0.21502954557840542
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,high_w_low_r_visits,30,100.3,11.362825049407753,2.0745585321817934,96.05705139564247,104.54294860435752
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,high_w_low_r_accept_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,high_w_low_r_reject_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_0_acceptance_rate,30,0.9145075552140816,0.023060663882325673,0.004210281933131477,0.9058965618027053,0.9231185486254578
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_1_acceptance_rate,30,0.8285551575484063,0.0221623891330188,0.004046280152120585,0.8202795854409161,0.8368307296558964
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_2_acceptance_rate,30,0.8346046633402479,0.027294727022580206,0.004983312563737666,0.8244126447688792,0.8447966819116165
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_3_acceptance_rate,30,0.8615879027822725,0.018872720268376372,0.003445671537491564,0.8545407132167417,0.8686350923478032
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_0_help_frequency,30,0.2760666666666667,0.0203231366933717,0.003710480135406877,0.268477882707188,0.2836554506261454
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_1_help_frequency,30,0.12975,0.014655086206643004,0.0026756404325203966,0.12427770087572053,0.1352222991242795
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_2_help_frequency,30,0.10305000000000002,0.015350699186592166,0.0028026414059909113,0.09731795472019893,0.1087820452798011
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_3_help_frequency,30,0.3267833333333333,0.017169380992865205,0.0031346857560642393,0.3203721811062596,0.33319448556040704
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_0_incoming_request_frequency,30,0.3023,0.026442716225443075,0.004827757386127678,0.2924261274888666,0.31217387251113343
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_1_incoming_request_frequency,30,0.15656666666666666,0.01685114000713987,0.0030765831671960907,0.1502743475766307,0.16285898575670263
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_2_incoming_request_frequency,30,0.12344999999999999,0.01765099879952094,0.003222616734998075,0.11685900872834902,0.13004099127165097
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_3_incoming_request_frequency,30,0.37941666666666674,0.020769292374732625,0.0037919366456870326,0.37166128543781835,0.3871720478955151
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_0_helper_reward,30,87.0266666666666,9.985202269749564,1.8230401747978735,83.29813086237121,90.75520247096199
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_1_helper_reward,30,38.591666666666846,8.568990639200962,1.5644764893803262,35.39195297616649,41.7913803571672
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_2_helper_reward,30,21.851666666666702,6.949788924273526,1.2688520545747244,19.256572833169493,24.44676050016391
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-TS,agent_3_helper_reward,30,125.25166666666617,11.31091541261183,2.065081172506784,121.02810143924513,129.4752318940872
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,cumulative_regret,30,214.08833333333342,90.14801591265619,16.45870060989882,180.42651097498077,247.75015569168607
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,ask_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,optimal_action_rate,30,0.40903333333333336,0.1981028526545871,0.036168467035013176,0.33506051244282486,0.48300615422384185
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,acceptance_rate,30,0.9884166666666666,0.011729775943220793,0.002141554292861155,0.9840366963466705,0.9927966369866628
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,rejection_rate,30,0.011583333333333334,0.011729775943220779,0.0021415542928611524,0.0072033630133371655,0.015963303653329503
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,success_rate,30,0.6686575128294765,0.04030268283888887,0.007358229506278593,0.65360824372962,0.683706781929333
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,task_completion_rate,30,0.6726166666666664,0.039108091440160496,0.0071401279542502,0.6580134653260136,0.6872198680073193
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_workload,30,0.28885,0.0517369986166773,0.009445840399989244,0.26953108721908736,0.30816891278091263
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_resources,30,1.698258333333333,0.051210591801342034,0.009349732104261384,1.6791359840876978,1.7173806825789681
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,total_communication_cost,30,200.00000000000176,0.0,0.0,200.00000000000176,200.00000000000176
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_requester_reward,30,282.54375000000044,20.558251644244393,3.7534060561401086,274.8671726750223,290.2203273249786
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_helper_reward,30,84.4424999999994,10.721135868476761,1.957402652414154,80.4391620736928,88.445837926306
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_cooperation_frequency,30,0.24710416666666665,0.002932443985805198,0.0005353885732152887,0.24600917408666761,0.2481991592466657
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,avg_acceptance_rate_per_agent,30,0.9862565663394314,0.012526782388814679,0.00228706709577075,0.9815789889216147,0.9909341437572481
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,requester_net_utility,30,0.5650875000000007,0.041116503288488794,0.007506812112280218,0.5497343453500444,0.5804406546499571
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,requester_utility,30,0.5650875000000007,0.041116503288488794,0.007506812112280218,0.5497343453500444,0.5804406546499571
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,helper_utility,30,0.16888499999999879,0.02144227173695352,0.003914805304828308,0.16087832414738557,0.176891675852612
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,social_welfare,30,0.7339724999999996,0.058812921679383644,0.010737721292194346,0.7120113941242442,0.755933605875755
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,low_w_high_r_visits,30,1786.6333333333334,205.45584026464317,37.51093276137441,1709.9148617457238,1863.351804920943
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,low_w_high_r_accept_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,low_w_high_r_reject_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,med_w_med_r_visits,30,170.8,205.38565910383625,37.49811949307913,94.10773448852045,247.49226551147956
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,med_w_med_r_accept_rate,30,0.8062900330716938,0.22225913871431216,0.04057878129516618,0.7232971067251999,0.8892829594181877
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,med_w_med_r_reject_rate,30,0.1937099669283063,0.22225913871431216,0.04057878129516618,0.11071704058181236,0.27670289327480024
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,high_w_low_r_visits,30,3.2666666666666666,5.394335044721699,0.9848663289115712,1.252388857238305,5.280944476095028
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,high_w_low_r_accept_rate,17,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,high_w_low_r_reject_rate,17,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_0_acceptance_rate,30,0.9924647031852447,0.012394576798623554,0.0022629297677787623,0.9878364921461191,0.9970929142243703
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_1_acceptance_rate,30,0.9827125233805598,0.01858705956687211,0.0033935172674893527,0.9757720012740014,0.9896530454871182
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_2_acceptance_rate,30,0.9743079937062654,0.02383376175257309,0.004351429647362714,0.9654083208058242,0.9832076666067067
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_3_acceptance_rate,30,0.9955410450856552,0.008140150945297377,0.001486181431412125,0.9925014627685439,0.9985806274027665
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_0_help_frequency,30,0.23496666666666668,0.14530894158910912,0.026529661705185215,0.18070741615146907,0.2892259171818643
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_1_help_frequency,30,0.2472,0.13747254271308143,0.025098937560515715,0.1958669089151954,0.29853309108480464
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_2_help_frequency,30,0.19864999999999997,0.11074225667645166,0.020218677350239887,0.15729816175857225,0.24000183824142768
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_3_help_frequency,30,0.3076,0.13483287228371227,0.024617001881000772,0.2572525780525407,0.35794742194745927
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_0_incoming_request_frequency,30,0.23608333333333326,0.14534175440909142,0.026535652479078433,0.1818118303097899,0.2903548363568766
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_1_incoming_request_frequency,30,0.2514166666666667,0.13922222891114946,0.02541838509359482,0.1994302320181025,0.30340310131523085
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_2_incoming_request_frequency,30,0.20373333333333335,0.11227289209266221,0.020498131865164828,0.16180994643435334,0.24565672023231336
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_3_incoming_request_frequency,30,0.3087666666666667,0.13496319634558193,0.02464079569049134,0.258370580914738,0.35916275241859535
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_0_helper_reward,30,86.27666666666599,52.66353304368774,9.615001668648825,66.61178024479001,105.94155308854197
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_1_helper_reward,30,71.89999999999964,37.40790300052256,6.829717434117131,57.931659456352776,85.8683405436465
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_2_helper_reward,30,40.68833333333349,24.803572056895405,4.5284919740888085,31.426527313767018,49.95013935289996
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-D-UCB,agent_3_helper_reward,30,138.90499999999844,58.39837968642515,10.662036625335508,117.09868664835773,160.71131335163915
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,cumulative_regret,30,650.0,0.0,0.0,650.0,650.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,ask_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,optimal_action_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,rejection_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,success_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,task_completion_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_workload,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_resources,30,1.75,0.0,0.0,1.75,1.75
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,total_communication_cost,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_requester_reward,30,174.99999999999832,5.78151716258171e-14,1.0555557888497552e-14,174.9999999999983,174.99999999999835
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_cooperation_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,avg_acceptance_rate_per_agent,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,requester_net_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,requester_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,helper_utility,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,social_welfare,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,low_w_high_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,low_w_high_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,low_w_high_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,med_w_med_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,med_w_med_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,med_w_med_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,high_w_low_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,high_w_low_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,high_w_low_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_0_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_1_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_2_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_3_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_0_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_1_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_2_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_3_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_0_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_1_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_2_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_3_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_0_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_1_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_2_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,2,Informed Threshold,informed_threshold,MultiAgent-Greedy,agent_3_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,cumulative_regret,30,255.62088809826656,22.522017017342534,4.111938920304575,247.2110287318205,264.03074746471265
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,ask_rate,30,0.9145000000000001,0.022844677943556733,0.004170848476208917,0.9059696570636135,0.9230303429363866
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,optimal_action_rate,30,0.43488333333333334,0.03927570173945257,0.0071707292681810215,0.420217545278341,0.4495491213883257
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,acceptance_rate,30,0.6899806277346843,0.05644965458319969,0.010306249726197786,0.6689019802954425,0.7110592751739261
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,rejection_rate,30,0.3100193722653158,0.056449654583199685,0.010306249726197784,0.288940724826074,0.33109801970455754
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,success_rate,30,0.6993048530821677,0.020712190048783014,0.0037815112350174946,0.6915707942122521,0.7070389119520833
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,task_completion_rate,30,0.8099000000000001,0.023363838843761118,0.004265633854881127,0.8011757991975124,0.8186242008024878
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_workload,30,0.3179125,0.03400941410616812,0.006209241091160891,0.3052131760652093,0.33061182393479066
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_resources,30,1.5794958333333335,0.031272345172012134,0.00570952295893294,1.5678185477352866,1.5911731189313805
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,total_communication_cost,30,182.9000000000015,4.568935588711407,0.8341696952417946,181.1939314127242,184.60606858727883
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_requester_reward,30,239.61416666666767,11.908716532608512,2.1742242252814625,235.16737883247902,244.06095450085633
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_helper_reward,30,52.30958333333333,5.597936507264716,1.0220387001701892,50.21927948833848,54.39988717832818
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_cooperation_frequency,30,0.1579916666666667,0.016065596049844574,0.0029331631187552547,0.15199267451097803,0.16399065882235536
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,avg_acceptance_rate_per_agent,30,0.6569029606128616,0.07400950647161995,0.013512225388110274,0.6292673567179203,0.6845385645078028
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,requester_net_utility,30,0.4792283333333353,0.023817433065217018,0.004348448450562924,0.47033475766495797,0.48812190900171265
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,requester_utility,30,0.4792283333333353,0.023817433065217018,0.004348448450562924,0.47033475766495797,0.48812190900171265
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,helper_utility,30,0.10461916666666667,0.011195873014529433,0.0020440774003403785,0.10043855897667697,0.10879977435665636
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,social_welfare,30,0.583847500000002,0.03064920285710319,0.005595753258129068,0.5724028995664158,0.5952921004335882
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,helper_policy_convergence,30,0.9913194444444444,0.0162029909987396,0.002958247889687613,0.9852691481716788,0.9973697407172101
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,helper_policy_stability,30,0.9913194444444444,0.0162029909987396,0.002958247889687613,0.9852691481716788,0.9973697407172101
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,helper_states_evaluated,30,4.358333333333333,0.32659313329071027,0.05962747540987114,4.2363814531395265,4.48028521352714
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,low_w_high_r_visits,30,1117.1333333333334,94.93908512861006,17.333426171280994,1081.6824963281108,1152.584170338556
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,low_w_high_r_accept_rate,30,0.8851136343006192,0.05370117155203469,0.00980444767450137,0.8650612872919899,0.9051659813092484
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,low_w_high_r_reject_rate,30,0.11488636569938074,0.05370117155203471,0.009804447674501374,0.09483401869075148,0.13493871270801
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,med_w_med_r_visits,30,395.6,42.91659915182726,7.8354631489542905,379.5746785079203,411.62532149207976
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,med_w_med_r_accept_rate,30,0.32732080912653755,0.25818622520712364,0.04713813986101685,0.23091248820778876,0.42372913004528634
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,med_w_med_r_reject_rate,30,0.6726791908734625,0.25818622520712364,0.04713813986101685,0.5762708699547137,0.7690875117922114
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,high_w_low_r_visits,30,96.3,59.73686553082841,10.90640958862918,73.99388782009527,118.60611217990473
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,high_w_low_r_accept_rate,30,0.25665843148633255,0.24691822041700695,0.04508089306047579,0.164457652705233,0.3488592102674321
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,high_w_low_r_reject_rate,30,0.7433415685136675,0.24691822041700698,0.045080893060475795,0.651140789732568,0.8355423472947671
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_0_acceptance_rate,30,0.7241538168762337,0.0594226681146445,0.010849045251177924,0.7019650279396856,0.7463426058127818
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_1_acceptance_rate,30,0.697864106463463,0.10677443354861951,0.01949425527313843,0.6579938777275385,0.7377343351993875
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_2_acceptance_rate,30,0.5200426241539245,0.2435371385205477,0.044463594785988096,0.4291043621018446,0.6109808862060045
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_3_acceptance_rate,30,0.6855512949578245,0.06916154250948821,0.012627112314766382,0.6597259505571255,0.7113766393585236
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_0_help_frequency,30,0.19443333333333335,0.03619457316279309,0.0066081947268442935,0.18091805759700638,0.2079486090696603
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_1_help_frequency,30,0.12653333333333333,0.034509851999935774,0.006300608132176531,0.11364714281794353,0.13941952384872314
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_2_help_frequency,30,0.07135,0.04413540099160373,0.008057984902545745,0.05486957042145564,0.08783042957854435
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_3_help_frequency,30,0.23965000000000003,0.05552820811580115,0.01013801738762191,0.21891542632637895,0.2603845736736211
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_0_incoming_request_frequency,30,0.2670166666666667,0.03433091582829092,0.00626793900632203,0.25419729201585706,0.2798360413174763
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_1_incoming_request_frequency,30,0.17866666666666667,0.03162450308546047,0.005773817903266142,0.16685788314263025,0.19047545019070308
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_2_incoming_request_frequency,30,0.12288333333333336,0.03628661844483335,0.0066249998192727515,0.10933368732383293,0.1364329793428338
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_3_incoming_request_frequency,30,0.34593333333333337,0.05293224904069113,0.009664062273022574,0.32616810670913127,0.3656985599575355
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_0_helper_reward,30,65.77166666666685,10.215350883751276,1.8650593706203025,61.95719195753684,69.58614137579686
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_1_helper_reward,30,34.00000000000014,11.164969848778812,2.038435280013733,29.83093174174698,38.169068258253304
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_2_helper_reward,30,13.028333333333357,10.929528835897433,1.9954498287747342,8.947180194134644,17.10948647253207
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-TS,agent_3_helper_reward,30,96.43833333333299,14.820626838465742,2.7058638785980533,90.90422032124809,101.9724463454179
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,cumulative_regret,30,195.1845543819854,32.32250747330527,5.901255486086202,183.11513173604368,207.25397702792714
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,ask_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,optimal_action_rate,30,0.5049333333333333,0.07562164593113094,0.01380656043738306,0.47669574667090087,0.5331709199957658
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,acceptance_rate,30,0.8211499999999998,0.056769064851712424,0.010364565795918854,0.7999520828063519,0.8423479171936478
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,rejection_rate,30,0.17885000000000004,0.056769064851712424,0.010364565795918854,0.15765208280635207,0.200047917193648
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,success_rate,30,0.6871045459709807,0.02773476034415214,0.005063651289163957,0.6767482162569591,0.6974608756850023
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,task_completion_rate,30,0.7428166666666667,0.031022373276043225,0.005663884543544771,0.7312327221085917,0.7544006112247417
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_workload,30,0.31176666666666664,0.03825120762874645,0.006983683090026042,0.29748343099968444,0.32604990233364883
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_resources,30,1.6271875,0.04038945308194482,0.007374071512759243,1.6121058303588984,1.6422691696411016
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,total_communication_cost,30,200.00000000000176,0.0,0.0,200.00000000000176,200.00000000000176
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_requester_reward,30,263.28208333333436,13.84239283000052,2.527263600946353,258.1132489031958,268.4509177634729
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_helper_reward,30,68.55833333333318,5.442330230088252,0.9936290108038721,66.52613382715411,70.59053283951225
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_cooperation_frequency,30,0.20528749999999996,0.014192266212928106,0.0025911414489797136,0.19998802070158797,0.21058697929841194
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,avg_acceptance_rate_per_agent,30,0.7565509504768714,0.09312458901932404,0.017002146021427224,0.7217776574539798,0.7913242434997629
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,requester_net_utility,30,0.5265641666666687,0.02768478566000103,0.005054527201892704,0.5162264978063917,0.5369018355269457
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,requester_utility,30,0.5265641666666687,0.02768478566000103,0.005054527201892704,0.5162264978063917,0.5369018355269457
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,helper_utility,30,0.1371166666666664,0.010884660460176502,0.001987258021607744,0.13305226765430825,0.14118106567902453
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,social_welfare,30,0.6636808333333352,0.03218900385394298,0.005876881171475099,0.6516612617581428,0.6757004049085276
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,helper_policy_convergence,30,0.994375,0.01619436763518255,0.0029566734861070252,0.988327923744106,1.000422076255894
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,helper_policy_stability,30,0.994375,0.01619436763518255,0.0029566734861070252,0.988327923744106,1.000422076255894
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,helper_states_evaluated,30,3.9166666666666665,0.3926635028071512,0.07169021933215661,3.770043705037545,4.063289628295788
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,low_w_high_r_visits,30,1481.4666666666667,157.36794865654127,28.73132510250082,1422.7045089092805,1540.2288244240528
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,low_w_high_r_accept_rate,30,0.9179376939198932,0.0348804520572452,0.006368270135910225,0.9049131190688212,0.9309622687709652
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,low_w_high_r_reject_rate,30,0.08206230608010666,0.0348804520572452,0.006368270135910225,0.06903773122903462,0.0950868809311787
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,med_w_med_r_visits,30,301.43333333333334,101.51055094926335,18.533206193229663,263.52867066318265,339.337996003484
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,med_w_med_r_accept_rate,30,0.48302376524127016,0.2715112868827323,0.049570952147642997,0.38163978452016895,0.5844077459623714
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,med_w_med_r_reject_rate,30,0.5169762347587299,0.2715112868827323,0.049570952147642997,0.41559225403762867,0.6183602154798311
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,high_w_low_r_visits,30,69.1,50.75862420352312,9.26721448806577,50.146418229006244,88.05358177099374
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,high_w_low_r_accept_rate,30,0.2763866144147135,0.2599054604786129,0.047452027840967914,0.17933632049505965,0.3734369083343674
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,high_w_low_r_reject_rate,30,0.7236133855852864,0.25990546047861285,0.0474520278409679,0.6265630916656326,0.8206636795049402
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_0_acceptance_rate,30,0.807375622826763,0.142076205257503,0.025939447501422824,0.754323495896308,0.860427749757218
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_1_acceptance_rate,30,0.7769169858411645,0.18465363538213744,0.03371298714137692,0.7079661852147818,0.8458677864675472
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_2_acceptance_rate,30,0.5927804906867477,0.2966120073586959,0.05415369575241536,0.4820237469028719,0.7035372344706234
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_3_acceptance_rate,30,0.8491307025528098,0.05306128152945297,0.009687620274604538,0.8293172944054628,0.8689441107001568
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_0_help_frequency,30,0.22253333333333333,0.07464178054078595,0.013627662311512873,0.19466163442085255,0.2504050322458141
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_1_help_frequency,30,0.1924833333333333,0.07454892900700823,0.01361071001832987,0.16464630575337252,0.2203203609132941
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_2_help_frequency,30,0.12048333333333332,0.09421009933171684,0.017200332182927897,0.08530470409828009,0.15566196256838655
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_3_help_frequency,30,0.28565000000000007,0.06558768150740839,0.011974617552024003,0.26115915722939803,0.3101408427706021
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_0_incoming_request_frequency,30,0.2675166666666666,0.0791484292363071,0.014450460027942263,0.23796215747506533,0.2970711758582679
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_1_incoming_request_frequency,30,0.23538333333333336,0.07594844931941,0.013866226299926246,0.20702371628020413,0.2637429503864626
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_2_incoming_request_frequency,30,0.16156666666666666,0.09939998728000103,0.018147871749661048,0.12445010142263721,0.19868323191069612
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_3_incoming_request_frequency,30,0.3355333333333333,0.06850458496275662,0.012507168825543667,0.3099533009121733,0.36111336575449327
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_0_helper_reward,30,78.58999999999986,23.716473250638764,4.3300157946142415,69.73412334595203,87.4458766540477
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_1_helper_reward,30,51.67666666666693,18.836752105526553,3.4391046794432754,44.64290783387226,58.71042549946161
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_2_helper_reward,30,23.75000000000015,20.306381704553896,3.7074211069647913,16.16747245616732,31.332527543832978
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-D-UCB,agent_3_helper_reward,30,120.21666666666582,18.69428888140961,3.413094572288687,113.23610447601875,127.19722885731288
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,cumulative_regret,30,225.0,0.0,0.0,225.0,225.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,ask_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,optimal_action_rate,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,rejection_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,success_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,task_completion_rate,30,1.0,0.0,0.0,1.0,1.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_workload,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_resources,30,1.75,0.0,0.0,1.75,1.75
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,total_communication_cost,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_requester_reward,30,174.99999999999832,5.78151716258171e-14,1.0555557888497552e-14,174.9999999999983,174.99999999999835
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_request_frequency,30,0.25,0.0,0.0,0.25,0.25
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_cooperation_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,avg_acceptance_rate_per_agent,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,requester_net_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,requester_utility,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,helper_utility,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,social_welfare,30,0.34999999999999665,1.1292025708167404e-16,2.0616324000971782e-17,0.3499999999999966,0.3499999999999967
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,helper_policy_convergence,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,helper_policy_stability,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,helper_states_evaluated,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,low_w_high_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,low_w_high_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,low_w_high_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,med_w_med_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,med_w_med_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,med_w_med_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,high_w_low_r_visits,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,high_w_low_r_accept_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,high_w_low_r_reject_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_0_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_1_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_2_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_3_acceptance_rate,0,nan,nan,nan,nan,nan
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_0_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_1_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_2_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_3_help_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_0_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_1_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_2_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_3_incoming_request_frequency,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_0_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_1_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_2_helper_reward,30,0.0,0.0,0.0,0.0,0.0
+E5_helper_learning,3,Q-Learning,q_learning,MultiAgent-Greedy,agent_3_helper_reward,30,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,262 @@
+{
+  "experiment": "S2_alpha_ucb_E2_U080",
+  "title": "S2: D-UCB exploration-intensity sensitivity",
+  "config": {
+    "name": "S2_alpha_ucb_E2_U080",
+    "title": "S2: D-UCB exploration-intensity sensitivity",
+    "T": 2000,
+    "R": 1.0,
+    "n_seeds": 30,
+    "base": {
+      "theta": [
+        0.75,
+        0.65,
+        0.5
+      ],
+      "c": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "U_self": 0.8,
+      "lambda": 1.0,
+      "gamma": 0.98,
+      "alpha_ucb": 1.0
+    },
+    "reliability": {
+      "type": "stationary"
+    },
+    "sweep": {
+      "name": "alpha",
+      "symbol": "\u03b1",
+      "points": [
+        {
+          "value": 0.05,
+          "set": {
+            "alpha_ucb": 0.05
+          }
+        },
+        {
+          "value": 0.1,
+          "set": {
+            "alpha_ucb": 0.1
+          }
+        },
+        {
+          "value": 0.25,
+          "set": {
+            "alpha_ucb": 0.25
+          }
+        },
+        {
+          "value": 0.5,
+          "set": {
+            "alpha_ucb": 0.5
+          }
+        },
+        {
+          "value": 1.0,
+          "set": {
+            "alpha_ucb": 1.0
+          }
+        },
+        {
+          "value": 2.0,
+          "set": {
+            "alpha_ucb": 2.0
+          }
+        }
+      ]
+    },
+    "algorithms": [
+      "Dynamic Oracle",
+      "D-UCB"
+    ],
+    "notes": "Run once per scenario (E1 with \u0394 = 0.10, E2 with U_self = 0.80, E3 with gamma = 0.98).",
+    "scenario": "E2_U080"
+  },
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "points": [
+    {
+      "index": 0,
+      "label": "\u03b1=0.05",
+      "value": 0.05,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 0.05
+      }
+    },
+    {
+      "index": 1,
+      "label": "\u03b1=0.1",
+      "value": 0.1,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 0.1
+      }
+    },
+    {
+      "index": 2,
+      "label": "\u03b1=0.25",
+      "value": 0.25,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 0.25
+      }
+    },
+    {
+      "index": 3,
+      "label": "\u03b1=0.5",
+      "value": 0.5,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 0.5
+      }
+    },
+    {
+      "index": 4,
+      "label": "\u03b1=1.0",
+      "value": 1.0,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 1.0
+      }
+    },
+    {
+      "index": 5,
+      "label": "\u03b1=2.0",
+      "value": 2.0,
+      "params": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 2.0
+      }
+    }
+  ],
+  "algorithms": [
+    {
+      "label": "Dynamic Oracle",
+      "canonical": "Dynamic Oracle",
+      "overrides": {},
+      "slug": "Dynamic_Oracle"
+    },
+    {
+      "label": "D-UCB",
+      "canonical": "D-UCB",
+      "overrides": {},
+      "slug": "D_UCB"
+    }
+  ],
+  "n_runs": 360,
+  "runtime_seconds": 14.33,
+  "completed_at": "2026-10-20 18:10:06",
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "files": {
+    "runs": "raw/S2_alpha_ucb_E2_U080/runs.csv",
+    "curves": "raw/S2_alpha_ucb_E2_U080/curves.npz",
+    "summary": "processed/S2_alpha_ucb_E2_U080_summary.csv"
+  }
+}

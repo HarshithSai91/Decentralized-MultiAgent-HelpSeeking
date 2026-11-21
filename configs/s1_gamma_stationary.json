@@ -1,0 +1,69 @@
+{
+  "name": "S1_gamma_stationary",
+  "title": "S1 (H2): cost of forgetting in a stationary setting",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "base": {
+    "theta": [
+      0.7,
+      0.6,
+      0.5
+    ],
+    "c": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "U_self": 0.35,
+    "lambda": 1.0,
+    "gamma": 1.0,
+    "alpha_ucb": 1.0
+  },
+  "reliability": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "name": "gamma",
+    "symbol": "\u03b3",
+    "points": [
+      {
+        "value": 1.0,
+        "set": {
+          "gamma": 1.0
+        }
+      },
+      {
+        "value": 0.995,
+        "set": {
+          "gamma": 0.995
+        }
+      },
+      {
+        "value": 0.98,
+        "set": {
+          "gamma": 0.98
+        }
+      },
+      {
+        "value": 0.95,
+        "set": {
+          "gamma": 0.95
+        }
+      },
+      {
+        "value": 0.9,
+        "set": {
+          "gamma": 0.9
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "Dynamic Oracle",
+    "Greedy",
+    "D-UCB",
+    "D-TS"
+  ],
+  "notes": "E1 environment with \u0394 = 0.10, sweeping gamma to test hypothesis H2."
+}

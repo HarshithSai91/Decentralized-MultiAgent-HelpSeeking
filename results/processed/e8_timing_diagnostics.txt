@@ -1,0 +1,16 @@
+E8 timing diagnostics: mean over 30 seeds of the evaluation phase (next 400 tasks)
+
+Training phase: 400 tasks
+  Learned (online)             completion 0.540  requester reward 0.185  ask rate 0.548
+  Learned (greedy evaluation)  completion 0.543  requester reward 0.190  ask rate 0.532
+  Planned                      completion 0.593  requester reward 0.269  ask rate 0.441
+  Fixed delay (k=2)            completion 0.593  requester reward 0.245  ask rate 0.789
+  Urgency                      completion 0.609  requester reward 0.272  ask rate 0.680
+
+Training phase: 2000 tasks
+  Learned (online)             completion 0.550  requester reward 0.200  ask rate 0.485
+  Learned (greedy evaluation)  completion 0.551  requester reward 0.203  ask rate 0.484
+  Planned                      completion 0.591  requester reward 0.266  ask rate 0.442
+  Fixed delay (k=2)            completion 0.591  requester reward 0.242  ask rate 0.788
+  Urgency                      completion 0.604  requester reward 0.263  ask rate 0.678
+

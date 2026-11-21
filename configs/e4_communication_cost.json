@@ -1,0 +1,70 @@
+{
+  "name": "E4_communication_cost",
+  "title": "E4: Communication-cost variation (varying lambda)",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "base": {
+    "theta": [
+      0.6,
+      0.75,
+      0.9
+    ],
+    "c": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "U_self": 0.45,
+    "lambda": 1.0,
+    "gamma": 0.98,
+    "alpha_ucb": 1.0
+  },
+  "reliability": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "name": "lambda",
+    "symbol": "\u03bb",
+    "points": [
+      {
+        "value": 0.0,
+        "set": {
+          "lambda": 0.0
+        }
+      },
+      {
+        "value": 1.0,
+        "set": {
+          "lambda": 1.0
+        }
+      },
+      {
+        "value": 2.5,
+        "set": {
+          "lambda": 2.5
+        }
+      },
+      {
+        "value": 4.0,
+        "set": {
+          "lambda": 4.0
+        }
+      },
+      {
+        "value": 6.0,
+        "set": {
+          "lambda": 6.0
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "Dynamic Oracle",
+    "Always-Ask + Fixed-Cheapest",
+    "Greedy",
+    "D-UCB",
+    "D-TS"
+  ],
+  "notes": "Proposal Table 2, E4."
+}

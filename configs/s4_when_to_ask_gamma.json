@@ -1,0 +1,90 @@
+{
+  "name": "S4_when_to_ask_gamma",
+  "title": "S4: Ask-decision accuracy vs discounting (E2 environment)",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "base": {
+    "theta": [
+      0.75,
+      0.65,
+      0.5
+    ],
+    "c": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "U_self": 0.8,
+    "lambda": 1.0,
+    "gamma": 0.98,
+    "alpha_ucb": 1.0
+  },
+  "reliability": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "name": "gamma",
+    "symbol": "\u03b3",
+    "points": [
+      {
+        "value": 1.0,
+        "set": {
+          "gamma": 1.0
+        }
+      },
+      {
+        "value": 0.995,
+        "set": {
+          "gamma": 0.995
+        }
+      },
+      {
+        "value": 0.98,
+        "set": {
+          "gamma": 0.98
+        }
+      },
+      {
+        "value": 0.95,
+        "set": {
+          "gamma": 0.95
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "Dynamic Oracle",
+    "D-TS",
+    "D-UCB",
+    {
+      "name": "D-UCB",
+      "label": "D-UCB [alpha=0.1]",
+      "overrides": {
+        "alpha_ucb": 0.1
+      }
+    }
+  ],
+  "scenarios": {
+    "U050": {
+      "base": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.5,
+        "lambda": 1.0,
+        "gamma": 0.98,
+        "alpha_ucb": 1.0
+      }
+    },
+    "U080": {}
+  },
+  "notes": "Supplementary: is the ask-accuracy shortfall in E2 caused by discounting? E2 environment with U_self in {0.50, 0.80}, sweeping gamma."
+}

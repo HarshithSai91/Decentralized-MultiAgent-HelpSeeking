@@ -1,0 +1,20 @@
+\begin{tabular}{llrrrr}
+\toprule
+$p_c$ & Method & $\gamma=1$ & $\gamma=0.99$ & $\gamma=0.98$ & $\gamma=0.95$ \\
+\midrule
+\multirow{3}{*}{\shortstack{0.001\\[-1pt]\scriptsize($\approx$2.0 changes)}} & D-Greedy & 355.4{\scriptsize$\pm$73.7} & 110.2{\scriptsize$\pm$27.6} & 86.0{\scriptsize$\pm$28.2} & 56.5{\scriptsize$\pm$15.3} \\
+ & D-UCB & 96.1{\scriptsize$\pm$20.2} & 190.5{\scriptsize$\pm$16.3} & 216.5{\scriptsize$\pm$19.9} & 249.7{\scriptsize$\pm$26.3} \\
+ & D-TS & 126.7{\scriptsize$\pm$32.9} & 94.4{\scriptsize$\pm$7.2} & 115.6{\scriptsize$\pm$7.3} & 156.0{\scriptsize$\pm$9.9} \\
+ & Never-Ask & \multicolumn{4}{c}{527.1{\scriptsize$\pm$51.4} (independent of $\gamma$)} \\
+\midrule
+\multirow{3}{*}{\shortstack{0.0025\\[-1pt]\scriptsize($\approx$4.9 changes)}} & D-Greedy & 391.7{\scriptsize$\pm$74.1} & 167.5{\scriptsize$\pm$35.8} & 111.7{\scriptsize$\pm$27.2} & 73.5{\scriptsize$\pm$14.0} \\
+ & D-UCB & 98.0{\scriptsize$\pm$14.0} & 188.1{\scriptsize$\pm$12.8} & 220.7{\scriptsize$\pm$17.8} & 259.0{\scriptsize$\pm$25.1} \\
+ & D-TS & 158.9{\scriptsize$\pm$31.3} & 101.5{\scriptsize$\pm$10.5} & 116.6{\scriptsize$\pm$8.2} & 153.9{\scriptsize$\pm$8.7} \\
+ & Never-Ask & \multicolumn{4}{c}{570.4{\scriptsize$\pm$48.6} (independent of $\gamma$)} \\
+\midrule
+\multirow{3}{*}{\shortstack{0.005\\[-1pt]\scriptsize($\approx$10.4 changes)}} & D-Greedy & 416.5{\scriptsize$\pm$65.1} & 204.3{\scriptsize$\pm$28.0} & 174.9{\scriptsize$\pm$19.7} & 115.3{\scriptsize$\pm$13.8} \\
+ & D-UCB & 126.3{\scriptsize$\pm$16.6} & 196.5{\scriptsize$\pm$11.2} & 232.6{\scriptsize$\pm$14.9} & 278.3{\scriptsize$\pm$19.7} \\
+ & D-TS & 228.7{\scriptsize$\pm$35.2} & 131.7{\scriptsize$\pm$9.8} & 130.4{\scriptsize$\pm$6.8} & 159.7{\scriptsize$\pm$6.8} \\
+ & Never-Ask & \multicolumn{4}{c}{615.7{\scriptsize$\pm$47.9} (independent of $\gamma$)} \\
+\bottomrule
+\end{tabular}

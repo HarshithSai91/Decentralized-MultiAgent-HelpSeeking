@@ -1,0 +1,99 @@
+{
+  "name": "E7_changing_reliability",
+  "title": "E7: Multi-Agent Learning Under Changing Teammate Reliability",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "n_agents": 4,
+  "base": {
+    "theta": [
+      0.9,
+      0.7,
+      0.6,
+      0.5
+    ],
+    "c": [
+      [
+        0.0,
+        0.1,
+        0.1,
+        0.1
+      ],
+      [
+        0.1,
+        0.0,
+        0.1,
+        0.1
+      ],
+      [
+        0.1,
+        0.1,
+        0.0,
+        0.1
+      ],
+      [
+        0.1,
+        0.1,
+        0.1,
+        0.0
+      ]
+    ],
+    "U_self": 0.4,
+    "lambda": 1.0,
+    "gamma": 0.98,
+    "helper_rewards": {
+      "B_i": 0.5,
+      "resource_cost": 0.1,
+      "opportunity_cost": 0.05
+    }
+  },
+  "reliability": {
+    "type": "abrupt",
+    "theta_after": [
+      0.4,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "tau": 1000
+  },
+  "sweep": {
+    "name": "gamma",
+    "symbol": "γ",
+    "points": [
+      {
+        "value": 1.0,
+        "label": "γ = 1.00",
+        "set": {
+          "gamma": 1.0
+        }
+      },
+      {
+        "value": 0.995,
+        "label": "γ = 0.995",
+        "set": {
+          "gamma": 0.995
+        }
+      },
+      {
+        "value": 0.98,
+        "label": "γ = 0.98",
+        "set": {
+          "gamma": 0.98
+        }
+      },
+      {
+        "value": 0.95,
+        "label": "γ = 0.95",
+        "set": {
+          "gamma": 0.95
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "MultiAgent-D-TS",
+    "MultiAgent-D-UCB",
+    "MultiAgent-Greedy"
+  ]
+}

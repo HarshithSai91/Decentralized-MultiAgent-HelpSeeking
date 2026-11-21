@@ -1,0 +1,68 @@
+{
+  "name": "E2_when_to_ask",
+  "title": "E2: When to ask (varying U_self)",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "base": {
+    "theta": [
+      0.75,
+      0.65,
+      0.5
+    ],
+    "c": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "U_self": 0.5,
+    "lambda": 1.0,
+    "gamma": 0.98,
+    "alpha_ucb": 1.0
+  },
+  "reliability": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "name": "U_self",
+    "symbol": "U_self",
+    "points": [
+      {
+        "value": 0.3,
+        "set": {
+          "U_self": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "set": {
+          "U_self": 0.5
+        }
+      },
+      {
+        "value": 0.65,
+        "set": {
+          "U_self": 0.65
+        }
+      },
+      {
+        "value": 0.8,
+        "set": {
+          "U_self": 0.8
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "Dynamic Oracle",
+    "Always-Ask + Empirical Greedy",
+    "Never-Ask",
+    "D-UCB",
+    "D-TS",
+    {
+      "name": "Greedy",
+      "label": "Greedy (extra)"
+    }
+  ],
+  "notes": "Proposal Table 2, E2. 'Greedy (extra)' (discounted greedy, gamma = 0.98) is not in Table 2 and is added for completeness."
+}

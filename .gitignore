@@ -1,0 +1,58 @@
+# Python virtual environments & packages
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & test coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.npm/
+
+# Temporary, cache, and backup files
+*.tmp
+*.bak
+*~
+*.swp
+*.swo
+results/temp/
+.matplotlib/
+
+# Operating System metadata
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX/
+Thumbs.db
+
+# IDE and Editor configurations
+.claude/
+.vscode/
+.idea/
+
+# LaTeX compilation intermediates
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.bbl
+report/*.blg
+report/*.fls
+report/*.fdb_latexmk
+report/*.xdv
+report/*.synctex.gz
+*.zip

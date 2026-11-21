@@ -1,0 +1,119 @@
+{
+  "name": "S2_alpha_ucb",
+  "title": "S2: D-UCB exploration-intensity sensitivity",
+  "T": 2000,
+  "R": 1.0,
+  "n_seeds": 30,
+  "base": {
+    "theta": [
+      0.7,
+      0.6,
+      0.5
+    ],
+    "c": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "U_self": 0.35,
+    "lambda": 1.0,
+    "gamma": 1.0,
+    "alpha_ucb": 1.0
+  },
+  "reliability": {
+    "type": "stationary"
+  },
+  "sweep": {
+    "name": "alpha",
+    "symbol": "\u03b1",
+    "points": [
+      {
+        "value": 0.05,
+        "set": {
+          "alpha_ucb": 0.05
+        }
+      },
+      {
+        "value": 0.1,
+        "set": {
+          "alpha_ucb": 0.1
+        }
+      },
+      {
+        "value": 0.25,
+        "set": {
+          "alpha_ucb": 0.25
+        }
+      },
+      {
+        "value": 0.5,
+        "set": {
+          "alpha_ucb": 0.5
+        }
+      },
+      {
+        "value": 1.0,
+        "set": {
+          "alpha_ucb": 1.0
+        }
+      },
+      {
+        "value": 2.0,
+        "set": {
+          "alpha_ucb": 2.0
+        }
+      }
+    ]
+  },
+  "algorithms": [
+    "Dynamic Oracle",
+    "D-UCB"
+  ],
+  "scenarios": {
+    "E1": {},
+    "E2_U080": {
+      "base": {
+        "theta": [
+          0.75,
+          0.65,
+          0.5
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.8,
+        "lambda": 1.0,
+        "gamma": 0.98
+      }
+    },
+    "E3_g098": {
+      "base": {
+        "theta": [
+          0.8,
+          0.7,
+          0.9
+        ],
+        "c": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "U_self": 0.5,
+        "lambda": 1.0,
+        "gamma": 0.98
+      },
+      "reliability": {
+        "type": "abrupt",
+        "theta_after": [
+          0.8,
+          0.7,
+          0.4
+        ],
+        "tau": 1000
+      }
+    }
+  },
+  "notes": "Run once per scenario (E1 with \u0394 = 0.10, E2 with U_self = 0.80, E3 with gamma = 0.98)."
+}
