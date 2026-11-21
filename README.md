@@ -194,5 +194,5 @@ In accordance with course submission guidelines, the division of responsibilitie
 
 ## Repository & Final Submission Link
 
-- **GitHub Repository**: [https://github.com/cherukuriharshithsai/Decentralized-MultiAgent-HelpSeeking](https://github.com/cherukuriharshithsai/Decentralized-MultiAgent-HelpSeeking)
+- **GitHub Repository**: [https://github.com/HarshithSai91/Decentralized-MultiAgent-HelpSeeking](https://github.com/HarshithSai91/Decentralized-MultiAgent-HelpSeeking)
 - **Report**: [report/main.pdf](report/main.pdf) (arXiv format, 8 pages)
