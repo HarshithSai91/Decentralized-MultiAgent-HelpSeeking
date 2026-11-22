@@ -109,11 +109,13 @@ The requester queries helper $j^* = \arg\max_j \hat{\mu}_{ij}$ if $\max_j \hat{\
 
 ---
 
-## 5. Experimental Roadmap (E1--E6)
+## 5. Experimental Roadmap (E1--E8)
 
 - **E1: Stationary Reliability** under reciprocal peer interactions.
-- **E2: When-to-Ask** as autonomous self-capability $\Uself$ varies.
+- **E2: Whether-to-Ask** as autonomous self-capability $\Uself$ varies.
 - **E3: Abrupt Reliability Drop** demonstrating fast adaptation via discounting ($\gamma = 0.98$).
 - **E4: Communication Cost Scaling** showing rational transition from asking to autonomy.
-- **E5: Helper Policy Learning (NEW):** Empirical comparison of Tabular Q-Learning vs. Always-Accept vs. Always-Reject.
-- **E6: Multi-Agent Cooperation Dynamics (NEW):** Analysis of emergent cooperation, workload congestion, and acceptance rates across reward incentives ($B_i \in \{0.2, 0.5, 0.8\}$).
+- **E5: Helper Policy Learning (NEW):** Empirical comparison of Tabular Q-Learning vs. Always-Accept vs. Always-Reject and Informed Threshold.
+- **E6: Multi-Agent Cooperation Dynamics (NEW):** Analysis of emergent cooperation, workload congestion, and acceptance rates across reward incentives ($B_i \in \{0.2, 0.5, 0.8\}$) and heterogeneous teams.
+- **E7: Changing Teammate Reliability in Teams (NEW):** Abrupt reliability shift in decentralized 4-agent teams; clock divergence between per-decision clocks and global rounds ($\gamma=0.995$ vs $\gamma=0.98$).
+- **E8: Temporal Help-Seeking & Timing under Deadlines (NEW):** Multi-step task lifecycle ($D=5$); tabular 27-state Q-learning timing, heuristic baselines (Immediate, Fixed Delay, Urgency), and belief-based Planned Timing (optimal stopping).
