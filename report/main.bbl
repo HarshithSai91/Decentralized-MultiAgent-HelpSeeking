@@ -1,0 +1,88 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agrawal and Goyal(2012)]{agrawal2012analysis}
+Shipra Agrawal and Navin Goyal.
+\newblock Analysis of {T}hompson sampling for the multi-armed bandit problem.
+\newblock In \emph{Proceedings of the 25th Annual Conference on Learning Theory
+  (COLT)}, pages 39.1--39.26, 2012.
+
+\bibitem[Auer et~al.(2002)Auer, Cesa-Bianchi, and Fischer]{auer2002finite}
+Peter Auer, Nicol{\`o} Cesa-Bianchi, and Paul Fischer.
+\newblock Finite-time analysis of the multiarmed bandit problem.
+\newblock \emph{Machine Learning}, 47\penalty0 (2--3):\penalty0 235--256, 2002.
+
+\bibitem[Besbes et~al.(2014)Besbes, Gur, and Zeevi]{besbes2014stochastic}
+Omar Besbes, Yonatan Gur, and Assaf Zeevi.
+\newblock Stochastic multi-armed-bandit problem with non-stationary rewards.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, volume~27, pages 199--207, 2014.
+
+\bibitem[Claus and Boutilier(1998)]{claus1998dynamics}
+Caroline Claus and Craig Boutilier.
+\newblock The dynamics of reinforcement learning in cooperative multiagent
+  systems.
+\newblock In \emph{Proceedings of the Fifteenth National Conference on
+  Artificial Intelligence (AAAI)}, pages 746--752, 1998.
+
+\bibitem[Garivier and Moulines(2011)]{garivier2011ucb}
+Aur{\'e}lien Garivier and Eric Moulines.
+\newblock On upper-confidence bound policies for switching bandit problems.
+\newblock In \emph{Algorithmic Learning Theory (ALT)}, volume 6925 of
+  \emph{Lecture Notes in Computer Science}, pages 174--188. Springer, 2011.
+
+\bibitem[Gupta et~al.(2011)Gupta, Granmo, and Agrawala]{gupta2011thompson}
+Neha Gupta, Ole-Christoffer Granmo, and Ashok Agrawala.
+\newblock Thompson sampling for dynamic multi-armed bandits.
+\newblock In \emph{10th International Conference on Machine Learning and
+  Applications (ICMLA)}, volume~1, pages 484--489. IEEE, 2011.
+
+\bibitem[Hu and Wellman(2003)]{hu2003nash}
+Junling Hu and Michael~P. Wellman.
+\newblock Nash q-learning for general-sum stochastic games.
+\newblock \emph{Journal of Machine Learning Research}, 4:\penalty0 1039--1069,
+  2003.
+
+\bibitem[Panait and Luke(2005)]{panait2005cooperative}
+Liviu Panait and Sean Luke.
+\newblock Cooperative multi-agent learning: The state of the art.
+\newblock \emph{Autonomous Agents and Multi-Agent Systems}, 11\penalty0
+  (3):\penalty0 387--434, 2005.
+
+\bibitem[Stone et~al.(2010)Stone, Kaminka, Kraus, and
+  Rosenschein]{stone2010adhoc}
+Peter Stone, Gal~A. Kaminka, Sarit Kraus, and Jeffrey~S. Rosenschein.
+\newblock Ad hoc autonomous agent teams: Collaboration without
+  pre-coordination.
+\newblock In \emph{Proceedings of the Twenty-Fourth AAAI Conference on
+  Artificial Intelligence (AAAI)}, pages 1504--1509, 2010.
+
+\bibitem[Tan(1993)]{tan1993multiagent}
+Ming Tan.
+\newblock Multi-agent reinforcement learning: Independent vs. cooperative
+  agents.
+\newblock In \emph{Proceedings of the Tenth International Conference on Machine
+  Learning (ICML)}, pages 330--337, 1993.
+
+\bibitem[Torrey and Taylor(2013)]{torrey2013teaching}
+Lisa Torrey and Matthew Taylor.
+\newblock Teaching on a budget: Agents advising agents in reinforcement
+  learning.
+\newblock In \emph{Proceedings of the 12th International Conference on
+  Autonomous Agents and Multiagent Systems (AAMAS)}, pages 1053--1060, 2013.
+
+\bibitem[Watkins and Dayan(1992)]{watkins1992qlearning}
+Christopher J. C.~H. Watkins and Peter Dayan.
+\newblock Q-learning.
+\newblock \emph{Machine Learning}, 8\penalty0 (3--4):\penalty0 279--292, 1992.
+
+\bibitem[Wilcoxon(1945)]{wilcoxon1945individual}
+Frank Wilcoxon.
+\newblock Individual comparisons by ranking methods.
+\newblock \emph{Biometrics Bulletin}, 1\penalty0 (6):\penalty0 80--83, 1945.
+
+\end{thebibliography}

@@ -50,6 +50,7 @@ report/*.log
 report/*.out
 report/*.toc
 report/*.bbl
+!report/main.bbl
 report/*.blg
 report/*.fls
 report/*.fdb_latexmk
