@@ -182,7 +182,7 @@ Dashboard features:
 
 ### 1. Four Autonomous Agents: Status, Internal States, and Beliefs
 ![Multi-Agent Dashboard Agents](figures/dashboard_agents_state.png)
-*Figure 1: Live inspection of the 4 autonomous peer agents showing physical workload and resource levels, Q-learning values ($Q(\textsc{Accept})$ vs $Q(\textsc{Reject})$), and decentralized Beta-Bernoulli beliefs ($\hat{p}_{ij}$ acceptance and $\hat{\theta}_{ij}$ reliability).*
+*Figure 1: Live inspection of the 4 autonomous peer agents showing physical workload and resource levels, Q-learning values (`Q(Accept)` vs `Q(Reject)`), and decentralized Beta-Bernoulli beliefs (`p̂_ij` acceptance and `θ̂_ij` reliability).*
 
 ### 2. Round-by-Round Interaction Logs & Payoffs
 ![Multi-Agent Dashboard Interactions](figures/dashboard_interaction_logs.png)
@@ -198,9 +198,9 @@ Dashboard features:
 
 ### E7: Changing teammate reliability
 ![E7 Changing Reliability](figures/e7_changing_reliability.png)
-*Figure 4: Cumulative pseudo-regret for $\gamma \in \{1, 0.995, 0.98, 0.95\}$ with an abrupt reliability change at $t=1000$.*
+*Figure 4: Cumulative pseudo-regret for γ ∈ {1, 0.995, 0.98, 0.95} with an abrupt reliability change at t = 1000.*
 
-### E8: When to ask under deadlines ($D=5$)
+### E8: When to ask under deadlines (D = 5)
 ![E8 Temporal Help-Seeking](figures/e8_temporal_help_seeking.png)
 *Figure 5: Completion rate (40-task window) and cumulative requester reward for the six timing policies; reliability change at task 200.*
 
