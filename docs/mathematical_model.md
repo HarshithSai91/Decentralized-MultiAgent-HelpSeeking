@@ -3,6 +3,7 @@
 ## 1. Overview and Agent Autonomy
 
 The system consists of $N$ autonomous peer agents:
+
 $$\mathcal{A} = \{A_1, A_2, \dots, A_N\}$$
 
 Every agent can dynamically alternate between two roles:
@@ -16,7 +17,9 @@ There is **no centralized controller**, no shared team reward, and no permanent 
 ## 2. Agent State Space and Activity Transitions
 
 Each agent $A_i$ maintains an internal state:
+
 $$s_i(t) = (w_i(t), \rho_i(t)) \in \{0, 1, 2\}^2$$
+
 discretized into 9 states ($w \in \{0, 1, 2\}$: Low, Med, High workload; $\rho \in \{0, 1, 2\}$: Low, Med, High resources).
 
 At round $t$, internal states transition according to four mutually exclusive activities:
@@ -38,6 +41,7 @@ At round $t$, internal states transition according to four mutually exclusive ac
 ## 3. Decision-Epoch Helper Q-Learning
 
 Each agent maintains an independent Q-table for helping decisions:
+
 $$Q_i: \mathcal{S} \times \{\text{ACCEPT}, \text{REJECT}\} \to \mathbb{R}$$
 
 Because helping decisions occur asynchronously at discrete request rounds rather than every global simulation step, helper learning is formulated as **decision-epoch semi-Markov Q-learning**.
@@ -153,7 +157,9 @@ In sequential operational environments, tasks do not resolve in a single instant
 
 ### 7.1 Task Lifecycle Formulation
 Each task $\mathcal{T}$ is characterized by a tuple:
+
 $$\mathcal{T} = \left(p, D, \tau_{\mathrm{rem}}, a_{\mathrm{solo}}, \text{status}\right)$$
+
 - Normalized cumulative progress $p \in [0, 1]$, initialized at $p = 0.0$.
 - Deadline $D \in \mathbb{N}^+$ and remaining time $\tau_{\mathrm{rem}} \in \{0, \dots, D\}$, initialized at $\tau_{\mathrm{rem}} = D$.
 - Number of previous solo attempts $a_{\mathrm{solo}} \in \mathbb{N}$, initialized at $0$.
