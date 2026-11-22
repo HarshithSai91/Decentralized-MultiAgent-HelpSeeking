@@ -4,7 +4,7 @@
 
 The system consists of $N$ autonomous peer agents:
 
-$$\mathcal{A} = \{A_1, A_2, \dots, A_N\}$$
+$$\mathcal{A} = \lbrace A_1, A_2, \dots, A_N \rbrace$$
 
 Every agent can dynamically alternate between two roles:
 1. **Requester Role:** Receives an incoming task, determines whether to execute autonomously ($d_t = 0$) or query a teammate ($d_t = 1$), and selects which peer $j \in \mathcal{A} \setminus \{i\}$ to contact.
@@ -88,15 +88,29 @@ Requesters decouple teammate acceptance from execution reliability. For each pee
 
 $$\hat{p}_{ij}(t) = \frac{1 + A_{ij}(t)}{2 + A_{ij}(t) + R_{ij}(t)}$$
 
-Every global round **all agents** decay all their counts once ($A_{ij} \leftarrow \gamma A_{ij}$, $R_{ij} \leftarrow \gamma R_{ij}$); the requester then adds the new observation without a second discount: $A_{ij} \leftarrow A_{ij} + \mathbf{1}_{\{\text{accepted}\}}$, $R_{ij} \leftarrow R_{ij} + \mathbf{1}_{\{\text{rejected}\}}$.
+Every global round **all agents** decay all their counts once:
+
+$$A_{ij} \leftarrow \gamma A_{ij}, \qquad R_{ij} \leftarrow \gamma R_{ij}$$
+
+The requester then adds the new observation without a second discount:
+
+$$A_{ij} \leftarrow A_{ij} + \mathbf{1}_{\text{accepted}}, \qquad R_{ij} \leftarrow R_{ij} + \mathbf{1}_{\text{rejected}}$$
 
 **Conditional Execution Reliability Belief:**
 
 $$\hat{\theta}_{ij}(t) = \frac{1 + S_{ij}(t)}{2 + S_{ij}(t) + F_{ij}(t)}$$
 
-Decayed every global round like the acceptance counts; incremented only when a request was accepted: $S_{ij} \leftarrow S_{ij} + x_t$, $F_{ij} \leftarrow F_{ij} + (1 - x_t)$. A rejection adds nothing to $(S, F)$.
+Decayed every global round like the acceptance counts:
 
-Note on memory: because decay is applied every *global* round while each requester acts only every $N$-th round (round-robin) and spreads its requests over $N-1$ teammates, the effective memory per teammate is much shorter than in the single-agent setting. A per-round $\gamma = 0.995$ corresponds to $\approx 0.98$ per own decision for $N = 4$ ($0.995^4 \approx 0.980$); E7 therefore sweeps $\gamma \in \{1.00, 0.995, 0.98, 0.95\}$.
+$$S_{ij} \leftarrow \gamma S_{ij}, \qquad F_{ij} \leftarrow \gamma F_{ij}$$
+
+Incremented only when a request was accepted:
+
+$$S_{ij} \leftarrow S_{ij} + x_t, \qquad F_{ij} \leftarrow F_{ij} + (1 - x_t)$$
+
+(A rejection adds nothing to $S$ or $F$).
+
+Note on memory: because decay is applied every *global* round while each requester acts only every $N$-th round (round-robin) and spreads its requests over $N-1$ teammates, the effective memory per teammate is much shorter than in the single-agent setting. A per-round $\gamma = 0.995$ corresponds to $\approx 0.98$ per own decision for $N = 4$ ($0.995^4 \approx 0.980$); E7 therefore sweeps $\gamma \in \lbrace 1.00, 0.995, 0.98, 0.95 \rbrace$.
 
 ### Expected Net Utility
 
@@ -104,9 +118,19 @@ $$\hat{\mu}_{ij}(t) = U_i^{\mathrm{self}} + \hat{p}_{ij}(t) \left( R \hat{\theta
 
 ### Requester Policies
 
-- **MultiAgent Greedy (MA-Greedy):** Queries $\arg\max_j \hat{\mu}_{ij}(t)$ if $\max_j \hat{\mu}_{ij}(t) > U_i^{\mathrm{self}}$; else acts alone.
+- **MultiAgent Greedy (MA-Greedy):** Queries candidate helper $j^\star$ with highest expected net utility:
+
+  $$j^\star = \arg\max_j \hat{\mu}_{ij}(t)$$
+
+  if $\hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}$; else acts alone.
+
 - **MultiAgent Discounted UCB (MA-D-UCB):** Uses optimistic upper confidence bounds on both acceptance and reliability.
-- **MultiAgent Discounted Thompson Sampling (MA-D-TS):** Posterior sampling from $\tilde{p}_{ij} \sim \text{Beta}(1 + A_{ij}, 1 + R_{ij})$ and $\tilde{\theta}_{ij} \sim \text{Beta}(1 + S_{ij}, 1 + F_{ij})$.
+
+- **MultiAgent Discounted Thompson Sampling (MA-D-TS):** Posterior sampling from willingness and reliability posteriors:
+
+  $$\tilde{p}_{ij} \sim \mathrm{Beta}(1 + A_{ij},\, 1 + R_{ij}), \qquad \tilde{\theta}_{ij} \sim \mathrm{Beta}(1 + S_{ij},\, 1 + F_{ij})$$
+
+  and queries $j^\star = \arg\max_j \tilde{\mu}_{ij}(t)$ if $\max_j \tilde{\mu}_{ij}(t) > U_i^{\mathrm{self}}$.
 
 ---
 
@@ -124,9 +148,9 @@ $$\mathbb{P}_{\text{greedy}}(\text{ACCEPT}) = \begin{cases} 1.0, & \text{if } Q(
 
 ### Complete Set of Optimal Actions
 
-$$\mu^*(t) = \max\left( U_i^{\mathrm{self}},\, \max_j \mu^*_{ij}(t) \right)$$
+$$\mu^\star(t) = \max\left( U_i^{\mathrm{self}},\, \max_j \mu^\star_{ij}(t) \right)$$
 
-$$\mathcal{O}_t = \left\{ (d, a) \mid |\mu_{d, a}(t) - \mu^*(t)| < 10^{-9} \right\}$$
+$$\mathcal{O}_t = \left\lbrace (d, a) \;\middle|\; |\mu_{d, a}(t) - \mu^\star(t)| < 10^{-9} \right\rbrace$$
 
 An action is optimal (`opt_action = 1`) if it belongs to $\mathcal{O}_t$, correctly handling multiple equally optimal helpers and ties with autonomous execution.
 
@@ -136,7 +160,7 @@ Evaluated on expected choice utility prior to stochastic outcome realization:
 
 $$\mu_{\mathrm{chosen}}(t) = \begin{cases} U_i^{\mathrm{self}}, & \text{if } d_t = 0 \\ U_i^{\mathrm{self}} + p_{ij}(t)\left(R\theta_j(t) - U_i^{\mathrm{self}}\right) - \lambda c_{ij}, & \text{if } d_t = 1 \end{cases}$$
 
-$$\mathrm{Regret}_t = \max\left(0,\, \mu^*(t) - \mu_{\mathrm{chosen}}(t)\right)$$
+$$\mathrm{Regret}_t = \max\left(0,\, \mu^\star(t) - \mu_{\mathrm{chosen}}(t)\right)$$
 
 ---
 
@@ -204,8 +228,8 @@ Under **Evaluate_Help** ($u_k = 1$):
 $$V_{\mathrm{ask},j} = -\lambda c_{ij} + \tilde p_{ij}\tilde\theta_{ij} R + (1 - \tilde p_{ij}\tilde\theta_{ij})\left[-c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V_{\mathrm{solo}}(p, \tau_{\mathrm{rem}} - 1)\right]$$
 
 for $\tau_{\mathrm{rem}} > 1$; for $\tau_{\mathrm{rem}} = 1$ the bracket evaluates to $-c_{\mathrm{fail}}$.
-- If $\max_j V_{\mathrm{ask},j} > V_{\mathrm{solo}}(p, \tau_{\mathrm{rem}})$, a request is transmitted to candidate helper $j^*$; otherwise the agent takes a solo step.
-- Helper $j^*$ accepts or rejects via independent tabular Q-learning on private $(w_j, \rho_j)$ states; its reward uses the same state-dependent helping cost $\kappa_j(w_j, \rho_j)$ as in Section 3.
+- If $\max_j V_{\mathrm{ask},j} > V_{\mathrm{solo}}(p, \tau_{\mathrm{rem}})$, a request is transmitted to candidate helper $j^\star$; otherwise the agent takes a solo step.
+- Helper $j^\star$ accepts or rejects via independent tabular Q-learning on private $(w_j, \rho_j)$ states; its reward uses the same state-dependent helping cost $\kappa_j(w_j, \rho_j)$ as in Section 3.
 - If accepted and successful, progress advances to $1.0$ ($p \leftarrow 1.0$), completing the task.
 - If rejected or failed, exactly 1 deadline unit is consumed. If $\tau_{\mathrm{rem}} > 0$, the task enters a deterministic post-request solo phase until completion or deadline failure, without corrupting the timing policy on forced actions.
 
@@ -222,11 +246,11 @@ $q_j = \hat p_{ij}\hat\theta_{ij}$:
 
 $$\mathrm{Ask}(p,\tau) = \max_j\big[-\lambda c_{ij} + q_j R + (1 - q_j) F(p,\tau)\big],\qquad F(p,\tau) = \begin{cases}-c_{\mathrm{fail}} & \tau = 1\\ -c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V_{\mathrm{solo}}(p, \tau - 1) & \tau > 1\end{cases}$$
 
-$$\mathrm{Wait}(p,\tau) = \mathbb{E}_{\Delta p}\Big[R\,\mathbf{1}_{\{p + \Delta p \ge 1\}} + \mathbf{1}_{\{p + \Delta p < 1\}}\big(-c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V^*(p + \Delta p, \tau - 1)\big)\Big]$$
+$$\mathrm{Wait}(p,\tau) = \mathbb{E}_{\Delta p}\Big[R\,\mathbf{1}_{\lbrace p + \Delta p \ge 1 \rbrace} + \mathbf{1}_{\lbrace p + \Delta p < 1 \rbrace}\big(-c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V^\star(p + \Delta p, \tau - 1)\big)\Big]$$
 
 (where the second term inside the expectation evaluates to $-c_{\mathrm{fail}}$ if $\tau = 1$).
 
-$$V^*(p,\tau) = \max\{\mathrm{Ask}(p,\tau), \mathrm{Wait}(p,\tau)\}$$
+$$V^\star(p,\tau) = \max\lbrace \mathrm{Ask}(p,\tau),\, \mathrm{Wait}(p,\tau) \rbrace$$
 
 computed by backward induction on a 401-point progress grid (41-point quadrature for $\Delta p$). The policy chooses **Evaluate_Help** iff
 $\mathrm{Ask}(p,\tau) \ge \mathrm{Wait}(p,\tau)$; the request itself is then decided by the usual whether/whom rule.
