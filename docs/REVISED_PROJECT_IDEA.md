@@ -30,15 +30,15 @@ To make the problem fundamentally multi-agent, we transform the system into an *
 ├───────────────────────────────────────────────────────────────────────────────┤
 │  ROLE 1: REQUESTER (When holding a task)                                      │
 │  • Solves online exploration-exploitation dilemma (D-Greedy, D-UCB, D-TS)     │
-│  • Learns teammate availability: p_ij = P(A_j accepts request from A_i)      │
-│  • Learns teammate execution capability: theta_ij = P(Success | Accepted)    │
+│  • Learns teammate availability: p_ij = P(A_j accepts request from A_i)       │
+│  • Learns teammate execution capability: theta_ij = P(Success | Accepted)     │
 │  • Evaluates utility of asking vs. autonomous execution                       │
 ├───────────────────────────────────────────────────────────────────────────────┤
 │  ROLE 2: HELPER (When receiving a request from peer A_k)                      │
-│  • Observes internal state: s_i(t) = (workload_i(t), resources_i(t)) ∈ [3x3]   │
+│  • Observes internal state: s_i(t) = (workload_i(t), resources_i(t)) ∈ [3x3]  │
 │  • Independent Action: ACCEPT (0) or REJECT (1)                               │
 │  • Learns policy via private Tabular Q-Learning (Bellman optimality)          │
-│  • Selfish/Individual payoff: r_i = B_i * x - cost(w_i, rho_i)               │
+│  • Selfish/Individual payoff: r_i = B_i * x - cost(w_i, rho_i)                │
 └───────────────────────────────────────────────────────────────────────────────┘
 ```
 
