@@ -146,7 +146,7 @@ $$p_{ij}(t) = (1 - \epsilon)\,\mathbb{P}_{\text{greedy}}(\text{ACCEPT}) + \frac{
 
 where:
 
-$$\mathbb{P}_{\text{greedy}}(\text{ACCEPT}) = \begin{cases} 1.0, & \text{if } Q(\text{ACCEPT}) > Q(\text{REJECT}) \\ 0.0, & \text{if } Q(\text{REJECT}) > Q(\text{ACCEPT}) \\ 0.5, & \text{if } |Q(\text{ACCEPT}) - Q(\text{REJECT})| \le 10^{-12} \end{cases}$$
+$$\mathbb{P}_{\text{greedy}}(\text{ACCEPT}) = \begin{cases} 1.0, & \text{if } Q(\text{ACCEPT}) > Q(\text{REJECT}) \\\\ 0.0, & \text{if } Q(\text{REJECT}) > Q(\text{ACCEPT}) \\\\ 0.5, & \text{if } |Q(\text{ACCEPT}) - Q(\text{REJECT})| \le 10^{-12} \end{cases}$$
 
 ### Complete Set of Optimal Actions
 
@@ -160,7 +160,7 @@ An action is optimal (`opt_action = 1`) if it belongs to $\mathcal{O}_t$, correc
 
 Evaluated on expected choice utility prior to stochastic outcome realization:
 
-$$\mu_{\mathrm{chosen}}(t) = \begin{cases} U_i^{\mathrm{self}}, & \text{if } d_t = 0 \\ U_i^{\mathrm{self}} + p_{ij}(t)\left(R\theta_j(t) - U_i^{\mathrm{self}}\right) - \lambda c_{ij}, & \text{if } d_t = 1 \end{cases}$$
+$$\mu_{\mathrm{chosen}}(t) = \begin{cases} U_i^{\mathrm{self}}, & \text{if } d_t = 0 \\\\ U_i^{\mathrm{self}} + p_{ij}(t)\left(R\theta_j(t) - U_i^{\mathrm{self}}\right) - \lambda c_{ij}, & \text{if } d_t = 1 \end{cases}$$
 
 $$\mathrm{Regret}_t = \max\left(0,\, \mu^\star(t) - \mu_{\mathrm{chosen}}(t)\right)$$
 
@@ -256,7 +256,7 @@ The whether-rule above compares asking **now** with **never** asking ($V_{\mathr
 tabular timing policy has to learn that option value. The planned policy computes it from the requester's current posterior means
 $q_j = \hat p_{ij}\hat\theta_{ij}$:
 
-$$\mathrm{Ask}(p,\tau) = \max_j\big[-\lambda c_{ij} + q_j R + (1 - q_j) F(p,\tau)\big],\qquad F(p,\tau) = \begin{cases}-c_{\mathrm{fail}} & \tau = 1\\ -c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V_{\mathrm{solo}}(p, \tau - 1) & \tau > 1\end{cases}$$
+$$\mathrm{Ask}(p,\tau) = \max_j\big[-\lambda c_{ij} + q_j R + (1 - q_j) F(p,\tau)\big],\qquad F(p,\tau) = \begin{cases}-c_{\mathrm{fail}} & \tau = 1\\\\ -c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V_{\mathrm{solo}}(p, \tau - 1) & \tau > 1\end{cases}$$
 
 $$\mathrm{Wait}(p,\tau) = \mathbb{E}_{\Delta p}\Big[R\,\mathbf{1}_{\lbrace p + \Delta p \ge 1 \rbrace} + \mathbf{1}_{\lbrace p + \Delta p < 1 \rbrace}\big(-c_{\mathrm{step}} + \gamma_{\mathrm{timing}} V^\star(p + \Delta p, \tau - 1)\big)\Big]$$
 

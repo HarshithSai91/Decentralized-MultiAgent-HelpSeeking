@@ -65,7 +65,11 @@ $$Q_i(s, a) \leftarrow Q_i(s, a) + \alpha_{\mathrm{RL}} \left[ r_i + \gamma_Q \m
 
 - Helpers optimize their **individual reward** (no shared team reward, no central arbiter):
 
-$$r_i = \begin{cases} B_i \cdot x - \kappa_i(w_i, \rho_i), & \text{if } \text{ACCEPT} \\ 0, & \text{if } \text{REJECT} \end{cases}\qquad \kappa_i(w, \rho) = c_{\mathrm{res},i}(3 - \rho) + c_{\mathrm{opp},i}(1 + w)$$
+$$
+r_i = \begin{cases} B_i \cdot x - \kappa_i(w_i, \rho_i), & \text{if } \text{ACCEPT} \\\\ 0, & \text{if } \text{REJECT} \end{cases}
+$$
+
+$$\kappa_i(w, \rho) = c_{\mathrm{res},i}(3 - \rho) + c_{\mathrm{opp},i}(1 + w)$$
 
 where $B_i$ is cooperation compensation, $x \in \lbrace 0, 1 \rbrace$ is task success, and the helping cost $\kappa_i$ (resource use plus foregone progress on the agent's own queue) grows with the helper's workload and resource depletion at the moment it accepts. (Final version, Nov 2026: an earlier draft used a state-independent cost, under which the optimal helping decision did not depend on the helper's state.)
 
@@ -121,7 +125,7 @@ $$\text{Decision: query } j^\star \text{ if } \hat{\mu}_{ij^\star} > U_i^{\mathr
 1. **Endogenous Congestion Balancing:**  
    If agent $A_3$ has the highest execution reliability ($\theta_3 = 0.9$), all other agents prefer to ask $A_3$. This floods $A_3$'s queue, increasing its workload to High ($w_3 = 2$) and exhausting its resources ($\rho_3 = 0$). Under its Q-learning policy, $A_3$ begins rejecting requests. Requesters observe the drop in $\hat{p}_{i3}$ and adaptively shift their requests to second-best helpers (e.g., $A_1$ or $A_2$).
 2. **Cooperation Incentives:**  
-   If cooperation reward $B_i$ is low ($B_i = 0.20$), agents protect their resources and reject requests ($31\%$ rejection rate). If $B_i$ is high ($B_i = 0.80$), helping is profitable and sustainable cooperation emerges ($95\%$ acceptance rate).
+   If cooperation reward $B_i$ is low ($B_i = 0.20$), agents protect their resources and reject requests (31% rejection rate). If $B_i$ is high ($B_i = 0.80$), helping is profitable and sustainable cooperation emerges (95% acceptance rate).
 3. **No Centralized Point of Failure:**  
    Agents operate entirely on local observations, local Q-tables, and local communication without needing a global coordinator.
 

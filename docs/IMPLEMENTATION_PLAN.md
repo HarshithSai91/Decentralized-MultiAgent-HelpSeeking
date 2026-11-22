@@ -261,7 +261,7 @@ Run with multi-agent interaction model and MAB baselines:
 
 ### 9.1 Frontend Changes
 - "Multi-Agent Live" interactive view (`frontend/src/components/MultiAgentView.tsx`).
-- Real-time display of all 4 peer agents: physical workload, resource meters, Q-values ($Q(\text{ACCEPT})$ vs $Q(\text{REJECT})$), and Beta-Bernoulli beliefs ($\hat{p}_{ij}$, $\hat{\theta}_{ij}$).
+- Real-time display of all 4 peer agents: physical workload, resource meters, Q-values (`Q(ACCEPT)` vs `Q(REJECT)`), and Beta-Bernoulli beliefs (`p̂_ij`, `θ̂_ij`).
 - Round-by-round telemetry: task arrival, requester decision, selected helper, outcome, and individualized payoffs.
 - Full interactive control: Step 1, Step 50, Step 500, and Reset.
 

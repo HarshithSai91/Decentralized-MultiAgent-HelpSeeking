@@ -174,7 +174,7 @@ npm run dev                    # http://localhost:5173
 ```
 
 Dashboard features:
-- **Multi-Agent Simulation Tab**: Live inspection of $N$ peer agents, per-agent workload & resource gauges, current Q-values table, live belief tracking ($\hat{p}_{ij}$ and $\hat{\theta}_{ij}$), real-time reward & regret trajectories, and round-by-round interaction logs.
+- **Multi-Agent Simulation Tab**: Live inspection of $N$ peer agents, per-agent workload & resource gauges, current Q-values table, live belief tracking (p̂_ij and θ̂_ij), real-time reward & regret trajectories, and round-by-round interaction logs.
 - **Single-Agent Benchmark Tabs**: Interactive stepping through E1–E4, multi-algorithm side-by-side comparison, and 30-seed aggregate results viewer.
 
 ---
