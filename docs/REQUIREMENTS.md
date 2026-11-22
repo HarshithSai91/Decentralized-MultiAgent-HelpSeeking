@@ -57,7 +57,10 @@ $$\hat{\mu}_{ij}(t) = U_i^{\mathrm{self}} + \hat{p}_{ij}(t) \left( R \hat{\theta
 
 ### 4. Dynamic Oracle and Ex-Ante Pseudo-Regret
 - Oracle incorporates exact helper $\epsilon$-greedy acceptance probabilities $p_{ij}(t) = (1 - \epsilon)\mathbb{P}_{\text{greedy}}(\text{ACCEPT}) + \frac{\epsilon}{2}$.
-- Complete set of optimal actions $\mathcal{O}_t$ with tie-breaking ($|\mu_{d, a}(t) - \mu^\star(t)| < 10^{-9}$).
+- Complete set of optimal actions $\mathcal{O}_t$ with tie-breaking:
+
+$$\mathcal{O}_t = \left\lbrace (d, a) \;\middle|\; |\mu_{d, a}(t) - \mu^\star(t)| < 10^{-9} \right\rbrace$$
+
 - Ex-ante pseudo-regret evaluated on expected choice utility prior to stochastic outcome realization:
 
 $$\mathrm{Regret}_t = \max\left(0,\, \mu^\star(t) - \mu_{\mathrm{chosen}}(t)\right)$$
@@ -148,7 +151,7 @@ $$j^\star = \arg\max_j \hat{\mu}_{ij}(t)$$
 
 $$\text{Decision: query } j^\star \text{ if } \hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}, \quad \text{else act alone } (d_t = 0)$$
 
-2. **MultiAgent Discounted UCB (MA-D-UCB):** Optimistic confidence bounds on both $\hat{p}_{ij}$ and $\hat{\theta}_{ij}$.
+2. **MultiAgent Discounted UCB (MA-D-UCB):** Uses optimistic upper confidence bounds on both acceptance and reliability.
 
 3. **MultiAgent Discounted Thompson Sampling (MA-D-TS):** Beta posterior sampling on both acceptance and reliability:
 
