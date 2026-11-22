@@ -127,8 +127,9 @@ $$\text{Decision: query } j^\star \text{ if } \hat{\mu}_{ij^\star} > U_i^{\mathr
 
 ---
 
-## 5. Experimental Roadmap (E1--E8)
+## 5. Experimental Roadmap (E1--E8 & S1--S5)
 
+### Primary Experimental Suite (E1--E8)
 - **E1: Stationary Reliability** under reciprocal peer interactions.
 - **E2: Whether-to-Ask** as autonomous self-capability $U_{\mathrm{self}}$ varies.
 - **E3: Abrupt Reliability Drop** demonstrating fast adaptation via discounting ($\gamma = 0.98$).
@@ -137,3 +138,10 @@ $$\text{Decision: query } j^\star \text{ if } \hat{\mu}_{ij^\star} > U_i^{\mathr
 - **E6: Multi-Agent Cooperation Dynamics (NEW):** Analysis of emergent cooperation, workload congestion, and acceptance rates across reward incentives ($B_i \in \lbrace 0.2, 0.5, 0.8 \rbrace$) and heterogeneous teams.
 - **E7: Changing Teammate Reliability in Teams (NEW):** Abrupt reliability shift in decentralized 4-agent teams; clock divergence between per-decision clocks and global rounds ($\gamma=0.995$ vs $\gamma=0.98$).
 - **E8: Temporal Help-Seeking & Timing under Deadlines (NEW):** Multi-step task lifecycle ($D=5$); tabular 27-state Q-learning timing, heuristic baselines (Immediate, Fixed Delay, Urgency), and belief-based Planned Timing (optimal stopping).
+
+### Robustness & Sensitivity Suite (S1--S5)
+- **S1: Discounting in Stationary Worlds** — Parametric sweep over $\gamma \in \lbrace 0.90, 0.95, 0.98, 0.99, 1.00 \rbrace$ confirming retention of evidence without premature forgetting.
+- **S2: UCB Exploration Intensity** — Calibration of the upper-confidence parameter $\alpha_{\mathrm{ucb}} \in \lbrace 0.5, 1.0, 1.5, 2.0, 3.0 \rbrace$.
+- **S3: Continuous Reliability Drift** — Tracking gradual sinusoidal and linear non-stationary drift in peer competence.
+- **S4: Whether-to-Ask Under Varying Discounting** — Cross-sensitivity analysis of $U_{\mathrm{self}}$ thresholds under different memory horizons.
+- **S5: Multi-Shift Non-Stationary Regimes** — Stress-testing policy recovery across multiple recurring competence disruptions (rounds 500, 1000, 1500).
