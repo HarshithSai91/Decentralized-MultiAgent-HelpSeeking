@@ -120,17 +120,17 @@ $$\hat{\mu}_{ij}(t) = U_i^{\mathrm{self}} + \hat{p}_{ij}(t) \left( R \hat{\theta
 
 - **MultiAgent Greedy (MA-Greedy):** Queries candidate helper $j^\star$ with highest expected net utility:
 
-  $$j^\star = \arg\max_j \hat{\mu}_{ij}(t)$$
+$$j^\star = \arg\max_j \hat{\mu}_{ij}(t)$$
 
-  if $\hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}$; else acts alone.
+if $\hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}$; else acts alone.
 
 - **MultiAgent Discounted UCB (MA-D-UCB):** Uses optimistic upper confidence bounds on both acceptance and reliability.
 
 - **MultiAgent Discounted Thompson Sampling (MA-D-TS):** Posterior sampling from willingness and reliability posteriors:
 
-  $$\tilde{p}_{ij} \sim \mathrm{Beta}(1 + A_{ij},\, 1 + R_{ij}), \qquad \tilde{\theta}_{ij} \sim \mathrm{Beta}(1 + S_{ij},\, 1 + F_{ij})$$
+$$\tilde{p}_{ij} \sim \mathrm{Beta}(1 + A_{ij},\, 1 + R_{ij}), \qquad \tilde{\theta}_{ij} \sim \mathrm{Beta}(1 + S_{ij},\, 1 + F_{ij})$$
 
-  and queries $j^\star = \arg\max_j \tilde{\mu}_{ij}(t)$ if $\max_j \tilde{\mu}_{ij}(t) > U_i^{\mathrm{self}}$.
+and queries $j^\star = \arg\max_j \tilde{\mu}_{ij}(t)$ if $\max_j \tilde{\mu}_{ij}(t) > U_i^{\mathrm{self}}$.
 
 ---
 
