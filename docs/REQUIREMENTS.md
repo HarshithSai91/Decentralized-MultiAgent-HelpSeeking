@@ -1,105 +1,173 @@
 # REQUIREMENTS.md
 
 ## Project Title
-Learning When and Whom to Ask for Help Under Changing Teammate Reliability
+Learning When and Whom to Ask for Help Under Changing Teammate Reliability: A Decentralized Multi-Agent Formulation
 
-## Team
-- Cherukuri Harshith Sai (Roll 24110091) — Problem Formulation & Simulation Environment; Lead E1
-- Atragada Venkata Naga Sai Ganesh (Roll 24110060) — Learning Algorithms & Trust Estimation
-- Ambati Chaitanya Ram (Roll 24110035) — Baselines, Dynamics & Adaptation Analysis; Lead E2, E3
-- Dasari Lohith (Roll 24110100) — Communication Cost, Evaluation & Visualization; Lead E4
+## Team (Group 24 — IIT Gandhinagar CS329 MAS)
+- Cherukuri Harshith Sai (Roll 24110091) — Multi-Agent Architecture, Environment Formulation, Dynamic Oracle & E1/E7 Lead
+- Atragada Venkata Naga Sai Ganesh (Roll 24110060) — Decentralized Learning Algorithms, Trust & Acceptance Estimation, E5 Lead
+- Ambati Chaitanya Ram (Roll 24110035) — Autonomous Agent Policies, Helper Q-Learning Dynamics & E2/E3/E6 Lead
+- Dasari Lohith (Roll 24110100) — Temporal Task Lifecycle, Timing Policies, Evaluation & E4/E8 Lead
 
-## Source of Truth
-PDF: Project_Idea.pdf (14 pages, proposal finalized)
+---
 
-## Key Mathematical Definitions
-- K teammates, T rounds
-- R > 0 (normalized to 1.0)
-- U_self(t) autonomous utility
-- d_t ∈ {0,1} ask/no-ask
-- a_t ∈ H selected teammate
-- θ_k(t) true reliability
-- x_t ∈ {0,1} outcome
-- c_k communication cost
-- λ cost multiplier
-- r_t = R·x_t - λ·c_at if d_t=1; else x_self_t with E=U_self
-- μ_k(t) = R·θ_k(t) - λ·c_k
-- μ_self(t) = U_self(t)
-- S_k(t+1) = γ·S_k(t) + I·x_t
-- F_k(t+1) = γ·F_k(t) + I·(1-x_t)
-- θ̂_k(t) = (1 + S_k(t)) / (2 + S_k(t) + F_k(t))
-- Dynamic Oracle: d* = I[max μ_k(t) > U_self]; a* = argmax μ_k
-- Regret Reg_π(T) = Σ (μ*(t) - E_π[r_t])
+## Sources of Truth
+1. **Proposal Document:** `docs/Project_Idea.pdf` (14 pages, initial single-agent MAB proposal).
+2. **Revised Project Specification:** `docs/REVISED_PROJECT_IDEA.md` (decentralized multi-agent architecture and emergent cooperation).
+3. **Formal Mathematical Specification:** `docs/mathematical_model.md` (definitive mathematical formulation of agent states, semi-Markov helper Q-learning, decoupled beliefs, dynamic oracle, ex-ante pseudo-regret, and temporal timing policies).
 
-## Algorithms Required
-1. Discounted Greedy (D-Greedy)
-2. Discounted UCB (D-UCB)
-3. Discounted Thompson Sampling (D-TS)
+---
 
-## Baselines Required
-1. Never-Ask / Always-Act-Alone
-2. Always-Ask + Random Selection
-3. Always-Ask + Fixed-Cheapest
-4. Always-Ask + Empirical Greedy (γ=1, undiscounted)
-5. Dynamic Oracle (full info)
-6. Initial-Knowledge Oracle (secondary)
+## System Architecture and Key Mathematical Definitions
 
-## Experiments (Exact Configurations from PDF)
-### E1: Stationary Learning
-- Independent variable: Δ ∈ {0.02, 0.05, 0.10, 0.15}
-- θ = (0.60+Δ, 0.60, 0.50), c = (0.10, 0.10, 0.10)
-- K=3, T=2000, R=1.0, U_self=0.35, λ=1.0, γ=1.0
-- Algorithms: Stationary Oracle, Random, Fixed-Cheapest, Greedy, D-UCB, D-TS
-- Metrics: Cumulative regret, Optimal-teammate selection rate (given d_t=1), MAE_θ, Ask Rate
+### 1. Decentralized Multi-Agent Architecture
+- $N$ autonomous peer agents $\mathcal{A} = \{A_1, \dots, A_N\}$ operating without a centralized controller or shared team reward.
+- **Fluid Dual Roles:** Agents dynamically alternate between **Requester** ($d_t \in \{0, 1\}$) and **Helper** ($a_t \in \{\text{ACCEPT}, \text{REJECT}\}$).
+- **Physical Internal State:** $s_i(t) = (w_i(t), \rho_i(t)) \in \{0, 1, 2\}^2$ (9 discrete states spanning Workload and Resource levels).
+- **Activity State Transitions:**
+  - Own Execution / Fallback: $w \leftarrow \min(2, w+1)$, $\rho \leftarrow \max(0, \rho-1)$
+  - Accepted Helping: $w \leftarrow \min(2, w+1)$, $\rho \leftarrow \max(0, \rho-1)$
+  - Idle / Offloaded: $w \leftarrow \max(0, w-1)$, $\rho \leftarrow \min(2, \rho+1)$
+  - Rejected Helping: $w \leftarrow \max(0, w-1)$, $\rho \leftarrow \rho$ (preserves resources)
 
-### E2: When to Ask
-- Independent variable: U_self ∈ {0.30, 0.50, 0.65, 0.80}
-- θ = (0.75, 0.65, 0.50), c = (0.10, 0.10, 0.10)
-- K=3, T=2000, R=1.0, λ=1.0, γ=0.98
-- Algorithms: Dynamic Oracle, Always-Ask+Greedy, Never-Ask, D-UCB, D-TS
-- Metrics: Ask Rate, Ask Decision Accuracy (Acc_ask), Average Net Utility, Total Communication Cost
+### 2. Decision-Epoch Helper Q-Learning
+- Tabular Q-function: $Q_j: \mathcal{S} \times \{\text{ACCEPT}, \text{REJECT}\} \to \mathbb{R}$.
+- Semi-Markov decision-epoch update accounting for variable elapsed rounds $\Delta t = \max(1, t - t_{\text{prev}})$:
+  $$Q_j(s, a) \leftarrow Q_j(s, a) + \alpha \left[ r + \gamma_Q^{\Delta t} \max_{a'} Q_j(s', a') - Q_j(s, a) \right]$$
+- **State-Dependent Helping Cost:**
+  $$\kappa_j(w, \rho) = c_{\mathrm{res}, j} (1 + (2 - \rho)) + c_{\mathrm{opp}, j} (1 + w)$$
+- **Helper Payoff:** $r_j(t) = B_j \cdot x_t - \kappa_j(w_j, \rho_j)$ if accepted; $0$ if rejected.
 
-### E3: Abrupt Reliability Change
-- Independent variable: γ ∈ {1.0, 0.995, 0.98, 0.95, 0.90}
-- Initial θ(0) = (0.80, 0.70, 0.90), after τ=1000: θ = (0.80, 0.70, 0.40)
-- c = (0.10, 0.10, 0.10), U_self=0.50, λ=1.0, T=2000
-- Algorithms: Dynamic Oracle, Initial-Knowledge Oracle, Greedy, D-UCB, D-TS
-- Metrics: Adaptation latency τ_adapt, post-change regret, average net utility, optimal-teammate selection rate
+### 3. Decoupled Requester Belief Tracking
+- **Acceptance Probability Belief:** Discounted Beta-Bernoulli with pseudo-counts $A_{ij}, R_{ij}$:
+  $$\hat{p}_{ij}(t) = \frac{1 + A_{ij}(t)}{2 + A_{ij}(t) + R_{ij}(t)}$$
+- **Conditional Execution Reliability Belief:** Discounted Beta-Bernoulli with pseudo-counts $S_{ij}, F_{ij}$:
+  $$\hat{\theta}_{ij}(t) = \frac{1 + S_{ij}(t)}{2 + S_{ij}(t) + F_{ij}(t)}$$
+- **Expected Net Utility:**
+  $$\hat{\mu}_{ij}(t) = U_i^{\mathrm{self}} + \hat{p}_{ij}(t) \left( R \hat{\theta}_{ij}(t) - U_i^{\mathrm{self}} \right) - \lambda c_{ij}$$
+
+### 4. Dynamic Oracle and Ex-Ante Pseudo-Regret
+- Oracle incorporates exact helper $\epsilon$-greedy acceptance probabilities $p_{ij}(t) = (1 - \epsilon)\mathbb{P}_{\text{greedy}}(\text{ACCEPT}) + \frac{\epsilon}{2}$.
+- Complete set of optimal actions $\mathcal{O}_t$ with tie-breaking ($|\mu_{d, a}(t) - \mu^\star(t)| < 10^{-9}$).
+- Ex-ante pseudo-regret evaluated on expected choice utility prior to stochastic outcome realization:
+  $$\mathrm{Regret}_t = \max(0,\, \mu^\star(t) - \mu_{\mathrm{chosen}}(t))$$
+
+### 5. Temporal Task Lifecycle (WHEN to Ask)
+- Task tuple $\mathcal{T} = (p, D, \tau_{\mathrm{rem}}, a_{\mathrm{solo}}, \text{status})$ under hard deadline $D \in \mathbb{N}^+$.
+- Irwin-Hall exact continuation value of solo finishing $V_{\mathrm{solo}}(p, \tau_{\mathrm{rem}})$.
+- State space: 27 discrete states $s_{\mathrm{timing}} = (p_{\mathrm{lvl}}, \tau_{\mathrm{lvl}}, a_{\mathrm{lvl}}) \in \{0, 1, 2\}^3$.
+- Planned Timing policy computed via backward induction optimal stopping.
+
+---
+
+## Experimental Suite (E1–E8 & S1–S5)
+
+### E1: Stationary Reliability Benchmark
+- **Goal:** Validate requester learning in stationary peer environments with constant competences.
+- **Independent Variable:** Competence gap $\Delta \in \{0.02, 0.05, 0.10, 0.15\}$.
+- **Parameters:** $\theta = (0.60+\Delta, 0.60, 0.50)$, $c = (0.10, 0.10, 0.10)$, $K=3$, $T=2000$, $R=1.0$, $U_{\mathrm{self}}=0.35$, $\lambda=1.0$, $\gamma=1.0$.
+- **Policies:** Stationary Oracle, Random, Fixed-Cheapest, Greedy, D-UCB, D-TS.
+- **Metrics:** Cumulative regret, optimal teammate selection rate, MAE of beliefs, ask rate.
+
+### E2: When to Ask (Autonomy vs Delegation)
+- **Goal:** Analyze whether-to-ask adaptation as agent autonomous self-capability varies.
+- **Independent Variable:** Autonomous utility $U_{\mathrm{self}} \in \{0.30, 0.50, 0.65, 0.80\}$.
+- **Parameters:** $\theta = (0.75, 0.65, 0.50)$, $c = (0.10, 0.10, 0.10)$, $K=3$, $T=2000$, $R=1.0$, $\lambda=1.0$, $\gamma=0.98$.
+- **Policies:** Dynamic Oracle, Always-Ask+Greedy, Never-Ask, D-UCB, D-TS.
+- **Metrics:** Ask rate, ask decision accuracy ($\text{Acc}_{\mathrm{ask}}$), average net utility, total communication cost.
+
+### E3: Abrupt Reliability Shift
+- **Goal:** Evaluate non-stationary adaptation speed and regret recovery following teammate degradation.
+- **Independent Variable:** Discount factor $\gamma \in \{1.0, 0.995, 0.98, 0.95, 0.90\}$.
+- **Parameters:** Initial $\theta(0) = (0.80, 0.70, 0.90)$, post-shift $\theta(1000) = (0.80, 0.70, 0.40)$, $U_{\mathrm{self}}=0.50$, $\lambda=1.0$, $T=2000$.
+- **Policies:** Dynamic Oracle, Initial-Knowledge Oracle, Greedy, D-UCB, D-TS.
+- **Metrics:** Adaptation latency ($\tau_{\mathrm{adapt}}$), post-change regret, average net utility, optimal teammate selection.
 
 ### E4: Communication Cost Variation
-- Independent variable: λ ∈ {0, 1.0, 2.5, 4.0, 6.0}
-- θ = (0.60, 0.75, 0.90), c = (0.05, 0.10, 0.20)
-- K=3, T=2000, R=1.0, U_self=0.45, γ=0.98
-- Algorithms: Dynamic Oracle, Fixed-Cheapest, Greedy, D-UCB, D-TS
-- Metrics: Teammate selection share, Ask Rate, total communication cost, average net utility
+- **Goal:** Test rational policy shift from delegation to autonomy under increasing communication penalty.
+- **Independent Variable:** Cost multiplier $\lambda \in \{0, 1.0, 2.5, 4.0, 6.0\}$.
+- **Parameters:** $\theta = (0.60, 0.75, 0.90)$, $c = (0.05, 0.10, 0.20)$, $K=3$, $T=2000$, $R=1.0$, $U_{\mathrm{self}}=0.45$, $\gamma=0.98$.
+- **Policies:** Dynamic Oracle, Fixed-Cheapest, Greedy, D-UCB, D-TS.
+- **Metrics:** Teammate selection share, ask rate, total communication cost, average net utility.
+
+### E5: Autonomous Helper Policy Learning
+- **Goal:** Evaluate decentralized helper tabular Q-learning vs non-adaptive and informed baselines.
+- **Policies Compared:** Independent Tabular Q-Learning, Always-Accept, Always-Reject, Informed Threshold.
+- **Parameters:** $N=4$ autonomous agents, 9-state $(w, \rho)$ space, state-dependent helping cost $\kappa(w, \rho)$, $T=2000$ rounds, 30 seeds.
+- **Metrics:** State-dependent acceptance rate (Idle vs Medium vs Busy), helper payoff, requester regret, team social welfare.
+
+### E6: Multi-Agent Cooperation Dynamics
+- **Goal:** Investigate emergent cooperation, load shifting, and congestion balancing in heterogeneous teams.
+- **Parameters:** Cooperation incentive $B_i \in \{0.20, 0.50, 0.80\}$, heterogeneous abilities $\theta = (0.70, 0.60, 0.50, 0.80)$, varying base resource and opportunity costs.
+- **Metrics:** Per-agent acceptance rate, physical workload distribution, resource depletion rate, social welfare $W = U_{\mathrm{req}} + U_{\mathrm{help}}$.
+
+### E7: Changing Teammate Reliability in Decentralized Teams
+- **Goal:** Characterize belief adaptation and regret recovery in 4-agent peer networks under abrupt competence drops.
+- **Parameters:** $N=4$ agents, $\gamma \in \{1.00, 0.995, 0.98, 0.95\}$, Agent 4 reliability drops $0.80 \to 0.30$ at round $t=1000$.
+- **Key Finding:** Round-robin scheduling spreads interactions across $N$ agents, making per-round $\gamma = 0.995$ functionally equivalent to $\gamma^4 \approx 0.98$ on an agent's personal decision clock.
+- **Metrics:** Cumulative pseudo-regret, adaptation latency, tracking MAE of $\hat{p}$ and $\hat{\theta}$, team social welfare.
+
+### E8: Sequential Help-Seeking Under Deadlines
+- **Goal:** Resolve **WHEN** during a multi-step task lifecycle to seek help under hard deadlines ($D=5$).
+- **Timing Policies Compared:**
+  1. Never-Ask (Pure Solo Execution)
+  2. Ask-Immediate ($u_1 = 1$, asks at inception)
+  3. Ask-Urgent ($u_k = 1$ only when $\tau_{\mathrm{rem}} \le 1$)
+  4. Fixed-Delay ($u_k = 1$ on second attempt)
+  5. Tabular Q-Learning (Learns $Q(s_{\mathrm{timing}}, u)$ across 27 compact states)
+  6. Planned Timing (Model-based backward induction optimal stopping)
+- **Environment:** Multi-step progression with Irwin-Hall distribution; helper changes reliability at task 200 ($0.85 \to 0.35$).
+- **Metrics:** Task completion rate under deadline, cumulative requester reward, timing distribution of requests.
+
+### Sensitivity Analysis Suite (S1–S5)
+- **S1: Gamma Sweep in Stationary Environments** — $\gamma \in \{0.90, 0.95, 0.98, 0.99, 1.00\}$ under constant reliability.
+- **S2: UCB Exploration Parameter Sweep** — $\alpha_{\mathrm{ucb}} \in \{0.5, 1.0, 1.5, 2.0, 3.0\}$.
+- **S3: Non-Stationary Reliability Drift** — Continuous sinusoidal/linear drift in teammate reliability.
+- **S4: When-to-Ask Under Varying Discounting** — Interaction of $U_{\mathrm{self}}$ and $\gamma \in \{0.95, 0.98, 1.00\}$.
+- **S5: Multi-Shift Non-Stationary Regime** — Multiple abrupt shifts occurring at rounds 500, 1000, and 1500.
+
+---
+
+## Algorithms and Baselines Required
+
+### Requester Policies:
+1. **MultiAgent Greedy (MA-Greedy):** Queries $\arg\max_j \hat{\mu}_{ij}(t)$ if $\max_j \hat{\mu}_{ij}(t) > U_i^{\mathrm{self}}$.
+2. **MultiAgent Discounted UCB (MA-D-UCB):** Optimistic confidence bounds on both $\hat{p}_{ij}$ and $\hat{\theta}_{ij}$.
+3. **MultiAgent Discounted Thompson Sampling (MA-D-TS):** Beta posterior sampling on both acceptance and reliability.
+4. **Dynamic Oracle:** Full information benchmark with exact helper $\epsilon$-greedy tie-breaking probabilities.
+
+### Helper Policies:
+1. **Independent Tabular Q-Learning:** Learns state-dependent acceptance over $(w, \rho)$ states.
+2. **Always-Accept:** Unconditional compliance baseline.
+3. **Always-Reject:** Purely selfish baseline.
+4. **Informed Threshold:** Optimal non-learning threshold baseline knowing true $\theta_j$.
+
+### Timing Policies (E8):
+1. **Solo / Never-Ask**
+2. **Ask-Immediate**
+3. **Ask-Urgent**
+4. **Fixed-Delay**
+5. **Tabular Q-Learning (27 States)**
+6. **Planned Timing (Backward Induction Optimal Stopping)**
+
+---
 
 ## Evaluation Metrics
-- Cumulative Dynamic Regret
-- Average Net Utility
-- Ask Rate
-- Ask Decision Accuracy (Acc_ask)
-- Optimal-Teammate Selection Rate (conditional on d_t=1)
-- Adaptation Latency (τ_adapt)
-- Mean Absolute Estimation Error (MAE_θ)
-- Total Communication Cost
+- **Cumulative Dynamic Pseudo-Regret:** $\sum_{t=1}^T (\mu^\star(t) - \mu_{\mathrm{chosen}}(t))$
+- **Average Net Utility:** $\frac{1}{T} \sum_{t=1}^T r_{\mathrm{requester}, t}$
+- **Ask Rate:** Proportion of rounds where assistance is requested ($d_t = 1$)
+- **Ask Decision Accuracy ($\text{Acc}_{\mathrm{ask}}$):** Consistency of binary whether-to-ask decisions with dynamic oracle
+- **Optimal-Teammate Selection Rate:** Accuracy of whom-to-ask conditional on requesting help
+- **Adaptation Latency ($\tau_{\mathrm{adapt}}$):** Number of rounds post-shift required to switch to the new optimal peer
+- **Belief MAE ($\text{MAE}_p, \text{MAE}_\theta$):** Mean absolute error between beliefs and true parameters
+- **State-Dependent Acceptance Rate:** Helper compliance segregated by physical state (Idle vs Medium vs Busy)
+- **Social Welfare ($W$):** Aggregate sum of requester utility and helper utility
+- **Deadline Task Completion Rate:** Proportion of multi-step tasks completed before deadline expiration ($p \ge 1.0$)
 
-## Hypotheses
-- H1: D-UCB and D-TS > Random and Fixed-Cheapest (stationary, when asking beneficial)
-- H2: γ=1.0 retains evidence; excessive discounting (γ < 1.0) increases steady-state regret in stationary settings
-- H3: Discounted methods (γ < 1.0) have lower τ_adapt than non-discounted (γ=1.0) after abrupt change
-- H4: Increasing λ shifts preference from Helper 3 → Helper 2 → autonomous action
-- H5: Adaptive policies distinguish advantageous vs. disadvantageous help-seeking regimes (Acc_ask > 90%)
+---
 
-## Success Criteria
-1. Learning-based selection improves over non-adaptive baselines in E1.
-2. High Ask Decision Accuracy (>90%) and lower unnecessary cost vs Always-Ask.
-3. Quantitative γ vs τ_adapt relationship shown.
-4. Cost scaling λ changes selection, including autonomous transition.
-5. At least one failure/regime identified with technical explanation.
-
-## Limitations (from PDF)
-- Simplified autonomous benchmark (parameterized U_self, not MDP)
-- Synthetic Bernoulli reliability (not hardware physics)
-- Binary feedback only
-- Scalar reliability per teammate
-- Fixed, exogenous costs; scripted helpers unaffected by load
+## Verification and Success Criteria
+1. **198 automated unit and integration tests** passing with 0 failures (`pytest backend/tests/`).
+2. **All 13 experiment configurations** (E1–E8, S1–S5) successfully executed across 30 random seeds (9,240 total simulation runs).
+3. **Full interactive visualization:** React + TypeScript dashboard with live telemetry, state inspectors, round-by-round logs, and policy comparisons.
+4. **Publication-grade LaTeX manuscript:** arXiv-formatted report (`report/main.pdf`) with automated tables (`report/tables/`) and figures (`figures/`).

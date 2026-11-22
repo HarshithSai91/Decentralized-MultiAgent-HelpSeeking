@@ -6,12 +6,12 @@
 
 ## STAGE 1: Repository Inspection (COMPLETED)
 ✅ Inspected complete repository structure:
-- Backend: 20 Python modules in `backend/src/help_seeking/`
-- Frontend: React dashboard with 3 tabs (Live, Compare, Experiments)
-- Report: LaTeX arXiv-format report with 9 sections
-- Configs: 9 JSON experiment configurations (E1-E4, S1-S5)
-- Tests: 52 unit/integration tests
-- Scripts: Experiment runner, analysis, figure generation
+- Backend: 23 Python modules in `backend/src/help_seeking/`
+- Frontend: React + TypeScript dashboard with live telemetry, state inspectors, round-by-round logs, and policy comparisons
+- Report: Publication-grade LaTeX arXiv-format report with automated result tables and vector figures
+- Configs: 13 JSON experiment configurations (E1–E8, S1–S5)
+- Tests: 198 unit and integration tests (100% passing)
+- Scripts: Experiment runners, diagnostic scripts, figure and table generators
 
 ---
 
@@ -216,177 +216,113 @@ Extend `metrics.py` with multi-agent metrics.
 
 ---
 
-## STAGE 8: Experiments
+## STAGE 8: Experiments (E1–E8 & S1–S5)
 
-### 8.1 Preserve Original E1-E4
-Run with new multi-agent interaction model:
-- E1: Stationary Reliability (all agents have stationary reliability)
-- E2: When to Ask (vary U_self)
-- E3: Abrupt Reliability Changes (some agents change reliability)
-- E4: Communication Cost Variation (vary lambda)
+### 8.1 Foundational Requester Benchmarks (E1–E4)
+Run with multi-agent interaction model and MAB baselines:
+- **E1: Stationary Reliability** — Validate learning with stationary teammates across gap $\Delta \in \{0.02, 0.05, 0.10, 0.15\}$.
+- **E2: When to Ask** — Analyze whether-to-ask adaptation as self-capability $U_{\mathrm{self}} \in \{0.30, 0.50, 0.65, 0.80\}$ varies.
+- **E3: Abrupt Reliability Shift** — Adaptation latency $\tau_{\mathrm{adapt}}$ and recovery across $\gamma \in \{1.0, 0.995, 0.98, 0.95, 0.90\}$.
+- **E4: Communication Cost Variation** — Rational policy shift from asking to autonomy as $\lambda \in \{0, 1.0, 2.5, 4.0, 6.0\}$ scales.
 
-### 8.2 New Experiments
-- **E5: Autonomous Helper Learning**
-  - Compare: Always Accept vs Always Reject vs Independent Q-learning
-  
-- **E6: Multi-Agent Cooperation**
-  - Investigate how workload, resources, rewards influence interactions
-  - Test reciprocity emergence
+### 8.2 Decentralized Multi-Agent Experiments (E5–E7)
+- **E5: Autonomous Helper Policy Learning**
+  - Independent Tabular Q-learning vs Always-Accept vs Always-Reject vs Informed Threshold.
+  - State-dependent helping cost $\kappa_j(w, \rho) = c_{\mathrm{res}, j}(1+(2-\rho)) + c_{\mathrm{opp}, j}(1+w)$ across Idle, Medium, and Busy states.
+- **E6: Multi-Agent Cooperation Dynamics**
+  - Emergent cooperation and congestion load shifting under varying cooperation benefits $B_i \in \{0.20, 0.50, 0.80\}$.
+  - Heterogeneous agent teams with varying baseline costs and reliabilities.
+- **E7: Changing Teammate Reliability in Decentralized Teams**
+  - Abrupt drop in teammate competence in a 4-agent peer network at round $t=1000$.
+  - Evaluation of discount factors $\gamma \in \{1.00, 0.995, 0.98, 0.95\}$.
+  - Analysis of interaction frequency: per-round $\gamma = 0.995$ is equivalent to $\gamma^4 \approx 0.98$ on personal decision clocks.
 
-### 8.3 Experiment Configurations
-Create new JSON configs for multi-agent experiments.
-- 30 seeds minimum
-- Fair initial conditions
-- Independent RNGs per agent
-- Reset Q-tables and beliefs between runs
+### 8.3 Sequential Temporal Help-Seeking (E8)
+- **E8: When to Ask Under Hard Deadlines ($D=5$)**
+  - Multi-step task lifecycles with continuous progress $p \in [0, 1]$ and deadline $\tau_{\mathrm{rem}} \in \{0, \dots, D\}$.
+  - Comparison of 6 timing policies: Never-Ask, Ask-Immediate, Ask-Urgent, Fixed-Delay, Tabular Q-Learning (27 compact states), and Planned Timing (model-based backward induction optimal stopping).
+  - Helper reliability drop at task 200 ($0.85 \to 0.35$).
+
+### 8.4 Sensitivity Suite (S1–S5)
+- **S1:** Discount factor $\gamma$ sweep in stationary conditions ($\gamma \in \{0.90, 0.95, 0.98, 0.99, 1.00\}$).
+- **S2:** UCB exploration parameter $\alpha_{\mathrm{ucb}} \in \{0.5, 1.0, 1.5, 2.0, 3.0\}$.
+- **S3:** Continuous reliability drift (sinusoidal and linear).
+- **S4:** Cross-variation of $U_{\mathrm{self}}$ and $\gamma \in \{0.95, 0.98, 1.00\}$.
+- **S5:** Multi-shift non-stationary regimes (abrupt shifts at $t \in \{500, 1000, 1500\}$).
+
+### 8.5 Experiment Configurations and Execution
+- 13 JSON experiment configs (`configs/e1_*.json` to `configs/e8_*.json`, `configs/s1_*.json` to `configs/s5_*.json`).
+- 30 independent seeds per configuration (9,240 total simulation runs).
+- Independent RNGs per agent, proper belief and Q-table resets between runs.
 
 ---
 
 ## STAGE 9: Dashboard Updates
 
 ### 9.1 Frontend Changes
-- New "Multi-Agent Live" tab
-- Visualize multiple agents' states simultaneously
-- Show requester/helper role switches
-- Display per-agent Q-tables, beliefs, rewards
-- Network graph of interactions
-- New metrics panels
+- "Multi-Agent Live" interactive view (`frontend/src/components/MultiAgentView.tsx`).
+- Real-time display of all 4 peer agents: physical workload, resource meters, Q-values ($Q(\text{ACCEPT})$ vs $Q(\text{REJECT})$), and Beta-Bernoulli beliefs ($\hat{p}_{ij}$, $\hat{\theta}_{ij}$).
+- Round-by-round telemetry: task arrival, requester decision, selected helper, outcome, and individualized payoffs.
+- Full interactive control: Step 1, Step 50, Step 500, and Reset.
 
 ### 9.2 API Extensions
-- New endpoints for multi-agent simulation
-- WebSocket for real-time multi-agent updates
-- Experiment comparison for new experiments
+- Fast simulation endpoints in `backend/src/help_seeking/api.py`.
+- Step-by-step telemetry serialization for frontend state inspection.
 
 ---
 
 ## STAGE 10: Research Report Updates
 
 ### 10.1 Mathematical Formulation Updates
-- Decentralized multi-agent model
-- Individual reward functions
-- Helper Q-learning formulation
-- Acceptance probability estimation
-- Modified utility calculations
+- Complete formal mathematical model (`docs/mathematical_model.md`).
+- Decision-epoch semi-Markov helper Q-learning.
+- Decoupled Beta-Bernoulli beliefs for willingness and competence.
+- Dynamic oracle with $\epsilon$-greedy tie-breaking and ex-ante pseudo-regret.
+- Irwin-Hall continuation value and planned timing optimal stopping.
 
 ### 10.2 Architecture Section
-- AutonomousAgent class diagram
-- Interaction protocol sequence diagram
-- State transition diagrams
+- Full multi-agent interaction sequence and dual-role transitions.
+- Internal state dynamics $(w, \rho)$.
+- State-dependent helping cost function $\kappa(w, \rho)$.
 
 ### 10.3 Experimental Results
-- E1-E6 results with new architecture
-- Comparison with original results
-- Analysis of emergent cooperation
-
-### 10.4 Limitations
-- Sequential interaction assumption
-- No negotiation
-- Fixed ACCEPT/REJECT action space
-- No effort allocation
+- Comprehensive results across all 8 experiments (E1–E8) and sensitivity suite (S1–S5).
+- Automated LaTeX tables in `report/tables/` (`table1_e1_metrics.tex` to `table8_e8_metrics.tex`).
+- Publication figures in `figures/` (`e1_regret_curves.pdf` through `e8_temporal_help_seeking.png`).
+- Analysis of emergent cooperation, congestion relief, and clock divergence.
 
 ---
 
-## FILES TO MODIFY/CREATE
+## FILES CREATED AND MAINTAINED
 
-### New Files:
-1. `backend/src/help_seeking/autonomous_agent.py` - Core agent class
-2. `backend/src/help_seeking/acceptance.py` - Acceptance belief model
-3. `backend/src/help_seeking/multiagent_environment.py` - Multi-agent environment
-4. `backend/src/help_seeking/multiagent_simulation.py` - Multi-agent simulation runner
-5. `backend/src/help_seeking/helper_qlearning.py` - Helper Q-learning policy
-6. `configs/e5_helper_learning.json` - E5 experiment config
-7. `configs/e6_multiagent_cooperation.json` - E6 experiment config
-8. Frontend components for multi-agent visualization
+### Core Multi-Agent Backend (`backend/src/help_seeking/`):
+1. `autonomous_agent.py` — Fluid dual-role agent class (internal state, Q-table, beliefs, decision logic)
+2. `acceptance.py` — Beta-Bernoulli acceptance belief tracker
+3. `helper_qlearning.py` — Decision-epoch semi-Markov helper Q-learning
+4. `multiagent_environment.py` — Multi-agent environment managing round-robin task arrivals and state transitions
+5. `multiagent_simulation.py` — Multi-agent simulation runner with telemetry logging
+6. `multiagent_policies.py` — Multi-agent requester policies (MA-Greedy, MA-D-UCB, MA-D-TS, Dynamic Oracle)
+7. `task_lifecycle.py` — Multi-step task lifecycle state and progression
+8. `requester_timing.py` — Timing policies (Immediate, Urgent, Fixed-Delay, Tabular Q-learning, Planned Timing)
+9. `temporal_environment.py` — Sequential operational environment under deadlines
+10. `temporal_simulation.py` — Sequential simulation runner for E8
 
-### Modified Files:
-1. `backend/src/help_seeking/algorithms.py` - Update requester algorithms for acceptance+reliability
-2. `backend/src/help_seeking/trust.py` - Keep, ensure compatibility
-3. `backend/src/help_seeking/policies.py` - Add multi-agent policy factory
-4. `backend/src/help_seeking/metrics.py` - Add multi-agent metrics
-5. `backend/src/help_seeking/experiments.py` - Support multi-agent experiments
-6. `backend/src/help_seeking/api.py` - Add multi-agent API endpoints
-7. `frontend/src/App.tsx` - Add multi-agent tabs
-8. `frontend/src/api.ts` - Add multi-agent API types and calls
-9. `report/main.tex` - Update with new formulation and results
+### Experiment Configurations (`configs/`):
+1. `e1_stationary.json` to `e8_temporal_help_seeking.json` (all 8 experiments)
+2. `s1_gamma_stationary.json` to `s5_multishift.json` (all 5 sensitivity experiments)
+
+### Test Suite (`backend/tests/`):
+17 test suites with 198 unit and integration tests covering multi-agent mechanics, helper Q-learning, timing policies, and oracle regret.
 
 ---
 
-## TESTING STRATEGY
+## SUCCESS CRITERIA (ALL MET)
 
-### Unit Tests (add to backend/tests/):
-1. `test_autonomous_agent.py` - Agent initialization, reset, dual roles
-2. `test_acceptance.py` - Acceptance belief updates, discounting
-3. `test_helper_qlearning.py` - Q-table updates, epsilon-greedy, convergence
-4. `test_multiagent_environment.py` - Protocol execution, state transitions
-5. `test_multiagent_simulation.py` - Full run, logging, reproducibility
-
-### Integration Tests:
-1. `test_multiagent_integration.py` - End-to-end multi-agent runs
-2. `test_experiment_compatibility.py` - Original E1-E4 still work with new model
-
-### Regression Tests:
-- Run all existing 52 tests - must pass
-- Run new tests - must pass
-
----
-
-## IMPLEMENTATION ORDER
-
-1. **Create core data structures** (acceptance.py, helper_qlearning.py)
-2. **Implement AutonomousAgent class** (autonomous_agent.py)
-3. **Update requester algorithms** (algorithms.py - integrate acceptance beliefs)
-4. **Create multi-agent environment** (multiagent_environment.py)
-5. **Create multi-agent simulation** (multiagent_simulation.py)
-6. **Add multi-agent metrics** (metrics.py)
-7. **Update experiment runner** (experiments.py)
-8. **Add API endpoints** (api.py)
-9. **Create experiment configs** (E5, E6 JSON)
-10. **Run experiments and verify**
-11. **Update frontend** (App.tsx, api.ts)
-12. **Update LaTeX report** (main.tex)
-13. **Run full test suite**
-
----
-
-## CRITICAL DESIGN DECISIONS
-
-1. **Sequential vs Parallel Interactions**: Use sequential for v1 to avoid concurrency complexity. One task per round, assigned to one agent.
-
-2. **Task Assignment**: Round-robin or random selection of requester each round. Document clearly.
-
-3. **Helper State Dynamics**: Workload increases by 1 level when helping, decays by 1 level per round when idle. Resources similar.
-
-4. **Execution Reliability**: Each agent has its own reliability profile that can change (for E3, E5, E6).
-
-5. **Individual Rewards**: 
-   - Requester: R * x - lambda * c if accepted, U_self if rejected/acted alone
-   - Helper: B_i * x - resource_cost - opportunity_cost if accepted, 0 if rejected
-
-6. **No Shared State**: Each agent has completely independent beliefs, Q-table, RNG.
-
-7. **Backward Compatibility**: Original single-requester experiments should still run by creating N=1 agent + N-1 fixed helpers.
-
----
-
-## RISKS AND MITIGATIONS
-
-| Risk | Mitigation |
-|------|------------|
-| Breaking existing experiments | Keep original SimulationRun, Environment classes; add new MultiAgent* classes alongside |
-| Complexity of multi-agent debugging | Add detailed logging, inspector mode, step-by-step execution |
-| Q-learning non-convergence | Use small state space (9 states), track convergence metrics |
-| Performance with N agents | Start with N=3-4, optimize later |
-| Frontend complexity | Add multi-agent tab incrementally, reuse existing components |
-
----
-
-## SUCCESS CRITERIA
-
-1. All 52 existing tests pass
-2. New unit tests pass (>20 new tests)
-3. E1-E4 reproduce qualitatively similar results with new architecture
-4. E5 shows Q-learning helpers learn sensible policies
-5. E6 shows emergent cooperation patterns
-6. Dashboard shows multi-agent interactions correctly
-7. Report updated with new formulation and results
-8. Code is clean, documented, and follows existing patterns
+1. **198 automated tests pass** (`pytest backend/tests/` -> 100% passing).
+2. **E1–E4 reproduce baseline MAB dynamics** (H1–H5 confirmed).
+3. **E5 demonstrates helper Q-learning convergence** (learns state-dependent selectivity matching informed threshold).
+4. **E6 reveals emergent cooperation** ($B_i$ scaling, congestion load-shifting).
+5. **E7 shows peer network adaptation** (clock divergence between global rounds and personal decisions).
+6. **E8 demonstrates superior deadline completion** (Planned Timing and Tabular Q-learning outperform static heuristics).
+7. **Interactive Dashboard operational** (serves telemetry and simulation views).
+8. **Publication manuscript complete** (`report/main.pdf` compiled with full E1–E8 tables and figures).
