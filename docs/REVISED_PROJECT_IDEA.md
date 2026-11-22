@@ -22,7 +22,7 @@ In the original proposal, the system was formulated as a **Single-Agent Non-Stat
 
 ## 2. The Revised Multi-Agent Idea: 5 Core Changes
 
-To make the problem fundamentally multi-agent, we transform the system into an **ad-hoc decentralized cooperative network** of $N$ symmetric, autonomous agents $\mathcal{A} = \{A_1, A_2, \dots, A_N\}$.
+To make the problem fundamentally multi-agent, we transform the system into an **ad-hoc decentralized cooperative network** of $N$ symmetric, autonomous agents $\mathcal{A} = \lbrace A_1, A_2, \dots, A_N \rbrace$.
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────────┐
@@ -51,35 +51,53 @@ To make the problem fundamentally multi-agent, we transform the system into an *
 ### Change 2: Autonomous Helper Decisions with Physical State Dynamics
 - Helpers are **autonomous agents** that can say **NO**.
 - Each agent maintains an internal state:
-  $$s_i(t) = (\text{workload}_i(t),\, \text{resources}_i(t)) \in \{0, 1, 2\} \times \{0, 1, 2\}$$
-  - $\text{workload} \in \{\text{Low}, \text{Medium}, \text{High}\}$: increases by $+1$ when helping; cools down when idle.
-  - $\text{resources} \in \{\text{Low}, \text{Medium}, \text{High}\}$: depletes by $-1$ when helping; regenerates when idle.
-- Helper action space: $\mathcal{A}_i = \{\text{ACCEPT}, \text{REJECT}\}$.
+
+$$s_i(t) = (\text{workload}_i(t),\, \text{resources}_i(t)) \in \lbrace 0, 1, 2 \rbrace \times \lbrace 0, 1, 2 \rbrace$$
+
+  - $\text{workload} \in \lbrace \text{Low}, \text{Medium}, \text{High} \rbrace$: increases by $+1$ when helping; cools down when idle.
+  - $\text{resources} \in \lbrace \text{Low}, \text{Medium}, \text{High} \rbrace$: depletes by $-1$ when helping; regenerates when idle.
+- Helper action space: $\mathcal{A}_i = \lbrace \text{ACCEPT}, \text{REJECT} \rbrace$.
 
 ### Change 3: Decentralized Helper Q-Learning with Individual Payoffs
 - Helpers learn when to accept assistance requests using **independent Tabular Q-Learning**:
-  $$Q_i(s, a) \leftarrow Q_i(s, a) + \alpha_{\mathrm{RL}} \left[ r_i + \gamma_Q \max_{a'} Q_i(s', a') - Q_i(s, a) \right]$$
+
+$$Q_i(s, a) \leftarrow Q_i(s, a) + \alpha_{\mathrm{RL}} \left[ r_i + \gamma_Q \max_{a'} Q_i(s', a') - Q_i(s, a) \right]$$
+
 - Helpers optimize their **individual reward** (no shared team reward, no central arbiter):
-  $$r_i = \begin{cases} B_i \cdot x - \kappa_i(w_i, \rho_i) & \text{if } \text{ACCEPT}, \\ 0 & \text{if } \text{REJECT}, \end{cases}\qquad \kappa_i(w, \rho) = c_{\mathrm{res},i}(3 - \rho) + c_{\mathrm{opp},i}(1 + w)$$
-  where $B_i$ is cooperation compensation, $x \in \{0, 1\}$ is task success, and the helping cost $\kappa_i$ (resource use plus foregone progress on the agent's own queue) grows with the helper's workload and resource depletion at the moment it accepts. (Final version, Nov 2026: an earlier draft used a state-independent cost, under which the optimal helping decision did not depend on the helper's state.)
+
+$$r_i = \begin{cases} B_i \cdot x - \kappa_i(w_i, \rho_i), & \text{if } \text{ACCEPT} \\ 0, & \text{if } \text{REJECT} \end{cases}\qquad \kappa_i(w, \rho) = c_{\mathrm{res},i}(3 - \rho) + c_{\mathrm{opp},i}(1 + w)$$
+
+where $B_i$ is cooperation compensation, $x \in \lbrace 0, 1 \rbrace$ is task success, and the helping cost $\kappa_i$ (resource use plus foregone progress on the agent's own queue) grows with the helper's workload and resource depletion at the moment it accepts. (Final version, Nov 2026: an earlier draft used a state-independent cost, under which the optimal helping decision did not depend on the helper's state.)
 
 ### Change 4: Decoupled Acceptance Beliefs vs. Execution Trust
 A requester must now track two independent latent variables for each teammate $A_j$:
-1. **Acceptance Probability** $p_{ij} = P(A_j \text{ accepts } A_i)$:
+1. **Acceptance Probability** $p_{ij} = P(A_j \text{ accepts } A_i)$:  
    Estimated via discounted pseudo-counts $A_{ij}$ (accepted) and $R_{ij}$ (rejected):
-   $$\hat{p}_{ij} = \frac{1 + A_{ij}}{2 + A_{ij} + R_{ij}}$$
-2. **Conditional Execution Reliability** $\theta_{ij} = P(\text{Success} \mid \text{Accepted})$:
+
+$$\hat{p}_{ij} = \frac{1 + A_{ij}}{2 + A_{ij} + R_{ij}}$$
+
+2. **Conditional Execution Reliability** $\theta_{ij} = P(\text{Success} \mid \text{Accepted})$:  
    Estimated via discounted Beta-Bernoulli trust pseudo-counts $S_{ij}$ (success) and $F_{ij}$ (failure):
-   $$\hat{\theta}_{ij} = \frac{1 + S_{ij}}{2 + S_{ij} + F_{ij}}$$
+
+$$\hat{\theta}_{ij} = \frac{1 + S_{ij}}{2 + S_{ij} + F_{ij}}$$
+
 *Critical Rule:* **Rejection is NOT an execution failure.** Rejection updates acceptance beliefs only; execution reliability is untouched.
 
 ### Change 5: Autonomous Return on Rejection & Expected Net Utility
 If a helper rejects a request, the task returns immediately to the requester for autonomous execution in the same round.
 The expected net utility of querying helper $j$ becomes:
-$$\mu_{ij} = p_{ij}(R\theta_j - \lambda c_{ij}) + (1 - p_{ij})(\Uself - \lambda c_{ij}) = \Uself + p_{ij}(R\theta_j - \Uself) - \lambda c_{ij}$$
+
+$$\mu_{ij} = p_{ij}(R\theta_j - \lambda c_{ij}) + (1 - p_{ij})(U_i^{\mathrm{self}} - \lambda c_{ij}) = U_i^{\mathrm{self}} + p_{ij}(R\theta_j - U_i^{\mathrm{self}}) - \lambda c_{ij}$$
+
 Estimated utility:
-$$\hat{\mu}_{ij} = \Uself + \hat{p}_{ij}(R\hat{\theta}_{ij} - \Uself) - \lambda c_{ij}$$
-The requester queries helper $j^* = \arg\max_j \hat{\mu}_{ij}$ if $\max_j \hat{\mu}_{ij} > \Uself$; otherwise, it acts independently.
+
+$$\hat{\mu}_{ij} = U_i^{\mathrm{self}} + \hat{p}_{ij}(R\hat{\theta}_{ij} - U_i^{\mathrm{self}}) - \lambda c_{ij}$$
+
+The requester queries candidate helper:
+
+$$j^\star = \arg\max_j \hat{\mu}_{ij}$$
+
+$$\text{Decision: query } j^\star \text{ if } \hat{\mu}_{ij^\star} > U_i^{\mathrm{self}}, \quad \text{else act alone } (d_t = 0)$$
 
 ---
 
@@ -92,19 +110,19 @@ The requester queries helper $j^* = \arg\max_j \hat{\mu}_{ij}$ if $\max_j \hat{\
 | **Helper Behavior** | 100% unconditional compliance | Autonomous ACCEPT / REJECT decisions |
 | **Helper State** | None (stateless) | Dynamic physical state: $(\text{workload}, \text{resources})$ |
 | **Helper Learning** | None (fixed exogenous parameter) | Tabular Q-learning over individual rewards |
-| **Helper Motivation** | Free labor | Self-interested payoff: $B_i x - \kappa_i(w_i,\rho_i)$ (cost grows with load) |
-| **Learned Beliefs** | Execution reliability $\theta$ only | Decoupled: Willingness $p_{ij}$ AND Competence $\theta_{ij}$ |
+| **Helper Motivation** | Free labor | Self-interested payoff: `r_i = B_i · x - κ_i(w_i, ρ_i)` (cost grows with load) |
+| **Learned Beliefs** | Execution reliability $\theta$ only | Decoupled: Willingness `p_ij` and competence `θ_ij` |
 | **Emergent Dynamics** | Simple arm convergence | Congestion-driven load shifting, cooperation emergence |
 
 ---
 
 ## 4. Emergent Multi-Agent Dynamics
 
-1. **Endogenous Congestion Balancing:**
+1. **Endogenous Congestion Balancing:**  
    If agent $A_3$ has the highest execution reliability ($\theta_3 = 0.9$), all other agents prefer to ask $A_3$. This floods $A_3$'s queue, increasing its workload to High ($w_3 = 2$) and exhausting its resources ($\rho_3 = 0$). Under its Q-learning policy, $A_3$ begins rejecting requests. Requesters observe the drop in $\hat{p}_{i3}$ and adaptively shift their requests to second-best helpers (e.g., $A_1$ or $A_2$).
-2. **Cooperation Incentives:**
+2. **Cooperation Incentives:**  
    If cooperation reward $B_i$ is low ($B_i = 0.20$), agents protect their resources and reject requests ($31\%$ rejection rate). If $B_i$ is high ($B_i = 0.80$), helping is profitable and sustainable cooperation emerges ($95\%$ acceptance rate).
-3. **No Centralized Point of Failure:**
+3. **No Centralized Point of Failure:**  
    Agents operate entirely on local observations, local Q-tables, and local communication without needing a global coordinator.
 
 ---
@@ -112,10 +130,10 @@ The requester queries helper $j^* = \arg\max_j \hat{\mu}_{ij}$ if $\max_j \hat{\
 ## 5. Experimental Roadmap (E1--E8)
 
 - **E1: Stationary Reliability** under reciprocal peer interactions.
-- **E2: Whether-to-Ask** as autonomous self-capability $\Uself$ varies.
+- **E2: Whether-to-Ask** as autonomous self-capability $U_{\mathrm{self}}$ varies.
 - **E3: Abrupt Reliability Drop** demonstrating fast adaptation via discounting ($\gamma = 0.98$).
 - **E4: Communication Cost Scaling** showing rational transition from asking to autonomy.
 - **E5: Helper Policy Learning (NEW):** Empirical comparison of Tabular Q-Learning vs. Always-Accept vs. Always-Reject and Informed Threshold.
-- **E6: Multi-Agent Cooperation Dynamics (NEW):** Analysis of emergent cooperation, workload congestion, and acceptance rates across reward incentives ($B_i \in \{0.2, 0.5, 0.8\}$) and heterogeneous teams.
+- **E6: Multi-Agent Cooperation Dynamics (NEW):** Analysis of emergent cooperation, workload congestion, and acceptance rates across reward incentives ($B_i \in \lbrace 0.2, 0.5, 0.8 \rbrace$) and heterogeneous teams.
 - **E7: Changing Teammate Reliability in Teams (NEW):** Abrupt reliability shift in decentralized 4-agent teams; clock divergence between per-decision clocks and global rounds ($\gamma=0.995$ vs $\gamma=0.98$).
 - **E8: Temporal Help-Seeking & Timing under Deadlines (NEW):** Multi-step task lifecycle ($D=5$); tabular 27-state Q-learning timing, heuristic baselines (Immediate, Fixed Delay, Urgency), and belief-based Planned Timing (optimal stopping).
