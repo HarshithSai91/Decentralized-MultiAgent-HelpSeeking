@@ -28,8 +28,9 @@ The environment only assigns tasks (round-robin) and draws outcomes; there is no
 | **E6** | Incentives | Acceptance rises from $9.5\%$ ($B=0.2$) to $82.1\%$ ($B=0.8$), and welfare from 0.309 to 0.800. In a heterogeneous team, $A_4$ ($B=0.8$, $\theta=0.8$) accepts 75.5% and helps in 35.8% of rounds; $A_1$ ($B=0.2$) accepts 13.6% and helps in 1.3%. |
 | **E7** | Changing reliability | Per-round $\gamma=0.98$ *hurts* in the team (MA-D-TS total regret 231.6 vs 169.6 at $\gamma=1$, $p<10^{-8}$), because each requester sees each teammate rarely. $\gamma=0.995$ ($0.995^4\approx0.98$ per own decision) lowers post-change regret (MA-D-UCB 83.3 vs 98.6, $p=0.03$; MA-D-TS 93.9 vs 102.9, $p=0.09$) at the cost of pre-change regret. |
 | **E8** | When to ask | Model-free learned timing (Q-learning): $55.1 \pm 2.2\%$ completion, reward $0.199 \pm 0.031$, asks on 62.3% of tasks; it beats Immediate evaluation (48.7%, 0.087) and Never ask (40.3%) but **not** Fixed delay (61.4%, 0.277) or Urgency (62.6%, 0.297). **Planned timing** (approximate optimal stopping with frozen learned beliefs) reaches $60.5 \pm 1.8\%$ and reward $0.288 \pm 0.027$ — not significantly different from the two rules in reward ($p=0.18$, $0.28$) — while asking on only 43.8% of tasks. |
+| **S1–S5** | Robustness & sensitivity | Parameter sweeps over memory discounting $\gamma$, UCB exploration $\alpha_{\mathrm{ucb}}$, continuous drift, and multi-shift non-stationarity confirm policy stability across environmental regimes. |
 
-Full numbers: `results/MULTIAGENT_RESULTS_SUMMARY.md` (E5–E8), `results/RESULTS_SUMMARY.md` (E1–E4, S1–S5), and the report `report/main.pdf`.
+Full numbers: `results/RESULTS_SUMMARY.md` (master summary: E1–E8, S1–S5), `results/MULTIAGENT_RESULTS_SUMMARY.md` (E5–E8), and the report `report/main.pdf`.
 
 ---
 
