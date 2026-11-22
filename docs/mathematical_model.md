@@ -122,7 +122,7 @@ $$\hat{\mu}_{ij}(t) = U_i^{\mathrm{self}} + \hat{p}_{ij}(t) \left( R \hat{\theta
 
 $$j^\star = \arg\max_j \hat{\mu}_{ij}(t)$$
 
-if $\hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}$; else acts alone.
+$$\text{Decision: query } j^\star \text{ if } \hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}, \quad \text{else act alone } (d_t = 0)$$
 
 - **MultiAgent Discounted UCB (MA-D-UCB):** Uses optimistic upper confidence bounds on both acceptance and reliability.
 
@@ -130,7 +130,9 @@ if $\hat{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}$; else acts alone.
 
 $$\tilde{p}_{ij} \sim \mathrm{Beta}(1 + A_{ij},\, 1 + R_{ij}), \qquad \tilde{\theta}_{ij} \sim \mathrm{Beta}(1 + S_{ij},\, 1 + F_{ij})$$
 
-and queries $j^\star = \arg\max_j \tilde{\mu}_{ij}(t)$ if $\max_j \tilde{\mu}_{ij}(t) > U_i^{\mathrm{self}}$.
+$$j^\star = \arg\max_j \tilde{\mu}_{ij}(t)$$
+
+$$\text{Decision: query } j^\star \text{ if } \tilde{\mu}_{ij^\star}(t) > U_i^{\mathrm{self}}, \quad \text{else act alone } (d_t = 0)$$
 
 ---
 
@@ -167,9 +169,19 @@ $$\mathrm{Regret}_t = \max\left(0,\, \mu^\star(t) - \mu_{\mathrm{chosen}}(t)\rig
 ## 6. Social Welfare and Team Efficiency
 
 To distinguish individual requester payoff from overall team efficiency without double counting communication costs:
-- **Requester Utility:** $U_{\mathrm{req}} = \frac{1}{T} \sum_{t=1}^T r_{\mathrm{requester}, t}$
-- **Helper Utility:** $U_{\mathrm{help}} = \frac{1}{T} \sum_{t=1}^T r_{\mathrm{helper}, t}$
-- **Social Welfare:** $W = U_{\mathrm{req}} + U_{\mathrm{help}}$
+
+- **Requester Utility:**
+
+$$U_{\mathrm{req}} = \frac{1}{T} \sum_{t=1}^T r_{\mathrm{requester}, t}$$
+
+- **Helper Utility:**
+
+$$U_{\mathrm{help}} = \frac{1}{T} \sum_{t=1}^T r_{\mathrm{helper}, t}$$
+
+- **Social Welfare:**
+
+$$W = U_{\mathrm{req}} + U_{\mathrm{help}}$$
+
 Communication costs $\lambda c_{ij}$ are incurred exclusively by the requester channel and are reflected directly in $r_{\mathrm{requester}, t}$.
 
 
