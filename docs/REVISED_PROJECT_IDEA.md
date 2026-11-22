@@ -54,13 +54,13 @@ To make the problem fundamentally multi-agent, we transform the system into an *
   $$s_i(t) = (\text{workload}_i(t),\, \text{resources}_i(t)) \in \{0, 1, 2\} \times \{0, 1, 2\}$$
   - $\text{workload} \in \{\text{Low}, \text{Medium}, \text{High}\}$: increases by $+1$ when helping; cools down when idle.
   - $\text{resources} \in \{\text{Low}, \text{Medium}, \text{High}\}$: depletes by $-1$ when helping; regenerates when idle.
-- Helper action space: $\mathcal{A}_i = \{\textsc{Accept}, \textsc{Reject}\}$.
+- Helper action space: $\mathcal{A}_i = \{\text{ACCEPT}, \text{REJECT}\}$.
 
 ### Change 3: Decentralized Helper Q-Learning with Individual Payoffs
 - Helpers learn when to accept assistance requests using **independent Tabular Q-Learning**:
   $$Q_i(s, a) \leftarrow Q_i(s, a) + \alpha_{\mathrm{RL}} \left[ r_i + \gamma_Q \max_{a'} Q_i(s', a') - Q_i(s, a) \right]$$
 - Helpers optimize their **individual reward** (no shared team reward, no central arbiter):
-  $$r_i = \begin{cases} B_i \cdot x - \kappa_i(w_i, \rho_i) & \text{if } \textsc{Accept}, \\ 0 & \text{if } \textsc{Reject}, \end{cases}\qquad \kappa_i(w, \rho) = c_{\mathrm{res},i}(3 - \rho) + c_{\mathrm{opp},i}(1 + w)$$
+  $$r_i = \begin{cases} B_i \cdot x - \kappa_i(w_i, \rho_i) & \text{if } \text{ACCEPT}, \\ 0 & \text{if } \text{REJECT}, \end{cases}\qquad \kappa_i(w, \rho) = c_{\mathrm{res},i}(3 - \rho) + c_{\mathrm{opp},i}(1 + w)$$
   where $B_i$ is cooperation compensation, $x \in \{0, 1\}$ is task success, and the helping cost $\kappa_i$ (resource use plus foregone progress on the agent's own queue) grows with the helper's workload and resource depletion at the moment it accepts. (Final version, Nov 2026: an earlier draft used a state-independent cost, under which the optimal helping decision did not depend on the helper's state.)
 
 ### Change 4: Decoupled Acceptance Beliefs vs. Execution Trust
@@ -89,7 +89,7 @@ The requester queries helper $j^* = \arg\max_j \hat{\mu}_{ij}$ if $\max_j \hat{\
 |---|---|---|
 | **System Paradigm** | 1-agent MAB against passive arms | $N$ decentralized autonomous agents |
 | **Agent Roles** | Fixed Requester + Fixed Helpers | Fluid dual roles (Requester $\leftrightarrow$ Helper) |
-| **Helper Behavior** | 100% unconditional compliance | Autonomous $\textsc{Accept} / \textsc{Reject}$ decisions |
+| **Helper Behavior** | 100% unconditional compliance | Autonomous ACCEPT / REJECT decisions |
 | **Helper State** | None (stateless) | Dynamic physical state: $(\text{workload}, \text{resources})$ |
 | **Helper Learning** | None (fixed exogenous parameter) | Tabular Q-learning over individual rewards |
 | **Helper Motivation** | Free labor | Self-interested payoff: $B_i x - \kappa_i(w_i,\rho_i)$ (cost grows with load) |
