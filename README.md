@@ -36,57 +36,90 @@ Full numbers: `results/MULTIAGENT_RESULTS_SUMMARY.md` (E5–E8), `results/RESULT
 ## Repository Layout
 
 ```text
-.
-├── .gitignore
-├── PROGRESS.md
-├── README.md
-├── pytest.ini
-├── requirements.txt
-├── backend/                           # Multi-agent simulation package, algorithms & API
+Decentralized-MultiAgent-HelpSeeking/
+│
+├── backend/
 │   ├── src/
-│   │   └── help_seeking/             # Core multi-agent learning modules
+│   │   └── help_seeking/
+│   │       ├── __init__.py
 │   │       ├── acceptance.py
 │   │       ├── algorithms.py
 │   │       ├── api.py
 │   │       ├── autonomous_agent.py
 │   │       ├── baselines.py
 │   │       ├── environment.py
+│   │       ├── experiments.py
 │   │       ├── helper_qlearning.py
+│   │       ├── metrics.py
 │   │       ├── multiagent_environment.py
 │   │       ├── multiagent_policies.py
 │   │       ├── multiagent_simulation.py
+│   │       ├── policies.py
 │   │       ├── reliability.py
 │   │       ├── requester_timing.py
+│   │       ├── simulation.py
+│   │       ├── stats.py
 │   │       ├── task_lifecycle.py
 │   │       ├── temporal_environment.py
 │   │       ├── temporal_simulation.py
-│   │       └── trust.py
-│   └── tests/                         # 198-test verification suite
-├── configs/                           # Experiment JSON configurations (E1–E8, S1–S5)
-├── docs/                              # Design specifications and mathematical model
-├── figures/                           # Publication vector PDFs and dashboard PNGs
-├── frontend/                          # Interactive React + TypeScript dashboard
-│   ├── dist/                          # Pre-built production bundle served by FastAPI
-│   └── src/                           # Live telemetry and simulation components
-├── report/                            # Publication manuscript (arXiv format) & PDF
-│   ├── tables/                        # Automated LaTeX result tables
+│   │       ├── trust.py
+│   │       └── utilities.py
+│   └── tests/
+│
+├── configs/
+│
+├── docs/
+│
+├── figures/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── MultiAgentView.tsx
+│   │   ├── App.tsx
+│   │   ├── App.css
+│   │   ├── api.ts
+│   │   └── main.tsx
+│   ├── dist/
+│   │   ├── assets/
+│   │   └── index.html
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── tsconfig.json
+│   └── vite.config.ts
+│
+├── report/
+│   ├── tables/
 │   ├── arxiv.sty
 │   ├── main.bbl
 │   ├── main.pdf
 │   ├── main.tex
 │   └── references.bib
-├── results/                           # Experimental data and processed metrics
-│   ├── manifests/                     # Experiment run manifests
-│   ├── processed/                     # Summaries, key numbers, and diagnostics
-│   └── raw/                           # Raw per-seed runs.csv and curves.npz
-└── scripts/                           # Experiment execution and analysis pipelines
-    ├── analyze_results.py
-    ├── diagnose_e5_helpers.py
-    ├── diagnose_e8_timing.py
-    ├── generate_figures.py
-    ├── generate_multiagent_figures_and_tables.py
-    ├── run_all_experiments.py
-    └── run_experiment.py
+│
+├── results/
+│   ├── manifests/
+│   ├── processed/
+│   ├── raw/
+│   ├── MULTIAGENT_RESULTS_SUMMARY.md
+│   └── RESULTS_SUMMARY.md
+│
+├── scripts/
+│   ├── _common.py
+│   ├── _paths.py
+│   ├── analyze_results.py
+│   ├── diagnose_e5_helpers.py
+│   ├── diagnose_e8_timing.py
+│   ├── generate_figures.py
+│   ├── generate_multiagent_figures_and_tables.py
+│   ├── run_all_experiments.py
+│   └── run_experiment.py
+│
+├── .gitignore
+├── PROGRESS.md
+├── README.md
+├── pytest.ini
+└── requirements.txt
 ```
 
 ---
